@@ -1,0 +1,3603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generative AI for Work and Everyday Use: Complete Course</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Open Graph Tags -->
+  <meta property="og:title" content="Generative AI for Work and Everyday Use" />
+  <meta property="og:description" content="A complete 8-week course on using generative AI for work and everyday tasks." />
+  <meta property="og:image" content="./git_github_banner.jpg" />
+  <meta property="og:url" content="https://asabeneh.github.io/git-github-beginners/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Asabeneh's AI Courses" />
+    <style>
+        :root {
+            /* Deep, Rich Purple Color Palette */
+            --primary-color: #5b21b6; /* Deep, rich primary purple */
+            --primary-dark: #4c1d95; /* Darker purple for hover states */
+            --primary-light: #7c3aed; /* Lighter purple for accents */
+            --primary-lighter: #a855f7; /* Very light purple for backgrounds */
+            
+            /* Secondary Colors */
+            --accent-color: #7c3aed; /* Secondary purple accent */
+            --accent-light: #8b5cf6; /* Light accent */
+            
+            /* Background Colors */
+            --bg-color: #faf5ff; /* Very light purple background */
+            --bg-secondary: #f3e8ff; /* Slightly darker background */
+            --white: #ffffff;
+            
+            /* Text Colors */
+            --text-color: #1e1b4b; /* Dark purple text */
+            --text-secondary: #6b7280; /* Medium gray for secondary text */
+            --text-light: #5b21b6; /* Light purple text */
+            
+            /* Border Colors */
+            --border-color: #e9d5ff; /* Light purple border */
+            --border-light: #f3e8ff; /* Very light purple border */
+            
+            /* Gradient Colors */
+            --gradient-start: #4c1d95; /* Purple gradient start - deep */
+            --gradient-end: #5b21b6; /* Purple gradient end - deep */
+            --gradient-light: linear-gradient(135deg, #f3e8ff, #faf5ff);
+            
+            /* Card Colors */
+            --card-bg: #ffffff;
+            --card-accent: #faf5ff; /* Light purple for cards */
+            --card-hover: #f3e8ff; /* Slightly darker for hover */
+            
+            /* Code Colors */
+            --code-bg: #1e1b4b; /* Dark purple background for code */
+            --code-text: #f8fafc; /* Light text for code */
+            
+            /* Status Colors */
+            --success-color: #10b981; /* Green for success */
+            --warning-color: #f59e0b; /* Orange for warnings */
+            --info-color: #5b21b6; /* Purple for info */
+            --error-color: #ef4444; /* Red for errors */
+            
+            /* Shadows - Updated with deep purple */
+            --shadow-sm: 0 1px 2px 0 rgb(91 33 182 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(91 33 182 / 0.1), 0 2px 4px -2px rgb(91 33 182 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(91 33 182 / 0.1), 0 4px 6px -4px rgb(91 33 182 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(91 33 182 / 0.1), 0 8px 10px -6px rgb(91 33 182 / 0.1);
+            
+            /* Spacing */
+            --spacing-xs: 0.25rem;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+            --spacing-2xl: 3rem;
+            
+            /* Border Radius */
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: var(--gradient-light);
+            color: var(--text-color);
+            line-height: 1.6;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #4c1d95, #5b21b6);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.2;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 1;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 500;
+            color: #ffffff;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--white) 0%, var(--card-accent) 100%);
+            color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            background: linear-gradient(135deg, var(--card-accent) 0%, var(--primary-lighter) 100%);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.1) 100%);
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, var(--white) 0%, var(--card-accent) 100%);
+            color: var(--primary-color);
+        }
+        
+        /* Main Content */
+        .main-content {
+            background-color: var(--card-bg);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+            margin: var(--spacing-xl) auto;
+            padding: var(--spacing-2xl);
+            border: 1px solid var(--border-color);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 2.5rem 0 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid var(--border-color);
+            color: var(--text-color);
+            position: relative;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 3rem;
+            height: 3px;
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 50%, var(--primary-light) 100%);
+            border-radius: 2px;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem;
+            color: var(--text-color);
+        }
+        
+        h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.8rem;
+            color: var(--text-color);
+        }
+        
+        h5 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1.2rem 0 0.6rem;
+            color: var(--text-color);
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--secondary-text);
+            line-height: 1.7;
+        }
+        
+        .welcome {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            padding: var(--spacing-md) var(--spacing-lg);
+            background: linear-gradient(135deg, var(--card-accent) 0%, var(--primary-lighter) 50%, var(--card-accent) 100%);
+            border-left: 4px solid var(--primary-color);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-xl);
+        }
+        
+
+        
+        /* Course Outline Cards */
+        .course-outline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .outline-item {
+            background: linear-gradient(135deg, var(--card-bg) 0%, var(--card-accent) 100%);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .outline-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+        }
+        
+        .outline-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-color);
+            background: linear-gradient(135deg, var(--card-hover) 0%, var(--primary-lighter) 100%);
+        }
+        
+        .outline-item::after {
+            content: '→';
+            position: absolute;
+            top: var(--spacing-lg);
+            right: var(--spacing-lg);
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+        }
+        
+        .outline-item:hover::after {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .outline-item h3 {
+            margin-bottom: 1rem;
+            color: var(--text-color);
+            font-size: 1.25rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .outline-item p {
+            color: var(--secondary-text);
+            font-size: 1rem;
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+        
+        .outline-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 50%, var(--primary-light) 100%);
+            color: var(--white);
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 0.75rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: var(--shadow-md);
+            flex-shrink: 0;
+        }
+        
+        /* User Engagement Features */
+        .progress-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--border-light);
+            z-index: 1000;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        .engagement-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .interactive-card {
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .interactive-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-color);
+        }
+        
+        .interactive-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+            border-radius: inherit;
+        }
+        
+        .interactive-card:hover::before {
+            opacity: 0.05;
+        }
+        
+        .quiz-question {
+            background: var(--card-accent);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .quiz-question:hover {
+            border-color: var(--primary-color);
+            background: var(--card-hover);
+            transform: translateY(-2px);
+        }
+        
+        .quiz-option {
+            display: block;
+            padding: 0.75rem 1rem;
+            margin: 0.5rem 0;
+            background: var(--white);
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .quiz-option:hover {
+            border-color: var(--primary-color);
+            background: var(--card-accent);
+        }
+        
+        .quiz-option.selected {
+            border-color: var(--primary-color);
+            background: var(--primary-lighter);
+            color: var(--primary-dark);
+        }
+        
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background: var(--code-bg);
+            color: var(--white);
+            text-align: center;
+            border-radius: 6px;
+            padding: 0.5rem;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.875rem;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .fab {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .fab:hover {
+            transform: scale(1.1);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .nav-dots {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+        }
+        
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            background: var(--border-color);
+            border-radius: 50%;
+            margin: 0.5rem 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-dot.active {
+            background: var(--primary-color);
+            transform: scale(1.2);
+        }
+        
+        .nav-dot:hover {
+            background: var(--accent-color);
+        }
+        
+        .completion-check {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 24px;
+            height: 24px;
+            background: var(--success-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.75rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .outline-item.completed .completion-check {
+            opacity: 1;
+        }
+        
+        .learning-path {
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .learning-path::before {
+            content: '';
+            position: absolute;
+            left: 0.5rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+        }
+        
+        .learning-step {
+            position: relative;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--card-accent);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .learning-step::before {
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 1.5rem;
+            width: 12px;
+            height: 12px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            border: 3px solid var(--white);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            margin-top: var(--spacing-2xl);
+            padding: var(--spacing-2xl) 0 var(--spacing-xl);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .footer-section p {
+            color: var(--secondary-text);
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            color: var(--secondary-text);
+            text-decoration: none;
+            border-radius: 0.5rem;
+            transition: all 0.2s ease;
+            border: 1px solid var(--border-color);
+            background: var(--white);
+        }
+        
+        .social-links a:hover {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+        }
+        
+        /* Typography and Lists */
+        ul, ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+            color: var(--secondary-text);
+            line-height: 1.6;
+        }
+        
+        /* Code Blocks */
+        code {
+            font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+            background-color: var(--card-accent);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius-sm);
+            font-size: 0.9em;
+            color: var(--primary-color);
+            border: 1px solid var(--border-color);
+        }
+        
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-lg) 0;
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        th, td {
+            padding: var(--spacing-md);
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        th {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background: var(--card-accent);
+        }
+        
+        .comparison-table {
+            margin: var(--spacing-xl) 0;
+        }
+        
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            overflow-x: auto;
+            margin: var(--spacing-lg) 0;
+            line-height: 1.6;
+            font-size: 0.9rem;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-md);
+        }
+        
+        pre code {
+            background-color: transparent;
+            color: inherit;
+            padding: 0;
+            font-size: inherit;
+            border: none;
+        }
+        
+        /* Info Boxes */
+        .note-box, .warning-box, .tip-box {
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.75rem;
+            border: 1px solid;
+            position: relative;
+        }
+        
+        .note-box {
+            background-color: rgba(59, 130, 246, 0.05);
+            border-color: rgba(59, 130, 246, 0.2);
+            color: var(--text-color);
+        }
+        
+        .warning-box {
+            background-color: rgba(245, 158, 11, 0.05);
+            border-color: rgba(245, 158, 11, 0.2);
+            color: var(--text-color);
+        }
+        
+        .tip-box {
+            background-color: rgba(16, 185, 129, 0.05);
+            border-color: rgba(16, 185, 129, 0.2);
+            color: var(--text-color);
+        }
+        
+        .box-title {
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .note-box .box-title::before {
+            content: '💡';
+        }
+        
+        .warning-box .box-title::before {
+            content: '⚠️';
+        }
+        
+        .tip-box .box-title::before {
+            content: '✅';
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border: 1px solid var(--border-color);
+        }
+        
+        .command-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        
+        .command-table th, .command-table td {
+            padding: 0.8rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .command-table th {
+            background-color: var(--bg-color);
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .command-table tr:hover {
+            background-color: rgba(138, 43, 226, 0.05);
+        }
+        
+        .workflow-chart {
+            margin: 2rem 0;
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .section {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .section:first-of-type {
+            border-top: none;
+            padding-top: 0;
+        }
+        
+        .chapter-nav {
+            display: flex;
+            justify-content: space-between;
+            margin: 3rem 0 1rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .nav-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.2s;
+        }
+        
+        .nav-link:hover {
+            transform: translateX(3px);
+        }
+        
+        .nav-link-prev {
+            margin-right: auto;
+        }
+        
+        .nav-link-next {
+            margin-left: auto;
+        }
+        
+        blockquote {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            color: var(--secondary-text);
+            font-style: italic;
+        }
+        
+        .table-of-contents {
+            background: linear-gradient(135deg, var(--card-bg) 0%, var(--card-accent) 100%);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            margin: var(--spacing-xl) 0;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .table-of-contents:hover {
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow-md);
+            background: linear-gradient(135deg, var(--card-hover) 0%, var(--primary-lighter) 100%);
+        }
+        
+        .table-of-contents h3 {
+            margin-top: 0;
+        }
+        
+        .table-of-contents ul {
+            margin-bottom: 0;
+        }
+        
+        .toc-link {
+            color: var(--secondary-text);
+            text-decoration: none;
+        }
+        
+        .toc-link:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+        
+        /* Exercise Boxes */
+        .exercise {
+            background: var(--gradient-light);
+            border: 1px solid var(--border-color);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-xl);
+            margin: var(--spacing-xl) 0;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .exercise:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-color);
+            background: var(--card-hover);
+        }
+        
+        .exercise::before {
+            content: '📝';
+            position: absolute;
+            top: -0.75rem;
+            left: 1.5rem;
+            background: var(--white);
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.5rem;
+            font-size: 1.1rem;
+            border: 1px solid var(--border-color);
+        }
+        
+        .exercise h4 {
+            margin-top: 0;
+            color: var(--text-color);
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .course-outline {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 2rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .course-outline {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .outline-item {
+                padding: 1.5rem;
+            }
+            
+            .main-content {
+                padding: 1.5rem;
+                margin: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            h3 {
+                font-size: 1.25rem;
+            }
+            
+            pre {
+                font-size: 0.8rem;
+                padding: 1rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 0.75rem;
+            }
+            
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+            
+            .main-content {
+                padding: 1rem;
+                margin: 0.5rem;
+            }
+            
+            .outline-item {
+                padding: 1rem;
+            }
+        }
+        
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        /* Focus styles for accessibility */
+        .btn:focus,
+        .toc-link:focus,
+        .outline-item:focus,
+        .social-links a:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+            border-radius: var(--radius-md);
+        }
+        
+        /* Skip link for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 8px;
+            text-decoration: none;
+            border-radius: var(--radius-sm);
+            z-index: 1000;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            :root {
+                --border-color: #000000;
+                --text-color: #000000;
+                --secondary-text: #000000;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Progress Indicator -->
+    <div class="progress-indicator">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    
+    <!-- Navigation Dots -->
+    <div class="nav-dots" id="navDots">
+        <div class="nav-dot active" data-section="hero"></div>
+        <div class="nav-dot" data-section="week1"></div>
+        <div class="nav-dot" data-section="week2"></div>
+        <div class="nav-dot" data-section="week3"></div>
+        <div class="nav-dot" data-section="week4"></div>
+        <div class="nav-dot" data-section="week5"></div>
+        <div class="nav-dot" data-section="week6"></div>
+        <div class="nav-dot" data-section="week7"></div>
+        <div class="nav-dot" data-section="week8"></div>
+    </div>
+    
+    <!-- Floating Action Button -->
+    <button class="fab" id="fab" title="Quick Actions" aria-label="Quick actions menu">
+        <span>⚡</span>
+    </button>
+    
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <main id="main-content">
+        <section class="hero" role="banner" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 id="hero-title">Generative AI for Work and Everyday Use <span class="engagement-badge">Interactive</span></h1>
+                    <p class="hero-subtitle">Master AI tools for productivity, creativity, and professional growth in this comprehensive 8-week course</p>
+                    <div class="hero-buttons">
+                        <a href="#course-overview" class="btn btn-primary" aria-label="Start learning the course">Start Learning</a>
+                        <a href="#week1" class="btn btn-secondary" aria-label="View course content">View Course</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    <div class="container">
+        <article class="main-content">
+            <header>
+                <p class="welcome">Welcome to the Generative AI for Work and Everyday Use course!</p>
+                <p>This comprehensive 8-week course will transform you from a beginner to a confident user of generative AI tools for professional and personal applications. Whether you're a business professional, creative, student, or entrepreneur, these essential AI skills will help you boost productivity, enhance creativity, and stay competitive in the AI-powered future.</p>
+            </header>
+            
+            <nav class="table-of-contents" role="navigation" aria-label="Course navigation">
+                <h3 id="toc-heading">Table of Contents</h3>
+                <ul role="list">
+                    <li><a href="#week1" class="toc-link" aria-describedby="toc-heading">Week 1: Foundations of Generative AI</a></li>
+                    <li><a href="#week2" class="toc-link" aria-describedby="toc-heading">Week 2: Text Generation and Writing</a></li>
+                    <li><a href="#week3" class="toc-link" aria-describedby="toc-heading">Week 3: AI for Business and Productivity</a></li>
+                    <li><a href="#week4" class="toc-link" aria-describedby="toc-heading">Week 4: Creative Content Generation</a></li>
+                    <li><a href="#week5" class="toc-link" aria-describedby="toc-heading">Week 5: Data Analysis and Research</a></li>
+                    <li><a href="#week6" class="toc-link" aria-describedby="toc-heading">Week 6: Code Generation and Programming</a></li>
+                    <li><a href="#week7" class="toc-link" aria-describedby="toc-heading">Week 7: Image and Multimedia Generation</a></li>
+                    <li><a href="#week8" class="toc-link" aria-describedby="toc-heading">Week 8: Integration and Advanced Applications</a></li>
+                </ul>
+            </nav>
+            
+            <section aria-labelledby="course-outline-heading">
+                <h2 id="course-outline-heading">Course Outline</h2>
+                <div class="course-outline" role="list">
+                    <article class="outline-item interactive-card" role="listitem" tabindex="0" data-week="1">
+                        <div class="completion-check">✓</div>
+                        <h3><span class="outline-number" aria-hidden="true">1</span>Foundations of Generative AI</h3>
+                        <p>Understand what generative AI is, how it works, and set up your first AI workspace with essential tools.</p>
+                    </article>
+                <div class="outline-item interactive-card" data-week="2">
+                        <div class="completion-check">✓</div>
+                        <h3><span class="outline-number">2</span>Text Generation and Writing</h3>
+                        <p>Master text generation for various purposes and learn advanced prompt engineering techniques.</p>
+                    </div>
+                <div class="outline-item interactive-card" data-week="3">
+                        <div class="completion-check">✓</div>
+                        <h3><span class="outline-number">3</span>AI for Business and Productivity</h3>
+                        <p>Apply AI to business communication, automate routine tasks, and improve meeting preparation.</p>
+                    </div>
+                <div class="outline-item interactive-card" data-week="4">
+                        <div class="completion-check">✓</div>
+                        <h3><span class="outline-number">4</span>Creative Content Generation</h3>
+                        <p>Generate creative content for various platforms and use AI for brainstorming and ideation.</p>
+                    </div>
+                <div class="outline-item interactive-card" data-week="5">
+                        <div class="completion-check">✓</div>
+                        <h3><span class="outline-number">5</span>Data Analysis and Research</h3>
+                        <p>Use AI for data analysis, conduct research efficiently, and generate insights from complex information.</p>
+                    </div>
+                <div class="outline-item interactive-card" data-week="6">
+                        <div class="completion-check">✓</div>
+                        <h3><span class="outline-number">6</span>Code Generation and Programming</h3>
+                        <p>Use AI for code generation, debugging, and apply AI to software development workflows.</p>
+                    </div>
+                <div class="outline-item interactive-card" data-week="7">
+                        <div class="completion-check">✓</div>
+                        <h3><span class="outline-number">7</span>Image and Multimedia Generation</h3>
+                        <p>Generate and edit images using AI, create multimedia content for various purposes.</p>
+                    </div>
+                <div class="outline-item interactive-card" data-week="8">
+                        <div class="completion-check">✓</div>
+                        <h3><span class="outline-number">8</span>Integration and Advanced Applications</h3>
+                        <p>Integrate AI tools into existing workflows and build custom AI solutions for your needs.</p>
+                    </div>
+            </div>
+            
+
+            
+            <div class="section" id="week1">
+                <h2>Week 1: Foundations of Generative AI</h2>
+                
+                <h3>Learning Objectives</h3>
+                <ul>
+                    <li>Understand what generative AI is and how it works</li>
+                    <li>Learn about different types of generative AI tools</li>
+                    <li>Set up your first AI workspace</li>
+                    <li>Complete your first AI-assisted task</li>
+                </ul>
+                
+                <h3>What is Generative AI?</h3>
+                <p>Generative AI refers to artificial intelligence systems that can create new content, including text, images, audio, video, and code. These systems learn patterns from existing data and generate novel outputs that can be remarkably human-like and creative.</p>
+                
+                <h4>Key Characteristics of Generative AI</h4>
+                <ul>
+                    <li><strong>Creativity:</strong> Can produce original content that didn't exist before</li>
+                    <li><strong>Adaptability:</strong> Can generate content in various styles and formats</li>
+                    <li><strong>Context Awareness:</strong> Understands context and generates relevant responses</li>
+                    <li><strong>Iterative Improvement:</strong> Can refine outputs based on feedback</li>
+                    <li><strong>Multimodal Capabilities:</strong> Can work with text, images, audio, and video</li>
+                </ul>
+                
+                <h4>How Generative AI Differs from Traditional AI</h4>
+                <div class="comparison-table">
+                    <table>
+                        <tr>
+                            <th>Traditional AI</th>
+                            <th>Generative AI</th>
+                        </tr>
+                        <tr>
+                            <td>Analyzes and classifies existing data</td>
+                            <td>Creates new, original content</td>
+                        </tr>
+                        <tr>
+                            <td>Follows predefined rules</td>
+                            <td>Learns patterns and generates variations</td>
+                        </tr>
+                        <tr>
+                            <td>Predicts outcomes based on input</td>
+                            <td>Generates diverse outputs from prompts</td>
+                        </tr>
+                        <tr>
+                            <td>Specialized for specific tasks</td>
+                            <td>Versatile across multiple domains</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="note-box">
+                    <div class="box-title">Why Generative AI Matters</div>
+                    <p>Generative AI is transforming how we work, create, and solve problems. From writing emails to creating presentations, from analyzing data to generating code, AI tools can amplify human capabilities and unlock new possibilities in every field.</p>
+                </div>
+                
+                <h3>Types of Generative AI</h3>
+                <ul>
+                    <li><strong>Text Generation (LLMs)</strong>: ChatGPT, Claude, Gemini for writing, analysis, and conversation</li>
+                    <li><strong>Image Generation</strong>: DALL-E, Midjourney, Stable Diffusion for creating visual content</li>
+                    <li><strong>Audio Generation</strong>: ElevenLabs, Mubert for text-to-speech and music creation</li>
+                    <li><strong>Video Generation</strong>: Runway, Pika Labs for creating and editing videos</li>
+                    <li><strong>Code Generation</strong>: GitHub Copilot, Cursor for programming assistance</li>
+                </ul>
+                
+                <h3>Benefits of Generative AI</h3>
+                <p>Generative AI offers several advantages for work and everyday use:</p>
+                <ul>
+                    <li><strong>Productivity</strong>: Automate routine tasks and speed up content creation</li>
+                    <li><strong>Creativity</strong>: Generate ideas and content you might not have thought of</li>
+                    <li><strong>Efficiency</strong>: Handle multiple tasks simultaneously and reduce repetitive work</li>
+                    <li><strong>Accessibility</strong>: Make complex tasks easier for non-experts</li>
+                    <li><strong>Innovation</strong>: Explore new possibilities and approaches to problems</li>
+                </ul>
+                
+                <h3>How Generative AI Works</h3>
+                <p>Generative AI models learn patterns from massive amounts of data and use that knowledge to create new content. When you provide a prompt, the AI predicts what should come next based on its training.</p>
+                
+                <h4>The AI Generation Process</h4>
+                <p>Generative AI follows these main steps:</p>
+                <ul>
+                    <li><strong>Input Processing</strong>: Your prompt is analyzed and understood by the model</li>
+                    <li><strong>Pattern Recognition</strong>: The AI identifies relevant patterns from its training data</li>
+                    <li><strong>Content Generation</strong>: New content is created based on learned patterns</li>
+                    <li><strong>Output Refinement</strong>: The response is refined for coherence and relevance</li>
+                </ul>
+                
+                <div class="workflow-chart">
+                    <h4>AI Generation Workflow</h4>
+                    <p>Content generation follows this workflow:</p>
+                    <ol>
+                        <li><strong>Prompt Input</strong>: You provide a clear, specific request to the AI</li>
+                        <li><strong>AI Processing</strong>: The model analyzes and understands your request</li>
+                        <li><strong>Content Creation</strong>: AI generates relevant content based on patterns</li>
+                        <li><strong>Output Delivery</strong>: You receive the generated content for review and use</li>
+                    </ol>
+                </div>
+                
+                <div class="exercise">
+                    <h4>Self-Check Quiz</h4>
+                    <ol>
+                        <li>What are the five main types of generative AI?</li>
+                        <li>Explain the difference between traditional AI and generative AI.</li>
+                        <li>What are the four main steps in the AI generation process?</li>
+                    </ol>
+                </div>
+                
+                <!-- Interactive Quiz Section -->
+                <div class="quiz-question" id="quiz1">
+                    <h4>🎯 Quick Knowledge Check</h4>
+                    <p>Test your understanding of Generative AI fundamentals:</p>
+                    
+                    <div class="quiz-option" data-correct="true">
+                        <strong>A.</strong> Generative AI creates new content, while traditional AI analyzes existing data
+                    </div>
+                    <div class="quiz-option" data-correct="false">
+                        <strong>B.</strong> Generative AI only works with text, while traditional AI works with all data types
+                    </div>
+                    <div class="quiz-option" data-correct="false">
+                        <strong>C.</strong> Traditional AI is more advanced than generative AI
+                    </div>
+                    <div class="quiz-option" data-correct="false">
+                        <strong>D.</strong> There is no difference between them
+                    </div>
+                    
+                    <div class="tooltip" style="margin-top: 1rem;">
+                        <span style="color: var(--primary-color); cursor: help;">💡 Click here for a hint</span>
+                        <span class="tooltiptext">Think about what each type of AI is designed to do - one analyzes, the other creates!</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section" id="week2">
+                <h2>Week 2: Text Generation and Writing</h2>
+                
+                <h3>Learning Objectives</h3>
+                <ul>
+                    <li>Master text generation for various purposes</li>
+                    <li>Learn effective prompt engineering techniques</li>
+                    <li>Apply AI to professional writing tasks</li>
+                    <li>Understand AI writing limitations and ethics</li>
+                </ul>
+                
+                <h3>Advanced Prompt Engineering Techniques</h3>
+                <p>Building on the basics from Week 1, we'll explore advanced techniques for getting the best results from AI text generation tools. Effective prompt engineering is the key to unlocking the full potential of generative AI.</p>
+                
+                <h4>Understanding AI Model Capabilities</h4>
+                <p>Different AI models have different strengths and limitations:</p>
+                <ul>
+                    <li><strong>GPT Models:</strong> Excellent for creative writing, analysis, and conversation</li>
+                    <li><strong>Claude Models:</strong> Strong in reasoning, coding, and factual accuracy</li>
+                    <li><strong>Gemini Models:</strong> Good at multimodal tasks and real-time information</li>
+                    <li><strong>Specialized Models:</strong> Domain-specific models for coding, design, etc.</li>
+                </ul>
+                
+                <div class="tip-box">
+                    <div class="box-title">💡 Pro Tip: Model Selection</div>
+                    <p>Choose the right model for your task. For creative writing, use GPT-4; for coding, use Claude or specialized coding models; for real-time information, use Gemini.</p>
+                </div>
+                
+                <h4>The CLEAR Framework</h4>
+                <p>Use the CLEAR framework to create effective prompts:</p>
+                <ul>
+                    <li><strong>Context:</strong> Provide background information and setting</li>
+                    <li><strong>Length:</strong> Specify desired output length and format</li>
+                    <li><strong>Examples:</strong> Include sample outputs or style references</li>
+                    <li><strong>Audience:</strong> Define who the content is for</li>
+                    <li><strong>Role:</strong> Assign a specific role or perspective to the AI</li>
+                </ul>
+                
+                <div class="note-box">
+                    <div class="box-title">Example: CLEAR Framework in Action</div>
+                    <p><strong>Context:</strong> I'm writing a blog post for a tech startup's website<br>
+                    <strong>Length:</strong> 800-1000 words with 3-4 subheadings<br>
+                    <strong>Examples:</strong> Similar to articles on TechCrunch or Wired<br>
+                    <strong>Audience:</strong> Tech-savvy professionals aged 25-40<br>
+                    <strong>Role:</strong> Act as a senior technology journalist with 10+ years of experience</p>
+                </div>
+                
+                <h4>Advanced Prompting Strategies</h4>
+                
+                <h5>1. Temperature and Creativity Control</h5>
+                <p>Different AI tools allow you to control creativity levels:</p>
+                <ul>
+                    <li><strong>Low Temperature (0.1-0.3):</strong> More focused, factual, consistent outputs</li>
+                    <li><strong>Medium Temperature (0.4-0.7):</strong> Balanced creativity and accuracy</li>
+                    <li><strong>High Temperature (0.8-1.0):</strong> More creative, diverse, unexpected outputs</li>
+                </ul>
+                
+                <h5>2. Multi-Step Prompting</h5>
+                <p>Break complex tasks into smaller, manageable steps:</p>
+                <pre><code>Step 1: "Analyze this topic and create an outline with 5 main points"
+Step 2: "For each point in the outline, provide 3 supporting details"
+Step 3: "Write a 200-word introduction based on the outline"
+Step 4: "Expand each main point into a full paragraph"</code></pre>
+                
+                <h5>3. Persona-Based Prompting</h5>
+                <p>Give the AI a specific persona for better results:</p>
+                <ul>
+                    <li><strong>Expert Persona:</strong> "Act as a [profession] with [X] years of experience"</li>
+                    <li><strong>Style Persona:</strong> "Write in the style of [author/publication]"</li>
+                    <li><strong>Audience Persona:</strong> "Explain this as if to a [specific audience]"</li>
+                </ul>
+                
+                <h3>Writing for Different Audiences</h3>
+                
+                <h4>Professional Writing</h4>
+                <p>When writing for professional contexts, consider these elements:</p>
+                <ul>
+                    <li><strong>Tone:</strong> Formal, respectful, and authoritative</li>
+                    <li><strong>Structure:</strong> Clear introduction, body, and conclusion</li>
+                    <li><strong>Evidence:</strong> Include data, examples, and citations</li>
+                    <li><strong>Action Items:</strong> Clear next steps and recommendations</li>
+                </ul>
+                
+                <div class="exercise">
+                    <h4>Exercise: Professional Email Writing</h4>
+                    <p><strong>Scenario:</strong> You need to write an email to your manager requesting approval for a new project.</p>
+                    <p><strong>Prompt Template:</strong></p>
+                    <pre><code>Write a professional email to my manager requesting approval for [project name]. 
+Include:
+- Brief project overview (2-3 sentences)
+- Expected benefits and outcomes
+- Timeline and resource requirements
+- Clear request for approval
+- Professional tone and formatting</code></pre>
+                </div>
+                
+                <h4>Creative Writing</h4>
+                <p>For creative content, focus on:</p>
+                <ul>
+                    <li><strong>Imagery:</strong> Vivid descriptions and sensory details</li>
+                    <li><strong>Emotion:</strong> Engaging emotional content</li>
+                    <li><strong>Originality:</strong> Unique perspectives and fresh ideas</li>
+                    <li><strong>Flow:</strong> Smooth transitions and engaging narrative</li>
+                </ul>
+                
+                <h4>Academic Writing</h4>
+                <p>Academic writing requires:</p>
+                <ul>
+                    <li><strong>Research:</strong> Evidence-based arguments</li>
+                    <li><strong>Citations:</strong> Proper attribution and references</li>
+                    <li><strong>Objectivity:</strong> Balanced, analytical approach</li>
+                    <li><strong>Structure:</strong> Logical organization and flow</li>
+                </ul>
+                
+                <h3>Content Creation Strategies</h3>
+                
+                <h4>Blog Post Creation</h4>
+                <p>Follow this systematic approach:</p>
+                <ol>
+                    <li><strong>Research Phase:</strong> Gather information and identify key points</li>
+                    <li><strong>Outline Creation:</strong> Structure your content logically</li>
+                    <li><strong>Draft Writing:</strong> Create initial content</li>
+                    <li><strong>Revision:</strong> Improve clarity, flow, and engagement</li>
+                    <li><strong>SEO Optimization:</strong> Include relevant keywords and meta descriptions</li>
+                </ol>
+                
+                <h4>Social Media Content</h4>
+                <p>Different platforms require different approaches:</p>
+                <ul>
+                    <li><strong>LinkedIn:</strong> Professional insights, industry trends, thought leadership</li>
+                    <li><strong>Twitter/X:</strong> Concise, engaging, trending topics</li>
+                    <li><strong>Instagram:</strong> Visual storytelling, behind-the-scenes content</li>
+                    <li><strong>Facebook:</strong> Community engagement, personal stories</li>
+                </ul>
+                
+                <h3>Editing and Refinement with AI</h3>
+                
+                <h4>Self-Editing Techniques</h4>
+                <p>Use AI to improve your writing:</p>
+                <ul>
+                    <li><strong>Grammar and Style:</strong> "Check this text for grammar errors and suggest improvements"</li>
+                    <li><strong>Clarity:</strong> "Rewrite this paragraph to be clearer and more concise"</li>
+                    <li><strong>Tone:</strong> "Adjust the tone of this text to be more [professional/friendly/formal]"</li>
+                    <li><strong>Structure:</strong> "Reorganize this content for better flow and readability"</li>
+                </ul>
+                
+                <h4>Collaborative Editing</h4>
+                <p>Work with AI as a writing partner:</p>
+                <ul>
+                    <li><strong>Brainstorming:</strong> Generate ideas and explore different angles</li>
+                    <li><strong>Drafting:</strong> Create initial versions and explore options</li>
+                    <li><strong>Revising:</strong> Improve and refine content iteratively</li>
+                    <li><strong>Polishing:</strong> Final touches and quality assurance</li>
+                </ul>
+                
+                <h3>AI Writing Ethics and Best Practices</h3>
+                
+                <h4>Ethical Considerations</h4>
+                <ul>
+                    <li><strong>Transparency:</strong> Be honest about AI use when appropriate</li>
+                    <li><strong>Originality:</strong> Ensure content is original and not plagiarized</li>
+                    <li><strong>Accuracy:</strong> Verify facts and information</li>
+                    <li><strong>Attribution:</strong> Give credit where credit is due</li>
+                </ul>
+                
+                <h4>Quality Assurance</h4>
+                <p>Always review AI-generated content:</p>
+                <ul>
+                    <li><strong>Fact-Check:</strong> Verify information and claims</li>
+                    <li><strong>Style Check:</strong> Ensure consistency with your voice</li>
+                    <li><strong>Context Check:</strong> Make sure content is appropriate for your audience</li>
+                    <li><strong>Purpose Check:</strong> Confirm content serves your intended goals</li>
+                </ul>
+                
+                <div class="warning-box">
+                    <div class="box-title">Important Reminder</div>
+                    <p>AI is a tool to enhance your writing, not replace your critical thinking. Always review, edit, and take ownership of any content you publish, regardless of how it was created.</p>
+                </div>
+                
+                <h3>Hands-On Activities</h3>
+                
+                <div class="exercise">
+                    <h4>Activity 1: Advanced Prompt Engineering</h4>
+                    <p><strong>Objective:</strong> Practice creating sophisticated prompts for different writing tasks</p>
+                    <p><strong>Tasks:</strong></p>
+                    <ol>
+                        <li>Write a prompt for creating a professional LinkedIn post about AI trends</li>
+                        <li>Create a prompt for generating a creative short story</li>
+                        <li>Develop a prompt for writing an academic research summary</li>
+                        <li>Design a prompt for creating marketing copy for a new product</li>
+                    </ol>
+                </div>
+                
+                <div class="exercise">
+                    <h4>Activity 2: Multi-Platform Content Creation</h4>
+                    <p><strong>Objective:</strong> Create content for different platforms using AI</p>
+                    <p><strong>Task:</strong> Choose a topic and create content for:</p>
+                    <ul>
+                        <li>A blog post (800-1000 words)</li>
+                        <li>A LinkedIn professional post</li>
+                        <li>A Twitter thread (5-7 tweets)</li>
+                        <li>An Instagram caption</li>
+                    </ul>
+                </div>
+                
+                <div class="exercise">
+                    <h4>Activity 3: Editing and Refinement</h4>
+                    <p><strong>Objective:</strong> Practice using AI for editing and improving content</p>
+                    <p><strong>Task:</strong></p>
+                    <ol>
+                        <li>Write a draft of any content (email, post, article)</li>
+                        <li>Use AI to identify areas for improvement</li>
+                        <li>Apply AI suggestions and create a revised version</li>
+                        <li>Compare the original and revised versions</li>
+                    </ol>
+                </div>
+                
+                <h3>Week 2 Quiz</h3>
+                
+                <div class="exercise">
+                    <h4>Multiple Choice Questions</h4>
+                    <ol>
+                        <li>What does the "C" in CLEAR framework stand for?</li>
+                        <li>Which temperature setting is best for factual, consistent outputs?</li>
+                        <li>What is the primary purpose of persona-based prompting?</li>
+                        <li>Which platform is best for professional thought leadership content?</li>
+                        <li>What should you always do with AI-generated content before publishing?</li>
+                    </ol>
+                </div>
+                
+                <h3>Project: AI Writing Toolkit</h3>
+                <p>Create a comprehensive writing toolkit using AI that includes:</p>
+                <ul>
+                    <li>Prompt templates for different writing tasks</li>
+                    <li>Style guides for various audiences</li>
+                    <li>Editing checklists and workflows</li>
+                    <li>Content creation strategies for different platforms</li>
+                    <li>Quality assurance procedures</li>
+                </ul>
+            </div>
+            
+            <div class="section" id="week3">
+                <h2>Week 3: AI for Business and Productivity</h2>
+                
+                <h3>Learning Objectives</h3>
+                <ul>
+                    <li>Apply AI to business communication</li>
+                    <li>Automate routine tasks</li>
+                    <li>Improve meeting preparation and follow-up</li>
+                    <li>Create business documents efficiently</li>
+                </ul>
+                
+                <h3>Business Communication with AI</h3>
+                
+                <h4>Email Management and Responses</h4>
+                <p>AI can transform how you handle email communication, making you more efficient and professional in your business interactions.</p>
+                
+                <h5>Email Workflow Optimization</h5>
+                <p>Create an efficient email management system:</p>
+                <ol>
+                    <li><strong>Email Classification:</strong> Use AI to categorize emails by priority and type</li>
+                    <li><strong>Response Templates:</strong> Create templates for common email scenarios</li>
+                    <li><strong>Follow-up Automation:</strong> Set up reminders for pending responses</li>
+                    <li><strong>Quality Assurance:</strong> Review and refine AI-generated responses</li>
+                </ol>
+                
+                <h5>Email Response Strategies</h5>
+                <ul>
+                    <li><strong>Quick Responses:</strong> Generate professional replies to common inquiries</li>
+                    <li><strong>Follow-up Emails:</strong> Create polite reminders and follow-ups</li>
+                    <li><strong>Meeting Confirmations:</strong> Draft confirmation emails with details</li>
+                    <li><strong>Thank You Notes:</strong> Personalize thank you messages</li>
+                    <li><strong>Escalation Emails:</strong> Handle difficult situations professionally</li>
+                </ul>
+                
+                <div class="note-box">
+                    <div class="box-title">Email Best Practices</div>
+                    <ul>
+                        <li>Always personalize AI-generated emails</li>
+                        <li>Keep responses concise and actionable</li>
+                        <li>Include clear next steps or call-to-action</li>
+                        <li>Maintain your authentic voice and tone</li>
+                        <li>Proofread before sending</li>
+                    </ul>
+                </div>
+                
+                <h5>Email Response Strategies</h5>
+                <ul>
+                    <li><strong>Quick Responses:</strong> Generate professional replies to common inquiries</li>
+                    <li><strong>Follow-up Emails:</strong> Create polite reminders and follow-ups</li>
+                    <li><strong>Meeting Confirmations:</strong> Draft confirmation emails with details</li>
+                    <li><strong>Thank You Notes:</strong> Personalize thank you messages</li>
+                </ul>
+                
+                <div class="exercise">
+                    <h4>Exercise: Email Response Generation</h4>
+                    <p><strong>Scenario:</strong> You receive an email from a client requesting a project update.</p>
+                    <p><strong>Prompt Template:</strong></p>
+                    <pre><code>Write a professional email response to a client requesting a project update. 
+Include:
+- Acknowledgment of their request
+- Current project status (be specific)
+- Next steps and timeline
+- Any questions or clarifications needed
+- Professional closing
+
+Tone: Professional but friendly
+Length: 3-4 sentences</code></pre>
+                </div>
+                
+                <h4>Meeting Communication</h4>
+                <p>Streamline meeting-related communication:</p>
+                <ul>
+                    <li><strong>Meeting Invitations:</strong> Create clear, detailed meeting invites</li>
+                    <li><strong>Agenda Creation:</strong> Generate structured meeting agendas</li>
+                    <li><strong>Meeting Summaries:</strong> Create concise meeting minutes</li>
+                    <li><strong>Action Item Lists:</strong> Extract and organize action items</li>
+                </ul>
+                
+                <h3>Meeting Preparation and Follow-up</h3>
+                
+                <h4>Pre-Meeting Preparation</h4>
+                <p>Use AI to prepare effectively for meetings:</p>
+                
+                <h5>Agenda Development</h5>
+                <ul>
+                    <li><strong>Topic Organization:</strong> Structure meeting topics logically</li>
+                    <li><strong>Time Allocation:</strong> Suggest appropriate time for each item</li>
+                    <li><strong>Participant Preparation:</strong> Identify what participants need to prepare</li>
+                    <li><strong>Objective Setting:</strong> Define clear meeting objectives</li>
+                </ul>
+                
+                <h5>Research and Background</h5>
+                <ul>
+                    <li><strong>Topic Research:</strong> Gather relevant information and context</li>
+                    <li><strong>Participant Background:</strong> Research meeting participants</li>
+                    <li><strong>Previous Meeting Notes:</strong> Review and summarize past discussions</li>
+                    <li><strong>Industry Context:</strong> Understand broader industry trends</li>
+                </ul>
+                
+                <div class="note-box">
+                    <div class="box-title">AI Meeting Preparation Workflow</div>
+                    <p><strong>Step 1:</strong> Input meeting purpose and participants<br>
+                    <strong>Step 2:</strong> AI generates research questions and agenda items<br>
+                    <strong>Step 3:</strong> Review and customize the generated content<br>
+                    <strong>Step 4:</strong> Share agenda and preparation materials with participants</p>
+                </div>
+                
+                <h4>Post-Meeting Follow-up</h4>
+                <p>Efficiently handle meeting follow-up tasks:</p>
+                <ul>
+                    <li><strong>Meeting Minutes:</strong> Create structured meeting summaries</li>
+                    <li><strong>Action Items:</strong> Extract and assign action items</li>
+                    <li><strong>Decision Documentation:</strong> Record key decisions and rationale</li>
+                    <li><strong>Follow-up Emails:</strong> Send summary emails to participants</li>
+                </ul>
+                
+                <h3>Report and Proposal Writing</h3>
+                
+                <h4>Business Reports</h4>
+                <p>Create professional business reports efficiently:</p>
+                
+                <h5>Report Structure</h5>
+                <ul>
+                    <li><strong>Executive Summary:</strong> Key findings and recommendations</li>
+                    <li><strong>Introduction:</strong> Background and objectives</li>
+                    <li><strong>Methodology:</strong> Approach and data sources</li>
+                    <li><strong>Findings:</strong> Analysis and results</li>
+                    <li><strong>Conclusions:</strong> Key insights and implications</li>
+                    <li><strong>Recommendations:</strong> Actionable next steps</li>
+                </ul>
+                
+                <h5>Data Analysis and Visualization</h5>
+                <ul>
+                    <li><strong>Data Interpretation:</strong> Analyze and explain data trends</li>
+                    <li><strong>Chart Descriptions:</strong> Write clear explanations of visualizations</li>
+                    <li><strong>Statistical Analysis:</strong> Perform basic statistical calculations</li>
+                    <li><strong>Insight Generation:</strong> Identify key patterns and insights</li>
+                </ul>
+                
+                <h4>Proposal Writing</h4>
+                <p>Create compelling business proposals:</p>
+                <ul>
+                    <li><strong>Problem Statement:</strong> Clearly define the problem or opportunity</li>
+                    <li><strong>Solution Overview:</strong> Present your proposed solution</li>
+                    <li><strong>Value Proposition:</strong> Explain benefits and ROI</li>
+                    <li><strong>Implementation Plan:</strong> Detail timeline and approach</li>
+                    <li><strong>Budget and Resources:</strong> Provide cost estimates</li>
+                </ul>
+                
+                <h3>Business Process Automation</h3>
+                
+                <h4>Routine Task Automation</h4>
+                <p>Identify and automate repetitive tasks:</p>
+                
+                <h5>Common Automatable Tasks</h5>
+                <ul>
+                    <li><strong>Data Entry:</strong> Extract and format data from various sources</li>
+                    <li><strong>Document Generation:</strong> Create standardized documents</li>
+                    <li><strong>Email Templates:</strong> Generate personalized email responses</li>
+                    <li><strong>Report Creation:</strong> Automate regular reporting tasks</li>
+                    <li><strong>Content Updates:</strong> Update website and marketing materials</li>
+                </ul>
+                
+                <h5>Workflow Optimization</h5>
+                <ul>
+                    <li><strong>Process Mapping:</strong> Identify bottlenecks and inefficiencies</li>
+                    <li><strong>Task Prioritization:</strong> Optimize task order and timing</li>
+                    <li><strong>Resource Allocation:</strong> Better distribute work and responsibilities</li>
+                    <li><strong>Quality Control:</strong> Implement automated quality checks</li>
+                </ul>
+                
+                <h4>Customer Service Automation</h4>
+                <p>Improve customer service with AI:</p>
+                <ul>
+                    <li><strong>FAQ Generation:</strong> Create comprehensive FAQ sections</li>
+                    <li><strong>Response Templates:</strong> Develop standard response templates</li>
+                    <li><strong>Issue Classification:</strong> Categorize and prioritize customer issues</li>
+                    <li><strong>Escalation Guidelines:</strong> Define when human intervention is needed</li>
+                </ul>
+                
+                <h3>Project Management with AI</h3>
+                
+                <h4>Project Planning</h4>
+                <p>Use AI to enhance project management:</p>
+                <ul>
+                    <li><strong>Task Breakdown:</strong> Decompose projects into manageable tasks</li>
+                    <li><strong>Timeline Estimation:</strong> Estimate realistic project timelines</li>
+                    <li><strong>Resource Planning:</strong> Identify required resources and skills</li>
+                    <li><strong>Risk Assessment:</strong> Identify potential risks and mitigation strategies</li>
+                </ul>
+                
+                <h4>Progress Tracking</h4>
+                <p>Monitor and report on project progress:</p>
+                <ul>
+                    <li><strong>Status Reports:</strong> Generate regular progress updates</li>
+                    <li><strong>Milestone Tracking:</strong> Monitor key project milestones</li>
+                    <li><strong>Issue Identification:</strong> Spot potential problems early</li>
+                    <li><strong>Stakeholder Communication:</strong> Keep stakeholders informed</li>
+                </ul>
+                
+                <h3>Hands-On Activities</h3>
+                
+                <div class="exercise">
+                    <h4>Activity 1: Meeting Preparation</h4>
+                    <p><strong>Objective:</strong> Use AI to prepare for a business meeting</p>
+                    <p><strong>Task:</strong> Choose a meeting scenario and:</p>
+                    <ol>
+                        <li>Generate a meeting agenda using AI</li>
+                        <li>Research relevant topics and background information</li>
+                        <li>Create preparation materials for participants</li>
+                        <li>Draft a meeting invitation email</li>
+                    </ol>
+                </div>
+                
+                <div class="exercise">
+                    <h4>Activity 2: Business Document Creation</h4>
+                    <p><strong>Objective:</strong> Create professional business documents with AI</p>
+                    <p><strong>Task:</strong> Choose one of the following:</p>
+                    <ul>
+                        <li>Write a project proposal</li>
+                        <li>Create a quarterly business report</li>
+                        <li>Develop a marketing strategy document</li>
+                        <li>Draft a customer service policy</li>
+                    </ul>
+                </div>
+                
+                <div class="exercise">
+                    <h4>Activity 3: Process Automation Analysis</h4>
+                    <p><strong>Objective:</strong> Identify automation opportunities in your work</p>
+                    <p><strong>Task:</strong></p>
+                    <ol>
+                        <li>List 5 routine tasks you perform regularly</li>
+                        <li>Analyze which tasks could be automated with AI</li>
+                        <li>Create automation workflows for 2-3 tasks</li>
+                        <li>Estimate time savings and efficiency gains</li>
+                    </ol>
+                </div>
+                
+                <h3>Week 3 Quiz</h3>
+                
+                <div class="exercise">
+                    <h4>Multiple Choice Questions</h4>
+                    <ol>
+                        <li>What is the first step in AI-powered meeting preparation?</li>
+                        <li>Which business document typically includes an executive summary?</li>
+                        <li>What is the primary benefit of automating routine tasks?</li>
+                        <li>Which of the following is NOT a component of a business proposal?</li>
+                        <li>What should you always do with AI-generated business documents?</li>
+                    </ol>
+                </div>
+                
+                <h3>Project: Business Productivity Workflow</h3>
+                <p>Develop a comprehensive business productivity workflow using AI that includes:</p>
+                <ul>
+                    <li>Email management system</li>
+                    <li>Meeting preparation and follow-up procedures</li>
+                    <li>Document creation templates and processes</li>
+                    <li>Task automation strategies</li>
+                    <li>Quality control and review procedures</li>
+                </ul>
+            </div>
+            
+            <div class="section" id="week4">
+                <h2>Week 4: Creative Content Generation</h2>
+                
+                <h3>Learning Objectives</h3>
+                <ul>
+                    <li>Generate creative content for various platforms</li>
+                    <li>Use AI for brainstorming and ideation</li>
+                    <li>Create engaging social media content</li>
+                    <li>Develop creative writing projects</li>
+                </ul>
+                
+                <h3>Creative Writing with AI</h3>
+                
+                <h4>Storytelling and Narrative Development</h4>
+                <p>AI can enhance your creative writing process in multiple ways:</p>
+                
+                <h5>Story Structure and Plot Development</h5>
+                <ul>
+                    <li><strong>Plot Outlines:</strong> Generate story structures and plot points</li>
+                    <li><strong>Character Development:</strong> Create detailed character profiles and backstories</li>
+                    <li><strong>Conflict Generation:</strong> Develop compelling conflicts and obstacles</li>
+                    <li><strong>World Building:</strong> Create rich, detailed settings and environments</li>
+                </ul>
+                
+                <div class="exercise">
+                    <h4>Exercise: Story Development</h4>
+                    <p><strong>Scenario:</strong> Create a short story using AI assistance</p>
+                    <p><strong>Prompt Template:</strong></p>
+                    <pre><code>Help me develop a short story with the following elements:
+- Genre: [specify genre]
+- Setting: [describe setting]
+- Main character: [describe character]
+- Conflict: [describe main conflict]
+
+Please provide:
+1. A detailed plot outline
+2. Character development notes
+3. Key scenes and turning points
+4. Theme and message suggestions</code></pre>
+                </div>
+                
+                <h5>Creative Writing Techniques</h5>
+                <ul>
+                    <li><strong>Dialogue Generation:</strong> Create natural, engaging dialogue</li>
+                    <li><strong>Description Enhancement:</strong> Add vivid sensory details</li>
+                    <li><strong>Pacing Control:</strong> Manage story rhythm and flow</li>
+                    <li><strong>Genre-Specific Elements:</strong> Incorporate genre conventions effectively</li>
+                </ul>
+                
+                <h4>Poetry and Creative Expression</h4>
+                <p>Explore poetic forms and creative expression:</p>
+                <ul>
+                    <li><strong>Poetic Forms:</strong> Sonnets, haikus, free verse, and more</li>
+                    <li><strong>Rhyme and Rhythm:</strong> Create musical language patterns</li>
+                    <li><strong>Metaphor and Imagery:</strong> Develop powerful figurative language</li>
+                    <li><strong>Emotional Expression:</strong> Convey feelings and experiences</li>
+                </ul>
+                
+                <h3>Social Media Content Creation</h3>
+                
+                <h4>Platform-Specific Strategies</h4>
+                <p>Different social media platforms require different approaches:</p>
+                
+                <h5>LinkedIn Content</h5>
+                <ul>
+                    <li><strong>Professional Insights:</strong> Share industry knowledge and expertise</li>
+                    <li><strong>Thought Leadership:</strong> Position yourself as an industry expert</li>
+                    <li><strong>Career Updates:</strong> Share professional achievements and milestones</li>
+                    <li><strong>Industry Trends:</strong> Comment on relevant industry developments</li>
+                </ul>
+                
+                <h5>Twitter/X Content</h5>
+                <ul>
+                    <li><strong>Concise Messaging:</strong> Craft impactful messages within character limits</li>
+                    <li><strong>Thread Creation:</strong> Develop multi-tweet narratives</li>
+                    <li><strong>Trending Topics:</strong> Engage with current conversations</li>
+                    <li><strong>Community Engagement:</strong> Build relationships with followers</li>
+                </ul>
+                
+                <h5>Instagram Content</h5>
+                <ul>
+                    <li><strong>Visual Storytelling:</strong> Create compelling visual narratives</li>
+                    <li><strong>Caption Writing:</strong> Craft engaging captions that complement images</li>
+                    <li><strong>Hashtag Strategy:</strong> Use relevant hashtags for discoverability</li>
+                    <li><strong>Story Content:</strong> Create ephemeral, engaging stories</li>
+                </ul>
+                
+                <h5>Facebook Content</h5>
+                <ul>
+                    <li><strong>Community Building:</strong> Foster meaningful connections</li>
+                    <li><strong>Personal Stories:</strong> Share authentic personal experiences</li>
+                    <li><strong>Event Promotion:</strong> Create engaging event content</li>
+                    <li><strong>Group Engagement:</strong> Participate in relevant group discussions</li>
+                </ul>
+                
+                <div class="note-box">
+                    <div class="box-title">AI Content Creation Workflow</div>
+                    <p><strong>Step 1:</strong> Define your content goals and target audience<br>
+                    <strong>Step 2:</strong> Research trending topics and relevant hashtags<br>
+                    <strong>Step 3:</strong> Generate content ideas using AI brainstorming<br>
+                    <strong>Step 4:</strong> Create platform-specific content variations<br>
+                    <strong>Step 5:</strong> Schedule and publish content strategically</p>
+                </div>
+                
+                <h4>Content Calendar and Planning</h4>
+                <p>Develop a strategic approach to content creation:</p>
+                <ul>
+                    <li><strong>Content Themes:</strong> Define recurring themes and topics</li>
+                    <li><strong>Posting Schedule:</strong> Establish consistent posting times</li>
+                    <li><strong>Content Mix:</strong> Balance different types of content</li>
+                    <li><strong>Engagement Strategy:</strong> Plan for audience interaction</li>
+                </ul>
+                
+                <h3>Brainstorming and Ideation</h3>
+                
+                <h4>Creative Problem Solving</h4>
+                <p>Use AI to enhance your creative thinking process:</p>
+                
+                <h5>Idea Generation Techniques</h5>
+                <ul>
+                    <li><strong>Mind Mapping:</strong> Create visual idea connections</li>
+                    <li><strong>Random Association:</strong> Connect unrelated concepts</li>
+                    <li><strong>Reverse Thinking:</strong> Approach problems from opposite angles</li>
+                    <li><strong>Analogous Thinking:</strong> Apply solutions from other domains</li>
+                </ul>
+                
+                <h5>Creative Prompts and Exercises</h5>
+                <ul>
+                    <li><strong>What If Scenarios:</strong> Explore alternative possibilities</li>
+                    <li><strong>Constraint-Based Creativity:</strong> Use limitations to spark innovation</li>
+                    <li><strong>Cross-Disciplinary Connections:</strong> Combine ideas from different fields</li>
+                    <li><strong>Future Thinking:</strong> Imagine possibilities and trends</li>
+                </ul>
+                
+                <div class="exercise">
+                    <h4>Exercise: Creative Brainstorming</h4>
+                    <p><strong>Objective:</strong> Use AI to generate creative ideas for a project</p>
+                    <p><strong>Task:</strong> Choose a project and use AI to:</p>
+                    <ol>
+                        <li>Generate 20 initial ideas</li>
+                        <li>Expand on the top 5 ideas</li>
+                        <li>Identify potential challenges and solutions</li>
+                        <li>Create an implementation plan for the best idea</li>
+                    </ol>
+                </div>
+                
+                <h3>Content Strategy and Planning</h3>
+                
+                <h4>Audience Analysis</h4>
+                <p>Understand your target audience to create more effective content:</p>
+                <ul>
+                    <li><strong>Demographics:</strong> Age, location, interests, profession</li>
+                    <li><strong>Psychographics:</strong> Values, attitudes, lifestyle choices</li>
+                    <li><strong>Behavior Patterns:</strong> How they consume and interact with content</li>
+                    <li><strong>Pain Points:</strong> Problems and challenges they face</li>
+                </ul>
+                
+                <h4>Content Pillars</h4>
+                <p>Develop consistent content themes:</p>
+                <ul>
+                    <li><strong>Educational Content:</strong> Teach and inform your audience</li>
+                    <li><strong>Entertainment Content:</strong> Engage and amuse your audience</li>
+                    <li><strong>Inspirational Content:</strong> Motivate and encourage your audience</li>
+                    <li><strong>Community Content:</strong> Foster connections and discussions</li>
+                </ul>
+                
+                <h3>Visual Content Creation</h3>
+                
+                <h4>Design Principles</h4>
+                <p>Apply basic design principles to your visual content:</p>
+                <ul>
+                    <li><strong>Balance:</strong> Distribute visual elements harmoniously</li>
+                    <li><strong>Contrast:</strong> Create visual interest through differences</li>
+                    <li><strong>Hierarchy:</strong> Guide the viewer's attention</li>
+                    <li><strong>Consistency:</strong> Maintain visual coherence across content</li>
+                </ul>
+                
+                <h4>Brand Identity</h4>
+                <p>Develop and maintain a consistent brand identity:</p>
+                <ul>
+                    <li><strong>Color Palette:</strong> Choose colors that reflect your brand</li>
+                    <li><strong>Typography:</strong> Select fonts that convey your message</li>
+                    <li><strong>Visual Style:</strong> Develop a distinctive visual approach</li>
+                    <li><strong>Brand Voice:</strong> Maintain consistent messaging tone</li>
+                </ul>
+                
+                <h3>Content Optimization</h3>
+                
+                <h4>SEO and Discoverability</h4>
+                <p>Optimize your content for better visibility:</p>
+                <ul>
+                    <li><strong>Keyword Research:</strong> Identify relevant search terms</li>
+                    <li><strong>Title Optimization:</strong> Create compelling, searchable titles</li>
+                    <li><strong>Meta Descriptions:</strong> Write engaging content summaries</li>
+                    <li><strong>Internal Linking:</strong> Connect related content pieces</li>
+                </ul>
+                
+                <h4>Performance Analysis</h4>
+                <p>Measure and improve your content performance:</p>
+                <ul>
+                    <li><strong>Engagement Metrics:</strong> Track likes, shares, comments</li>
+                    <li><strong>Reach and Impressions:</strong> Monitor content visibility</li>
+                    <li><strong>Conversion Tracking:</strong> Measure content effectiveness</li>
+                    <li><strong>A/B Testing:</strong> Compare different content approaches</li>
+                </ul>
+                
+                <h3>Hands-On Activities</h3>
+                
+                <div class="exercise">
+                    <h4>Activity 1: Creative Writing Project</h4>
+                    <p><strong>Objective:</strong> Create a complete creative writing piece using AI</p>
+                    <p><strong>Task:</strong> Choose one of the following:</p>
+                    <ul>
+                        <li>Write a short story (1000-1500 words)</li>
+                        <li>Create a collection of 5 poems</li>
+                        <li>Develop a creative blog post</li>
+                        <li>Write a script for a short video</li>
+                    </ul>
+                </div>
+                
+                <div class="exercise">
+                    <h4>Activity 2: Social Media Campaign</h4>
+                    <p><strong>Objective:</strong> Create a complete social media campaign</p>
+                    <p><strong>Task:</strong> Develop a week-long social media campaign including:</p>
+                    <ul>
+                        <li>Campaign theme and goals</li>
+                        <li>7 days of content for 2-3 platforms</li>
+                        <li>Hashtag strategy</li>
+                        <li>Engagement plan</li>
+                    </ul>
+                </div>
+                
+                <div class="exercise">
+                    <h4>Activity 3: Creative Brainstorming Session</h4>
+                    <p><strong>Objective:</strong> Practice AI-assisted creative thinking</p>
+                    <p><strong>Task:</strong> Use AI to brainstorm solutions for a creative challenge:</p>
+                    <ol>
+                        <li>Define a creative problem or opportunity</li>
+                        <li>Use AI to generate 50+ initial ideas</li>
+                        <li>Group and categorize the ideas</li>
+                        <li>Develop the top 3 ideas in detail</li>
+                        <li>Create an action plan for implementation</li>
+                    </ol>
+                </div>
+                
+                <h3>Week 4 Quiz</h3>
+                
+                <div class="exercise">
+                    <h4>Multiple Choice Questions</h4>
+                    <ol>
+                        <li>What is the primary purpose of content pillars in social media strategy?</li>
+                        <li>Which social media platform is best for professional thought leadership?</li>
+                        <li>What is the main benefit of constraint-based creativity?</li>
+                        <li>Which design principle helps guide the viewer's attention?</li>
+                        <li>What should you track to measure content performance?</li>
+                    </ol>
+                </div>
+                
+                <h3>Project: Creative Content Portfolio</h3>
+                <p>Create a comprehensive creative content portfolio using AI that includes:</p>
+                <ul>
+                    <li>Creative writing samples</li>
+                    <li>Social media content calendar</li>
+                    <li>Visual content design concepts</li>
+                    <li>Content strategy document</li>
+                    <li>Performance analysis framework</li>
+                </ul>
+            </div>
+            
+            <div class="section" id="week5">
+                <h2>Week 5: Data Analysis and Research</h2>
+                
+                <h3>Learning Objectives</h3>
+                <ul>
+                    <li>Use AI for data analysis and interpretation</li>
+                    <li>Conduct research efficiently with AI</li>
+                    <li>Generate insights from complex information</li>
+                    <li>Create data visualizations and reports</li>
+                </ul>
+                
+                <h3>AI-Powered Research Methods</h3>
+                
+                <h4>Research Planning and Strategy</h4>
+                <p>Use AI to enhance your research process from start to finish:</p>
+                
+                <h5>Research Question Development</h5>
+                <ul>
+                    <li><strong>Question Refinement:</strong> Formulate clear, researchable questions</li>
+                    <li><strong>Scope Definition:</strong> Define research boundaries and limitations</li>
+                    <li><strong>Hypothesis Formation:</strong> Develop testable hypotheses</li>
+                    <li><strong>Literature Review Planning:</strong> Identify key sources and gaps</li>
+                </ul>
+                
+                <div class="exercise">
+                    <h4>Exercise: Research Question Development</h4>
+                    <p><strong>Scenario:</strong> You want to research the impact of AI on workplace productivity</p>
+                    <p><strong>Prompt Template:</strong></p>
+                    <pre><code>Help me develop a research question about [topic]. 
+Please provide:
+1. 3-5 refined research questions
+2. Key variables to consider
+3. Potential data sources
+4. Research methodology suggestions
+5. Expected challenges and limitations</code></pre>
+                </div>
+                
+                <h5>Literature Review and Background Research</h5>
+                <ul>
+                    <li><strong>Source Identification:</strong> Find relevant academic and industry sources</li>
+                    <li><strong>Summary Generation:</strong> Create concise summaries of key findings</li>
+                    <li><strong>Gap Analysis:</strong> Identify research gaps and opportunities</li>
+                    <li><strong>Citation Management:</strong> Organize and format citations properly</li>
+                </ul>
+                
+                <h4>Data Collection and Organization</h4>
+                <p>Streamline data collection and organization processes:</p>
+                <ul>
+                    <li><strong>Survey Design:</strong> Create effective survey questions</li>
+                    <li><strong>Data Cleaning:</strong> Identify and handle data quality issues</li>
+                    <li><strong>Data Structuring:</strong> Organize data for analysis</li>
+                    <li><strong>Metadata Management:</strong> Document data sources and collection methods</li>
+                </ul>
+                
+                <h3>Data Analysis and Interpretation</h3>
+                
+                <h4>Statistical Analysis with AI</h4>
+                <p>Use AI to perform and interpret statistical analyses:</p>
+                
+                <h5>Descriptive Statistics</h5>
+                <ul>
+                    <li><strong>Central Tendency:</strong> Calculate means, medians, and modes</li>
+                    <li><strong>Variability Measures:</strong> Standard deviation, variance, range</li>
+                    <li><strong>Distribution Analysis:</strong> Understand data distributions</li>
+                    <li><strong>Outlier Detection:</strong> Identify unusual data points</li>
+                </ul>
+                
+                <h5>Inferential Statistics</h5>
+                <ul>
+                    <li><strong>Hypothesis Testing:</strong> Test research hypotheses</li>
+                    <li><strong>Correlation Analysis:</strong> Examine relationships between variables</li>
+                    <li><strong>Regression Analysis:</strong> Model predictive relationships</li>
+                    <li><strong>Significance Testing:</strong> Determine statistical significance</li>
+                </ul>
+                
+                <div class="note-box">
+                    <div class="box-title">AI Data Analysis Workflow</div>
+                    <p><strong>Step 1:</strong> Upload or input your dataset<br>
+                    <strong>Step 2:</strong> Ask AI to perform initial data exploration<br>
+                    <strong>Step 3:</strong> Request specific statistical analyses<br>
+                    <strong>Step 4:</strong> Interpret results and generate insights<br>
+                    <strong>Step 5:</strong> Create visualizations and reports</p>
+                </div>
+                
+                <h4>Pattern Recognition and Insight Generation</h4>
+                <p>Leverage AI to identify patterns and generate insights:</p>
+                <ul>
+                    <li><strong>Trend Analysis:</strong> Identify temporal patterns and trends</li>
+                    <li><strong>Cluster Analysis:</strong> Group similar data points</li>
+                    <li><strong>Anomaly Detection:</strong> Find unusual patterns or outliers</li>
+                    <li><strong>Predictive Modeling:</strong> Forecast future trends and outcomes</li>
+                </ul>
+                
+                <h3>Report Generation and Summarization</h3>
+                
+                <h4>Research Report Structure</h4>
+                <p>Create comprehensive research reports using AI:</p>
+                
+                <h5>Executive Summary</h5>
+                <ul>
+                    <li><strong>Key Findings:</strong> Summarize main results and insights</li>
+                    <li><strong>Methodology Overview:</strong> Brief description of research approach</li>
+                    <li><strong>Implications:</strong> Practical implications of findings</li>
+                    <li><strong>Recommendations:</strong> Actionable next steps</li>
+                </ul>
+                
+                <h5>Detailed Analysis Sections</h5>
+                <ul>
+                    <li><strong>Methodology:</strong> Detailed research approach and methods</li>
+                    <li><strong>Results:</strong> Comprehensive presentation of findings</li>
+                    <li><strong>Discussion:</strong> Interpretation and analysis of results</li>
+                    <li><strong>Conclusions:</strong> Summary of key insights and implications</li>
+                </ul>
+                
+                <h4>Data Visualization</h4>
+                <p>Create effective data visualizations with AI assistance:</p>
+                <ul>
+                    <li><strong>Chart Selection:</strong> Choose appropriate chart types for your data</li>
+                    <li><strong>Design Principles:</strong> Apply effective visualization design</li>
+                    <li><strong>Interactive Elements:</strong> Create engaging, interactive visualizations</li>
+                    <li><strong>Accessibility:</strong> Ensure visualizations are accessible to all users</li>
+                </ul>
+                
+                <h3>Research Ethics and Validation</h3>
+                
+                <h4>Ethical Considerations</h4>
+                <p>Ensure your research follows ethical guidelines:</p>
+                <ul>
+                    <li><strong>Data Privacy:</strong> Protect personal and sensitive information</li>
+                    <li><strong>Informed Consent:</strong> Obtain proper consent for data collection</li>
+                    <li><strong>Bias Awareness:</strong> Identify and address potential biases</li>
+                    <li><strong>Transparency:</strong> Be transparent about methods and limitations</li>
+                </ul>
+                
+                <h4>Quality Assurance</h4>
+                <p>Validate your research findings and methods:</p>
+                <ul>
+                    <li><strong>Peer Review:</strong> Have findings reviewed by colleagues</li>
+                    <li><strong>Replication:</strong> Verify results through replication studies</li>
+                    <li><strong>Cross-Validation:</strong> Test findings with different datasets</li>
+                    <li><strong>Limitation Acknowledgment:</strong> Clearly state research limitations</li>
+                </ul>
+                
+                <h3>Advanced Research Techniques</h3>
+                
+                <h4>Qualitative Research</h4>
+                <p>Use AI to enhance qualitative research methods:</p>
+                <ul>
+                    <li><strong>Interview Analysis:</strong> Analyze interview transcripts and responses</li>
+                    <li><strong>Content Analysis:</strong> Analyze text and media content</li>
+                    <li><strong>Theme Identification:</strong> Identify recurring themes and patterns</li>
+                    <li><strong>Narrative Analysis:</strong> Analyze stories and narratives</li>
+                </ul>
+                
+                <h4>Mixed Methods Research</h4>
+                <p>Combine quantitative and qualitative approaches:</p>
+                <ul>
+                    <li><strong>Triangulation:</strong> Validate findings across multiple methods</li>
+                    <li><strong>Complementary Analysis:</strong> Use different methods to enhance understanding</li>
+                    <li><strong>Integration Strategies:</strong> Combine findings from different approaches</li>
+                    <li><strong>Comprehensive Reporting:</strong> Present mixed methods findings effectively</li>
+                </ul>
+                
+                <h3>Research Tools and Platforms</h3>
+                
+                <h4>AI-Powered Research Tools</h4>
+                <p>Explore tools that enhance research capabilities:</p>
+                <ul>
+                    <li><strong>Literature Review Tools:</strong> Semantic Scholar, ResearchGate</li>
+                    <li><strong>Data Analysis Platforms:</strong> Google Colab, Jupyter Notebooks</li>
+                    <li><strong>Survey Tools:</strong> Qualtrics, SurveyMonkey with AI features</li>
+                    <li><strong>Visualization Tools:</strong> Tableau, Power BI with AI integration</li>
+                </ul>
+                
+                <h4>Data Sources and APIs</h4>
+                <p>Access diverse data sources for your research:</p>
+                <ul>
+                    <li><strong>Public Datasets:</strong> Government data, open data repositories</li>
+                    <li><strong>Academic Databases:</strong> JSTOR, PubMed, IEEE Xplore</li>
+                    <li><strong>Industry Reports:</strong> Market research and industry analysis</li>
+                    <li><strong>Social Media Data:</strong> Twitter, Reddit, and other platforms</li>
+                </ul>
+                
+                <h3>Hands-On Activities</h3>
+                
+                <div class="exercise">
+                    <h4>Activity 1: Research Project Design</h4>
+                    <p><strong>Objective:</strong> Design a complete research project using AI</p>
+                    <p><strong>Task:</strong> Choose a research topic and:</p>
+                    <ol>
+                        <li>Develop research questions and hypotheses</li>
+                        <li>Design methodology and data collection plan</li>
+                        <li>Identify data sources and analysis approaches</li>
+                        <li>Create a research timeline and budget</li>
+                    </ol>
+                </div>
+                
+                <div class="exercise">
+                    <h4>Activity 2: Data Analysis Project</h4>
+                    <p><strong>Objective:</strong> Perform data analysis using AI tools</p>
+                    <p><strong>Task:</strong> Work with a dataset to:</p>
+                    <ul>
+                        <li>Perform exploratory data analysis</li>
+                        <li>Conduct statistical tests</li>
+                        <li>Create visualizations</li>
+                        <li>Generate insights and recommendations</li>
+                    </ul>
+                </div>
+                
+                <div class="exercise">
+                    <h4>Activity 3: Research Report Creation</h4>
+                    <p><strong>Objective:</strong> Create a comprehensive research report</p>
+                    <p><strong>Task:</strong> Develop a research report including:</p>
+                    <ul>
+                        <li>Executive summary</li>
+                        <li>Literature review</li>
+                        <li>Methodology section</li>
+                        <li>Results and analysis</li>
+                        <li>Conclusions and recommendations</li>
+                    </ul>
+                </div>
+                
+                <h3>Week 5 Quiz</h3>
+                
+                <div class="exercise">
+                    <h4>Multiple Choice Questions</h4>
+                    <ol>
+                        <li>What is the first step in AI-powered research planning?</li>
+                        <li>Which statistical measure describes the center of a dataset?</li>
+                        <li>What is the primary purpose of triangulation in mixed methods research?</li>
+                        <li>Which ethical consideration involves protecting personal information?</li>
+                        <li>What should you include in an executive summary?</li>
+                    </ol>
+                </div>
+                
+                <h3>Project: Comprehensive Research Project</h3>
+                <p>Conduct a complete research project using AI that includes:</p>
+                <ul>
+                    <li>Research question development and methodology</li>
+                    <li>Data collection and analysis</li>
+                    <li>Statistical analysis and interpretation</li>
+                    <li>Data visualization and reporting</li>
+                    <li>Ethical considerations and quality assurance</li>
+                </ul>
+            </div>
+            
+            <div class="section" id="week6">
+                <h2>Week 6: Code Generation and Programming</h2>
+                
+                <h3>Learning Objectives</h3>
+                <ul>
+                    <li>Use AI for code generation and debugging</li>
+                    <li>Understand AI coding limitations and best practices</li>
+                    <li>Apply AI to software development workflows</li>
+                    <li>Learn prompt engineering for coding tasks</li>
+                </ul>
+                
+                <h3>AI Code Generation Tools</h3>
+                
+                <h4>Popular AI Coding Assistants</h4>
+                <p>Explore the most effective AI tools for programming:</p>
+                
+                <h5>GitHub Copilot</h5>
+                <ul>
+                    <li><strong>Integration:</strong> Works directly in VS Code, IntelliJ, and other IDEs</li>
+                    <li><strong>Features:</strong> Real-time code suggestions, function completion, documentation</li>
+                    <li><strong>Best For:</strong> General programming, web development, Python, JavaScript</li>
+                    <li><strong>Cost:</strong> $10/month for individuals, free for students</li>
+                </ul>
+                
+                <h5>Cursor AI</h5>
+                <ul>
+                    <li><strong>Integration:</strong> Built on VS Code with advanced AI features</li>
+                    <li><strong>Features:</strong> Chat interface, code explanation, refactoring assistance</li>
+                    <li><strong>Best For:</strong> Complex projects, code review, learning programming</li>
+                    <li><strong>Cost:</strong> Free tier available, Pro plan $20/month</li>
+                </ul>
+                
+                <h5>Amazon CodeWhisperer</h5>
+                <ul>
+                    <li><strong>Integration:</strong> Works with VS Code, IntelliJ, AWS Cloud9</li>
+                    <li><strong>Features:</strong> AWS-focused suggestions, security scanning</li>
+                    <li><strong>Best For:</strong> AWS development, cloud applications, security-conscious projects</li>
+                    <li><strong>Cost:</strong> Free for individual use</li>
+                </ul>
+                
+                <div class="exercise">
+                    <h4>Exercise: Setting Up AI Coding Tools</h4>
+                    <p><strong>Objective:</strong> Set up and test AI coding assistants</p>
+                    <p><strong>Tasks:</strong></p>
+                    <ol>
+                        <li>Install GitHub Copilot or Cursor AI</li>
+                        <li>Configure the tool in your preferred IDE</li>
+                        <li>Test basic code completion features</li>
+                        <li>Try generating a simple function</li>
+                        <li>Document your experience and preferences</li>
+                    </ol>
+                </div>
+                
+                <h4>Prompt Engineering for Code</h4>
+                <p>Master the art of writing effective prompts for code generation:</p>
+                
+                <h5>Code Generation Prompts</h5>
+                <ul>
+                    <li><strong>Function Specification:</strong> Clearly describe what the function should do</li>
+                    <li><strong>Input/Output Requirements:</strong> Specify data types and formats</li>
+                    <li><strong>Error Handling:</strong> Define how errors should be handled</li>
+                    <li><strong>Performance Requirements:</strong> Specify time/space complexity needs</li>
+                </ul>
+                
+                <div class="note-box">
+                    <div class="box-title">Example: Effective Code Generation Prompt</div>
+                    <pre><code>Write a Python function that:
+- Takes a list of integers as input
+- Returns the sum of all even numbers in the list
+- Handles empty lists and non-integer values gracefully
+- Includes proper error handling and documentation
+- Has O(n) time complexity
+
+Please include:
+1. Function definition with type hints
+2. Docstring with examples
+3. Error handling for edge cases
+4. Test cases to verify functionality</code></pre>
+                </div>
+                
+                <h5>Code Review and Debugging Prompts</h5>
+                <ul>
+                    <li><strong>Bug Identification:</strong> "Find potential bugs in this code"</li>
+                    <li><strong>Performance Analysis:</strong> "Analyze the time complexity of this algorithm"</li>
+                    <li><strong>Code Optimization:</strong> "Suggest ways to improve this code's efficiency"</li>
+                    <li><strong>Security Review:</strong> "Identify potential security vulnerabilities"</li>
+                </ul>
+                
+                <h3>Code Generation Strategies</h3>
+                
+                <h4>Incremental Development</h4>
+                <p>Use AI to build code step by step:</p>
+                <ul>
+                    <li><strong>Start Simple:</strong> Begin with basic functionality</li>
+                    <li><strong>Add Features:</strong> Gradually add complexity</li>
+                    <li><strong>Test Frequently:</strong> Verify each addition works</li>
+                    <li><strong>Refactor as Needed:</strong> Improve code quality iteratively</li>
+                </ul>
+                
+                <h4>Template-Based Generation</h4>
+                <p>Use common patterns and templates:</p>
+                <ul>
+                    <li><strong>CRUD Operations:</strong> Create, Read, Update, Delete patterns</li>
+                    <li><strong>API Endpoints:</strong> RESTful API structure templates</li>
+                    <li><strong>Data Models:</strong> Database schema and model definitions</li>
+                    <li><strong>Testing Templates:</strong> Unit test and integration test patterns</li>
+                </ul>
+                
+                <h4>Language-Specific Techniques</h4>
+                <p>Adapt your approach for different programming languages:</p>
+                
+                <h5>Python Development</h5>
+                <ul>
+                    <li><strong>Use Type Hints:</strong> Improve code clarity and IDE support</li>
+                    <li><strong>Follow PEP 8:</strong> Maintain consistent coding style</li>
+                    <li><strong>Leverage Libraries:</strong> Use popular Python libraries effectively</li>
+                    <li><strong>Documentation:</strong> Include comprehensive docstrings</li>
+                </ul>
+                
+                <h5>JavaScript/TypeScript Development</h5>
+                <ul>
+                    <li><strong>Modern Syntax:</strong> Use ES6+ features and TypeScript</li>
+                    <li><strong>Async/Await:</strong> Handle asynchronous operations properly</li>
+                    <li><strong>Error Handling:</strong> Implement proper try-catch blocks</li>
+                    <li><strong>Module System:</strong> Use ES6 modules and proper imports</li>
+                </ul>
+                
+                <h3>Debugging and Problem Solving</h3>
+                
+                <h4>AI-Assisted Debugging</h4>
+                <p>Use AI to identify and fix code issues:</p>
+                
+                <h5>Error Analysis</h5>
+                <ul>
+                    <li><strong>Error Message Interpretation:</strong> Understand what error messages mean</li>
+                    <li><strong>Root Cause Analysis:</strong> Identify the underlying problem</li>
+                    <li><strong>Solution Generation:</strong> Generate potential fixes</li>
+                    <li><strong>Prevention Strategies:</strong> Learn how to avoid similar issues</li>
+                </ul>
+                
+                <h5>Code Review with AI</h5>
+                <ul>
+                    <li><strong>Style Consistency:</strong> Check for coding standards compliance</li>
+                    <li><strong>Logic Verification:</strong> Verify algorithm correctness</li>
+                    <li><strong>Performance Issues:</strong> Identify inefficient code patterns</li>
+                    <li><strong>Security Vulnerabilities:</strong> Spot potential security problems</li>
+                </ul>
+                
+                <div class="exercise">
+                    <h4>Exercise: Debugging with AI</h4>
+                    <p><strong>Objective:</strong> Practice using AI for debugging</p>
+                    <p><strong>Task:</strong> Take a piece of code with bugs and:</p>
+                    <ol>
+                        <li>Ask AI to identify potential issues</li>
+                        <li>Request specific fixes for each problem</li>
+                        <li>Test the suggested solutions</li>
+                        <li>Learn from the debugging process</li>
+                    </ol>
+                </div>
+                
+                <h3>Documentation Generation</h3>
+                
+                <h4>Code Documentation</h4>
+                <p>Use AI to create comprehensive documentation:</p>
+                <ul>
+                    <li><strong>Function Documentation:</strong> Generate clear docstrings and comments</li>
+                    <li><strong>API Documentation:</strong> Create comprehensive API docs</li>
+                    <li><strong>README Files:</strong> Generate project setup and usage instructions</li>
+                    <li><strong>Code Comments:</strong> Add explanatory comments to complex code</li>
+                </ul>
+                
+                <h4>Technical Writing</h4>
+                <p>Create technical documentation and guides:</p>
+                <ul>
+                    <li><strong>Installation Guides:</strong> Step-by-step setup instructions</li>
+                    <li><strong>User Manuals:</strong> Comprehensive usage documentation</li>
+                    <li><strong>Troubleshooting Guides:</strong> Common problems and solutions</li>
+                    <li><strong>Architecture Documentation:</strong> System design and structure</li>
+                </ul>
+                
+                <h3>Programming Best Practices with AI</h3>
+                
+                <h4>Code Quality</h4>
+                <p>Maintain high code quality standards:</p>
+                <ul>
+                    <li><strong>Readability:</strong> Write clear, understandable code</li>
+                    <li><strong>Maintainability:</strong> Structure code for easy updates</li>
+                    <li><strong>Testability:</strong> Design code that's easy to test</li>
+                    <li><strong>Performance:</strong> Consider efficiency and optimization</li>
+                </ul>
+                
+                <h4>Security Considerations</h4>
+                <p>Ensure your code is secure:</p>
+                <ul>
+                    <li><strong>Input Validation:</strong> Validate all user inputs</li>
+                    <li><strong>Authentication:</strong> Implement proper authentication</li>
+                    <li><strong>Authorization:</strong> Control access to resources</li>
+                    <li><strong>Data Protection:</strong> Secure sensitive data</li>
+                </ul>
+                
+                <h3>Software Development Workflows</h3>
+                
+                <h4>Version Control Integration</h4>
+                <p>Integrate AI with Git workflows:</p>
+                <ul>
+                    <li><strong>Commit Message Generation:</strong> Create clear, descriptive commit messages</li>
+                    <li><strong>Code Review Assistance:</strong> Automate parts of the review process</li>
+                    <li><strong>Branch Strategy:</strong> Plan and manage feature branches</li>
+                    <li><strong>Release Notes:</strong> Generate release documentation</li>
+                </ul>
+                
+                <h4>Testing Strategies</h4>
+                <p>Use AI to enhance testing processes:</p>
+                <ul>
+                    <li><strong>Test Case Generation:</strong> Create comprehensive test suites</li>
+                    <li><strong>Test Data Creation:</strong> Generate realistic test data</li>
+                    <li><strong>Test Automation:</strong> Automate repetitive testing tasks</li>
+                    <li><strong>Coverage Analysis:</strong> Ensure adequate test coverage</li>
+                </ul>
+                
+                <h3>Advanced Programming Concepts</h3>
+                
+                <h4>Design Patterns</h4>
+                <p>Implement common design patterns with AI assistance:</p>
+                <ul>
+                    <li><strong>Creational Patterns:</strong> Factory, Singleton, Builder patterns</li>
+                    <li><strong>Structural Patterns:</strong> Adapter, Decorator, Facade patterns</li>
+                    <li><strong>Behavioral Patterns:</strong> Observer, Strategy, Command patterns</li>
+                    <li><strong>Architectural Patterns:</strong> MVC, MVVM, Repository patterns</li>
+                </ul>
+                
+                <h4>Algorithm Development</h4>
+                <p>Use AI to develop and optimize algorithms:</p>
+                <ul>
+                    <li><strong>Algorithm Design:</strong> Create efficient algorithms</li>
+                    <li><strong>Complexity Analysis:</strong> Analyze time and space complexity</li>
+                    <li><strong>Optimization Techniques:</strong> Improve algorithm performance</li>
+                    <li><strong>Alternative Solutions:</strong> Explore different approaches</li>
+                </ul>
+                
+                <h3>Hands-On Activities</h3>
+                
+                <div class="exercise">
+                    <h4>Activity 1: Code Generation Project</h4>
+                    <p><strong>Objective:</strong> Build a complete application using AI assistance</p>
+                    <p><strong>Task:</strong> Choose a project and:</p>
+                    <ul>
+                        <li>Design the application architecture</li>
+                        <li>Generate core functionality with AI</li>
+                        <li>Implement error handling and validation</li>
+                        <li>Create comprehensive documentation</li>
+                        <li>Write tests for all functionality</li>
+                    </ul>
+                </div>
+                
+                <div class="exercise">
+                    <h4>Activity 2: Code Review and Refactoring</h4>
+                    <p><strong>Objective:</strong> Practice AI-assisted code review</p>
+                    <p><strong>Task:</strong> Take existing code and:</p>
+                    <ol>
+                        <li>Use AI to identify potential improvements</li>
+                        <li>Refactor code based on AI suggestions</li>
+                        <li>Improve documentation and comments</li>
+                        <li>Add comprehensive error handling</li>
+                        <li>Optimize performance where possible</li>
+                    </ol>
+                </div>
+                
+                <div class="exercise">
+                    <h4>Activity 3: Debugging Challenge</h4>
+                    <p><strong>Objective:</strong> Solve complex debugging problems with AI</p>
+                    <p><strong>Task:</strong> Work with buggy code to:</p>
+                    <ul>
+                        <li>Identify multiple types of bugs</li>
+                        <li>Use AI to understand error messages</li>
+                        <li>Generate and test potential fixes</li>
+                        <li>Learn debugging strategies and techniques</li>
+                    </ul>
+                </div>
+                
+                <h3>Week 6 Quiz</h3>
+                
+                <div class="exercise">
+                    <h4>Multiple Choice Questions</h4>
+                    <ol>
+                        <li>Which AI coding tool is best for AWS development?</li>
+                        <li>What is the primary benefit of incremental development?</li>
+                        <li>Which programming practice improves code maintainability?</li>
+                        <li>What should you include in a good code generation prompt?</li>
+                        <li>Which testing strategy ensures adequate coverage?</li>
+                    </ol>
+                </div>
+                
+                <h3>Project: Complete Software Development</h3>
+                <p>Develop a complete software project using AI assistance that includes:</p>
+                <ul>
+                    <li>Project planning and architecture design</li>
+                    <li>Code generation and implementation</li>
+                    <li>Testing and debugging</li>
+                    <li>Documentation and deployment</li>
+                    <li>Code review and optimization</li>
+                </ul>
+            </div>
+            
+            <div class="section" id="week7">
+                <h2>Week 7: Image and Multimedia Generation</h2>
+                
+                <h3>Learning Objectives</h3>
+                <ul>
+                    <li>Generate and edit images using AI</li>
+                    <li>Create multimedia content for various purposes</li>
+                    <li>Understand AI image generation capabilities</li>
+                    <li>Apply AI to design and visual tasks</li>
+                </ul>
+                
+                <h3>AI Image Generation Tools</h3>
+                
+                <h4>Popular Image Generation Platforms</h4>
+                <p>Explore the leading AI image generation tools:</p>
+                
+                <h5>DALL-E (OpenAI)</h5>
+                <ul>
+                    <li><strong>Features:</strong> High-quality image generation, editing capabilities</li>
+                    <li><strong>Best For:</strong> Creative projects, marketing materials, concept art</li>
+                    <li><strong>Cost:</strong> $0.02-0.04 per image, included with ChatGPT Plus</li>
+                    <li><strong>Strengths:</strong> Excellent prompt understanding, high resolution output</li>
+                </ul>
+                
+                <h5>Midjourney</h5>
+                <ul>
+                    <li><strong>Features:</strong> Artistic style generation, community features</li>
+                    <li><strong>Best For:</strong> Artistic projects, illustrations, creative concepts</li>
+                    <li><strong>Cost:</strong> $10-30/month depending on plan</li>
+                    <li><strong>Strengths:</strong> Beautiful artistic styles, strong community</li>
+                </ul>
+                
+                <h5>Stable Diffusion</h5>
+                <ul>
+                    <li><strong>Features:</strong> Open-source, customizable, local deployment</li>
+                    <li><strong>Best For:</strong> Technical users, custom models, privacy-conscious projects</li>
+                    <li><strong>Cost:</strong> Free (self-hosted) or paid services</li>
+                    <li><strong>Strengths:</strong> Highly customizable, privacy control</li>
+                </ul>
+                
+                <div class="exercise">
+                    <h4>Exercise: Setting Up Image Generation Tools</h4>
+                    <p><strong>Objective:</strong> Set up and test AI image generation platforms</p>
+                    <p><strong>Tasks:</strong></p>
+                    <ol>
+                        <li>Create accounts on 2-3 image generation platforms</li>
+                        <li>Test basic image generation with simple prompts</li>
+                        <li>Experiment with different styles and parameters</li>
+                        <li>Compare output quality and features</li>
+                        <li>Document your preferences and use cases</li>
+                    </ol>
+                </div>
+                
+                <h4>Prompt Engineering for Images</h4>
+                <p>Master the art of writing effective prompts for image generation:</p>
+                
+                <h5>Image Prompt Structure</h5>
+                <ul>
+                    <li><strong>Subject Description:</strong> Clear description of the main subject</li>
+                    <li><strong>Style Specification:</strong> Artistic style, medium, technique</li>
+                    <li><strong>Composition Details:</strong> Camera angle, framing, perspective</li>
+                    <li><strong>Lighting and Mood:</strong> Lighting conditions, atmosphere, emotion</li>
+                    <li><strong>Technical Parameters:</strong> Resolution, aspect ratio, quality settings</li>
+                </ul>
+                
+                <div class="note-box">
+                    <div class="box-title">Example: Effective Image Generation Prompt</div>
+                    <pre><code>A serene mountain landscape at sunset, 
+photorealistic style, 
+wide-angle view from a high vantage point, 
+warm golden hour lighting, 
+misty atmosphere, 
+4K resolution, 
+cinematic composition</code></pre>
+                </div>
+                
+                <h5>Advanced Prompting Techniques</h5>
+                <ul>
+                    <li><strong>Negative Prompts:</strong> Specify what you don't want in the image</li>
+                    <li><strong>Style Modifiers:</strong> Use specific style keywords and artists</li>
+                    <li><strong>Technical Terms:</strong> Include photography and art terminology</li>
+                    <li><strong>Iterative Refinement:</strong> Build on successful prompts</li>
+                </ul>
+                
+                <h3>Image Editing and Manipulation</h3>
+                
+                <h4>AI-Powered Image Editing</h4>
+                <p>Use AI tools to edit and enhance images:</p>
+                
+                <h5>Basic Editing Operations</h5>
+                <ul>
+                    <li><strong>Background Removal:</strong> Remove or replace backgrounds</li>
+                    <li><strong>Object Removal:</strong> Remove unwanted objects from images</li>
+                    <li><strong>Color Correction:</strong> Adjust colors, contrast, and brightness</li>
+                    <li><strong>Resizing and Cropping:</strong> Adjust image dimensions and composition</li>
+                </ul>
+                
+                <h5>Advanced Editing Features</h5>
+                <ul>
+                    <li><strong>Inpainting:</strong> Fill in missing or damaged areas</li>
+                    <li><strong>Outpainting:</strong> Extend images beyond their original boundaries</li>
+                    <li><strong>Style Transfer:</strong> Apply artistic styles to existing images</li>
+                    <li><strong>Face Editing:</strong> Enhance portraits and facial features</li>
+                </ul>
+                
+                <h4>Design and Visual Tasks</h4>
+                <p>Apply AI to various design and visual projects:</p>
+                
+                <h5>Graphic Design</h5>
+                <ul>
+                    <li><strong>Logo Design:</strong> Generate logo concepts and variations</li>
+                    <li><strong>Brand Identity:</strong> Create consistent visual branding elements</li>
+                    <li><strong>Marketing Materials:</strong> Design posters, flyers, and advertisements</li>
+                    <li><strong>Social Media Graphics:</strong> Create engaging social media content</li>
+                </ul>
+                
+                <h5>Web and UI Design</h5>
+                <ul>
+                    <li><strong>Website Mockups:</strong> Generate website layout concepts</li>
+                    <li><strong>UI Components:</strong> Design buttons, icons, and interface elements</li>
+                    <li><strong>Color Schemes:</strong> Generate harmonious color palettes</li>
+                    <li><strong>Typography:</strong> Create text-based designs and layouts</li>
+                </ul>
+                
+                <h3>Multimedia Content Creation</h3>
+                
+                <h4>Video Generation</h4>
+                <p>Explore AI-powered video creation tools:</p>
+                
+                <h5>Video Generation Platforms</h5>
+                <ul>
+                    <li><strong>Runway:</strong> Professional video editing and generation</li>
+                    <li><strong>Pika Labs:</strong> Text-to-video generation</li>
+                    <li><strong>Synthesia:</strong> AI avatar video creation</li>
+                    <li><strong>Lumen5:</strong> Turn text into video content</li>
+                </ul>
+                
+                <h5>Video Creation Workflows</h5>
+                <ul>
+                    <li><strong>Storyboard Generation:</strong> Create visual storyboards</li>
+                    <li><strong>Scene Creation:</strong> Generate individual video scenes</li>
+                    <li><strong>Animation:</strong> Create animated content and effects</li>
+                    <li><strong>Video Editing:</strong> Edit and enhance video content</li>
+                </ul>
+                
+                <h4>Audio and Music Generation</h4>
+                <p>Use AI for audio content creation:</p>
+                
+                <h5>Audio Generation Tools</h5>
+                <ul>
+                    <li><strong>ElevenLabs:</strong> High-quality text-to-speech</li>
+                    <li><strong>Mubert:</strong> AI-generated music and soundscapes</li>
+                    <li><strong>Soundraw:</strong> Royalty-free music generation</li>
+                    <li><strong>Descript:</strong> Audio editing and voice cloning</li>
+                </ul>
+                
+                <h5>Audio Content Applications</h5>
+                <ul>
+                    <li><strong>Podcast Production:</strong> Generate intros, outros, and sound effects</li>
+                    <li><strong>Video Narration:</strong> Create voice-overs for videos</li>
+                    <li><strong>Background Music:</strong> Generate custom music tracks</li>
+                    <li><strong>Sound Effects:</strong> Create ambient sounds and effects</li>
+                </ul>
+                
+                <h3>Creative Applications</h3>
+                
+                <h4>Artistic Projects</h4>
+                <p>Use AI for creative and artistic endeavors:</p>
+                <ul>
+                    <li><strong>Digital Art:</strong> Create original artwork and illustrations</li>
+                    <li><strong>Concept Art:</strong> Generate ideas for games, films, and books</li>
+                    <li><strong>Character Design:</strong> Create unique character concepts</li>
+                    <li><strong>World Building:</strong> Generate environments and settings</li>
+                </ul>
+                
+                <h4>Commercial Applications</h4>
+                <p>Apply AI to business and commercial projects:</p>
+                <ul>
+                    <li><strong>Product Photography:</strong> Generate product images and mockups</li>
+                    <li><strong>Marketing Campaigns:</strong> Create visual content for campaigns</li>
+                    <li><strong>E-commerce:</strong> Generate product images and lifestyle shots</li>
+                    <li><strong>Presentations:</strong> Create visual aids and graphics</li>
+                </ul>
+                
+                <h3>Ethical Considerations</h3>
+                
+                <h4>Copyright and Attribution</h4>
+                <p>Understand the legal and ethical aspects of AI-generated content:</p>
+                <ul>
+                    <li><strong>Copyright Issues:</strong> Understand ownership of AI-generated content</li>
+                    <li><strong>Artist Attribution:</strong> Respect and credit original artists</li>
+                    <li><strong>Commercial Use:</strong> Check licensing requirements for commercial use</li>
+                    <li><strong>Model Training:</strong> Be aware of how models were trained</li>
+                </ul>
+                
+                <h4>Responsible Use</h4>
+                <p>Use AI image generation responsibly:</p>
+                <ul>
+                    <li><strong>Transparency:</strong> Be honest about AI use when appropriate</li>
+                    <li><strong>Quality Standards:</strong> Maintain high quality and professional standards</li>
+                    <li><strong>Diversity and Inclusion:</strong> Ensure representation and avoid bias</li>
+                    <li><strong>Authenticity:</strong> Use AI to enhance, not replace, human creativity</li>
+                </ul>
+                
+                <h3>Workflow Integration</h3>
+                
+                <h4>Design Workflows</h4>
+                <p>Integrate AI into your design process:</p>
+                <ul>
+                    <li><strong>Ideation Phase:</strong> Use AI for brainstorming and concept generation</li>
+                    <li><strong>Prototyping:</strong> Create quick prototypes and mockups</li>
+                    <li><strong>Refinement:</strong> Iterate and improve designs</li>
+                    <li><strong>Final Production:</strong> Create final deliverables</li>
+                </ul>
+                
+                <h4>Collaboration</h4>
+                <p>Work with AI as a creative partner:</p>
+                <ul>
+                    <li><strong>Human-AI Collaboration:</strong> Combine human creativity with AI capabilities</li>
+                    <li><strong>Feedback Integration:</strong> Use AI to gather and incorporate feedback</li>
+                    <li><strong>Version Control:</strong> Manage different versions and iterations</li>
+                    <li><strong>Quality Assurance:</strong> Ensure final output meets standards</li>
+                </ul>
+                
+                <h3>Hands-On Activities</h3>
+                
+                <div class="exercise">
+                    <h4>Activity 1: Image Generation Project</h4>
+                    <p><strong>Objective:</strong> Create a series of images using AI</p>
+                    <p><strong>Task:</strong> Choose a theme and create:</p>
+                    <ul>
+                        <li>5 different image variations</li>
+                        <li>Different styles and approaches</li>
+                        <li>Edited and enhanced versions</li>
+                        <li>A cohesive visual story or series</li>
+                    </ul>
+                </div>
+                
+                <div class="exercise">
+                    <h4>Activity 2: Design Project</h4>
+                    <p><strong>Objective:</strong> Complete a design project using AI</p>
+                    <p><strong>Task:</strong> Choose one of the following:</p>
+                    <ul>
+                        <li>Create a brand identity package</li>
+                        <li>Design a website mockup</li>
+                        <li>Create marketing materials</li>
+                        <li>Develop a social media campaign</li>
+                    </ul>
+                </div>
+                
+                <div class="exercise">
+                    <h4>Activity 3: Multimedia Content Creation</h4>
+                    <p><strong>Objective:</strong> Create multimedia content using AI</p>
+                    <p><strong>Task:</strong> Develop a multimedia project including:</p>
+                    <ul>
+                        <li>Generated images and graphics</li>
+                        <li>AI-generated audio or music</li>
+                        <li>Video content or animations</li>
+                        <li>Integrated multimedia presentation</li>
+                    </ul>
+                </div>
+                
+                <h3>Week 7 Quiz</h3>
+                
+                <div class="exercise">
+                    <h4>Multiple Choice Questions</h4>
+                    <ol>
+                        <li>Which AI image tool is best for artistic projects?</li>
+                        <li>What should you include in an effective image generation prompt?</li>
+                        <li>Which editing technique fills in missing image areas?</li>
+                        <li>What is the primary ethical consideration for AI-generated content?</li>
+                        <li>Which multimedia tool is best for text-to-speech generation?</li>
+                    </ol>
+                </div>
+                
+                <h3>Project: Multimedia Presentation</h3>
+                <p>Create a comprehensive multimedia presentation using AI tools that includes:</p>
+                <ul>
+                    <li>AI-generated images and graphics</li>
+                    <li>Custom audio and music elements</li>
+                    <li>Video content and animations</li>
+                    <li>Professional design and layout</li>
+                    <li>Integrated multimedia experience</li>
+                </ul>
+            </div>
+            
+            <div class="section" id="week8">
+                <h2>Week 8: Integration and Advanced Applications</h2>
+                
+                <h3>Learning Objectives</h3>
+                <ul>
+                    <li>Integrate AI tools into existing workflows</li>
+                    <li>Build custom AI solutions</li>
+                    <li>Understand AI tool limitations and future trends</li>
+                    <li>Create a comprehensive AI strategy</li>
+                </ul>
+                
+                <h3>Workflow Integration Strategies</h3>
+                
+                <h4>Assessing Current Workflows</h4>
+                <p>Start by understanding your existing processes before integrating AI:</p>
+                
+                <h5>Workflow Analysis</h5>
+                <ul>
+                    <li><strong>Process Mapping:</strong> Document current workflows and procedures</li>
+                    <li><strong>Bottleneck Identification:</strong> Find areas where AI can add value</li>
+                    <li><strong>Task Categorization:</strong> Identify repetitive vs. creative tasks</li>
+                    <li><strong>Time Analysis:</strong> Measure time spent on different activities</li>
+                </ul>
+                
+                <div class="exercise">
+                    <h4>Exercise: Workflow Assessment</h4>
+                    <p><strong>Objective:</strong> Analyze your current workflow for AI integration opportunities</p>
+                    <p><strong>Tasks:</strong></p>
+                    <ol>
+                        <li>Map out your daily/weekly workflow</li>
+                        <li>Identify tasks that are repetitive or time-consuming</li>
+                        <li>List tasks that require creativity or decision-making</li>
+                        <li>Estimate time savings from AI automation</li>
+                        <li>Prioritize integration opportunities</li>
+                    </ol>
+                </div>
+                
+                <h5>Integration Planning</h5>
+                <ul>
+                    <li><strong>Pilot Projects:</strong> Start with small, low-risk integrations</li>
+                    <li><strong>Gradual Rollout:</strong> Implement changes incrementally</li>
+                    <li><strong>Training Requirements:</strong> Identify skills needed for team members</li>
+                    <li><strong>Success Metrics:</strong> Define how to measure integration success</li>
+                </ul>
+                
+                <h4>Cross-Platform Integration</h4>
+                <p>Connect different AI tools and platforms for maximum efficiency:</p>
+                
+                <h5>API Integration</h5>
+                <ul>
+                    <li><strong>OpenAI API:</strong> Integrate ChatGPT and DALL-E into custom applications</li>
+                    <li><strong>Google AI APIs:</strong> Use Gemini and other Google AI services</li>
+                    <li><strong>Anthropic API:</strong> Access Claude for specific use cases</li>
+                    <li><strong>Custom Integrations:</strong> Build connections between different tools</li>
+                </ul>
+                
+                <h5>Workflow Automation</h5>
+                <ul>
+                    <li><strong>Zapier/IFTTT:</strong> Automate workflows between different applications</li>
+                    <li><strong>Custom Scripts:</strong> Write scripts to automate repetitive tasks</li>
+                    <li><strong>Webhooks:</strong> Set up real-time data flow between systems</li>
+                    <li><strong>Data Pipelines:</strong> Create automated data processing workflows</li>
+                </ul>
+                
+                <h3>Custom AI Solution Development</h3>
+                
+                <h4>Building Custom AI Applications</h4>
+                <p>Create tailored AI solutions for your specific needs:</p>
+                
+                <h5>No-Code/Low-Code Solutions</h5>
+                <ul>
+                    <li><strong>Bubble:</strong> Build web applications with AI integration</li>
+                    <li><strong>Webflow:</strong> Create websites with AI-powered features</li>
+                    <li><strong>Airtable:</strong> Build databases with AI automation</li>
+                    <li><strong>Notion:</strong> Create AI-enhanced knowledge bases</li>
+                </ul>
+                
+                <h5>Custom Development</h5>
+                <ul>
+                    <li><strong>Python Applications:</strong> Build custom AI tools using Python</li>
+                    <li><strong>Web Applications:</strong> Create AI-powered web apps</li>
+                    <li><strong>Mobile Apps:</strong> Develop AI-enhanced mobile applications</li>
+                    <li><strong>Desktop Tools:</strong> Build specialized desktop applications</li>
+                </ul>
+                
+                <div class="note-box">
+                    <div class="box-title">Custom AI Solution Development Process</div>
+                    <p><strong>Step 1:</strong> Define the problem and requirements<br>
+                    <strong>Step 2:</strong> Research available AI tools and APIs<br>
+                    <strong>Step 3:</strong> Design the solution architecture<br>
+                    <strong>Step 4:</strong> Develop and test the solution<br>
+                    <strong>Step 5:</strong> Deploy and monitor the application</p>
+                </div>
+                
+                <h4>AI-Powered Automation</h4>
+                <p>Automate complex tasks using AI:</p>
+                
+                <h5>Document Processing</h5>
+                <ul>
+                    <li><strong>Document Classification:</strong> Automatically categorize documents</li>
+                    <li><strong>Data Extraction:</strong> Extract information from forms and documents</li>
+                    <li><strong>Content Summarization:</strong> Automatically summarize long documents</li>
+                    <li><strong>Translation Services:</strong> Automate document translation</li>
+                </ul>
+                
+                <h5>Customer Service Automation</h5>
+                <ul>
+                    <li><strong>Chatbot Development:</strong> Create AI-powered customer service bots</li>
+                    <li><strong>Email Classification:</strong> Automatically route and respond to emails</li>
+                    <li><strong>Ticket Management:</strong> Automate support ticket processing</li>
+                    <li><strong>Knowledge Base Management:</strong> Maintain and update help content</li>
+                </ul>
+                
+                <h3>AI Tool Limitations and Risks</h3>
+                
+                <h4>Understanding Limitations</h4>
+                <p>Be aware of AI tool limitations and constraints:</p>
+                
+                <h5>Technical Limitations</h5>
+                <ul>
+                    <li><strong>Context Windows:</strong> Limited input/output length</li>
+                    <li><strong>Training Data Cutoff:</strong> Knowledge limited to training data</li>
+                    <li><strong>Hallucination:</strong> AI may generate false information</li>
+                    <li><strong>Bias and Fairness:</strong> Inherited biases from training data</li>
+                </ul>
+                
+                <h5>Practical Limitations</h5>
+                <ul>
+                    <li><strong>Cost Considerations:</strong> API usage costs and rate limits</li>
+                    <li><strong>Privacy Concerns:</strong> Data handling and security</li>
+                    <li><strong>Reliability Issues:</strong> Service availability and consistency</li>
+                    <li><strong>Integration Complexity:</strong> Technical challenges in implementation</li>
+                </ul>
+                
+                <h4>Risk Management</h4>
+                <p>Implement strategies to manage AI-related risks:</p>
+                
+                <h5>Quality Assurance</h5>
+                <ul>
+                    <li><strong>Human Review:</strong> Always review AI-generated content</li>
+                    <li><strong>Fact-Checking:</strong> Verify information and claims</li>
+                    <li><strong>Testing Protocols:</strong> Test AI solutions thoroughly</li>
+                    <li><strong>Fallback Plans:</strong> Have backup processes when AI fails</li>
+                </ul>
+                
+                <h5>Security and Privacy</h5>
+                <ul>
+                    <li><strong>Data Protection:</strong> Secure sensitive information</li>
+                    <li><strong>Access Control:</strong> Limit who can use AI tools</li>
+                    <li><strong>Audit Trails:</strong> Track AI usage and decisions</li>
+                    <li><strong>Compliance:</strong> Ensure regulatory compliance</li>
+                </ul>
+                
+                <h3>Future Trends in Generative AI</h3>
+                
+                <h4>Emerging Technologies</h4>
+                <p>Stay informed about upcoming AI developments:</p>
+                
+                <h5>Multimodal AI</h5>
+                <ul>
+                    <li><strong>Text-to-Video:</strong> Advanced video generation capabilities</li>
+                    <li><strong>3D Generation:</strong> Create 3D models and environments</li>
+                    <li><strong>Audio-Visual Integration:</strong> Combined audio and visual generation</li>
+                    <li><strong>Interactive AI:</strong> Real-time AI interaction and response</li>
+                </ul>
+                
+                <h5>Specialized AI Models</h5>
+                <ul>
+                    <li><strong>Domain-Specific Models:</strong> AI trained for specific industries</li>
+                    <li><strong>Smaller, Efficient Models:</strong> Faster, more accessible AI</li>
+                    <li><strong>Edge AI:</strong> AI running on local devices</li>
+                    <li><strong>Federated Learning:</strong> Collaborative AI training</li>
+                </ul>
+                
+                <h4>Industry Applications</h4>
+                <p>Explore how AI is transforming different industries:</p>
+                <ul>
+                    <li><strong>Healthcare:</strong> Medical diagnosis, drug discovery, patient care</li>
+                    <li><strong>Education:</strong> Personalized learning, content creation, assessment</li>
+                    <li><strong>Finance:</strong> Risk assessment, fraud detection, trading</li>
+                    <li><strong>Manufacturing:</strong> Quality control, predictive maintenance, design</li>
+                </ul>
+                
+                <h3>Building Your AI Toolkit</h3>
+                
+                <h4>Tool Selection Strategy</h4>
+                <p>Develop a systematic approach to choosing AI tools:</p>
+                
+                <h5>Evaluation Criteria</h5>
+                <ul>
+                    <li><strong>Functionality:</strong> Does it solve your specific problem?</li>
+                    <li><strong>Ease of Use:</strong> How easy is it to learn and use?</li>
+                    <li><strong>Cost:</strong> What are the pricing and usage costs?</li>
+                    <li><strong>Integration:</strong> How well does it work with your existing tools?</li>
+                    <li><strong>Reliability:</strong> How consistent and dependable is it?</li>
+                </ul>
+                
+                <h5>Tool Categories</h5>
+                <ul>
+                    <li><strong>Core Tools:</strong> Essential AI tools for daily use</li>
+                    <li><strong>Specialized Tools:</strong> Tools for specific tasks or industries</li>
+                    <li><strong>Experimental Tools:</strong> New tools to test and evaluate</li>
+                    <li><strong>Backup Tools:</strong> Alternatives when primary tools fail</li>
+                </ul>
+                
+                <h4>Skill Development</h4>
+                <p>Continuously develop your AI skills:</p>
+                <ul>
+                    <li><strong>Prompt Engineering:</strong> Master the art of writing effective prompts</li>
+                    <li><strong>Tool Proficiency:</strong> Become expert with your chosen tools</li>
+                    <li><strong>Integration Skills:</strong> Learn to connect different AI tools</li>
+                    <li><strong>Critical Thinking:</strong> Evaluate AI outputs and make informed decisions</li>
+                </ul>
+                
+                <h3>Creating a Comprehensive AI Strategy</h3>
+                
+                <h4>Strategic Planning</h4>
+                <p>Develop a long-term AI strategy for your organization or personal use:</p>
+                
+                <h5>Vision and Goals</h5>
+                <ul>
+                    <li><strong>AI Vision:</strong> Define your desired future state with AI</li>
+                    <li><strong>Strategic Goals:</strong> Set specific, measurable objectives</li>
+                    <li><strong>Success Metrics:</strong> Define how you'll measure success</li>
+                    <li><strong>Timeline:</strong> Create a realistic implementation timeline</li>
+                </ul>
+                
+                <h5>Resource Planning</h5>
+                <ul>
+                    <li><strong>Budget Allocation:</strong> Plan for AI tool costs and training</li>
+                    <li><strong>Team Development:</strong> Identify skills needed and training plans</li>
+                    <li><strong>Infrastructure:</strong> Plan for technical requirements</li>
+                    <li><strong>Partnerships:</strong> Consider external partnerships and support</li>
+                </ul>
+                
+                <h4>Implementation Roadmap</h4>
+                <p>Create a detailed implementation plan:</p>
+                
+                <h5>Phase 1: Foundation (Months 1-3)</h5>
+                <ul>
+                    <li>Assess current state and identify opportunities</li>
+                    <li>Select and implement core AI tools</li>
+                    <li>Train team members on basic AI usage</li>
+                    <li>Establish basic workflows and processes</li>
+                </ul>
+                
+                <h5>Phase 2: Expansion (Months 4-6)</h5>
+                <ul>
+                    <li>Integrate AI into more complex workflows</li>
+                    <li>Develop custom solutions for specific needs</li>
+                    <li>Measure and optimize AI usage</li>
+                    <li>Expand team AI capabilities</li>
+                </ul>
+                
+                <h5>Phase 3: Optimization (Months 7-12)</h5>
+                <ul>
+                    <li>Advanced AI applications and automation</li>
+                    <li>Continuous improvement and optimization</li>
+                    <li>Stay current with new AI developments</li>
+                    <li>Share knowledge and best practices</li>
+                </ul>
+                
+                <h3>Hands-On Activities</h3>
+                
+                <div class="exercise">
+                    <h4>Activity 1: Workflow Integration Project</h4>
+                    <p><strong>Objective:</strong> Integrate AI into an existing workflow</p>
+                    <p><strong>Task:</strong> Choose a current process and:</p>
+                    <ol>
+                        <li>Analyze the current workflow</li>
+                        <li>Identify AI integration opportunities</li>
+                        <li>Design the integrated workflow</li>
+                        <li>Implement and test the integration</li>
+                        <li>Measure improvements and document results</li>
+                    </ol>
+                </div>
+                
+                <div class="exercise">
+                    <h4>Activity 2: Custom AI Solution Development</h4>
+                    <p><strong>Objective:</strong> Build a custom AI solution</p>
+                    <p><strong>Task:</strong> Develop a custom AI application:</p>
+                    <ul>
+                        <li>Define the problem and requirements</li>
+                        <li>Research available tools and APIs</li>
+                        <li>Design and develop the solution</li>
+                        <li>Test and refine the application</li>
+                        <li>Document the development process</li>
+                    </ul>
+                </div>
+                
+                <div class="exercise">
+                    <h4>Activity 3: AI Strategy Development</h4>
+                    <p><strong>Objective:</strong> Create a comprehensive AI strategy</p>
+                    <p><strong>Task:</strong> Develop a complete AI strategy including:</p>
+                    <ul>
+                        <li>Vision and strategic goals</li>
+                        <li>Current state assessment</li>
+                        <li>Implementation roadmap</li>
+                        <li>Resource planning and budget</li>
+                        <li>Success metrics and evaluation plan</li>
+                    </ul>
+                </div>
+                
+                <h3>Week 8 Quiz</h3>
+                
+                <div class="exercise">
+                    <h4>Multiple Choice Questions</h4>
+                    <ol>
+                        <li>What is the first step in workflow integration planning?</li>
+                        <li>Which tool is best for no-code AI application development?</li>
+                        <li>What is the primary limitation of current AI models?</li>
+                        <li>Which phase focuses on advanced AI applications?</li>
+                        <li>What should you always do with AI-generated content?</li>
+                    </ol>
+                </div>
+                
+                <h3>Final Project: AI Implementation Plan</h3>
+                <p>Create a comprehensive AI implementation plan for your work or personal use that includes:</p>
+                <ul>
+                    <li>Current state assessment and opportunity analysis</li>
+                    <li>Strategic vision and implementation roadmap</li>
+                    <li>Tool selection and integration strategy</li>
+                    <li>Resource planning and budget considerations</li>
+                    <li>Success metrics and evaluation framework</li>
+                </ul>
+            </div>
+            
+            <div class="section" id="conclusion">
+                <h2>Course Conclusion</h2>
+                
+                <h3>What You've Accomplished</h3>
+                <p>Congratulations! You've completed the Generative AI for Work and Everyday Use course. Over these 8 weeks, you've built a comprehensive understanding of generative AI tools and how to apply them effectively in professional and personal contexts.</p>
+                
+                <h3>Key Takeaways</h3>
+                <ul>
+                    <li><strong>Foundation:</strong> You understand what generative AI is and how it works</li>
+                    <li><strong>Practical Skills:</strong> You can use AI tools for writing, analysis, creativity, and productivity</li>
+                    <li><strong>Integration:</strong> You know how to incorporate AI into your existing workflows</li>
+                    <li><strong>Best Practices:</strong> You understand AI limitations and ethical considerations</li>
+                    <li><strong>Future-Ready:</strong> You're prepared to adapt to new AI developments</li>
+                </ul>
+                
+                <h3>Next Steps</h3>
+                <p>Your AI journey doesn't end here! Consider these next steps:</p>
+                <ul>
+                    <li><strong>Practice Regularly:</strong> Use AI tools daily to maintain and improve your skills</li>
+                    <li><strong>Stay Updated:</strong> Follow AI developments and new tool releases</li>
+                    <li><strong>Share Knowledge:</strong> Help others learn about AI and its applications</li>
+                    <li><strong>Specialize:</strong> Focus on AI applications in your specific field or interest area</li>
+                    <li><strong>Build Projects:</strong> Create your own AI-powered solutions and workflows</li>
+                </ul>
+                
+                <h3>Resources for Continued Learning</h3>
+                <p>Here are some resources to help you continue your AI education:</p>
+                <ul>
+                    <li><a href="https://openai.com/blog/">OpenAI Blog</a> - Latest developments in AI</li>
+                    <li><a href="https://www.anthropic.com/blog">Anthropic Blog</a> - AI safety and research</li>
+                    <li><a href="https://ai.googleblog.com/">Google AI Blog</a> - Google's AI research and applications</li>
+                    <li><a href="https://www.technologyreview.com/topic/artificial-intelligence/">MIT Technology Review</a> - AI news and analysis</li>
+                    <li><a href="https://www.coursera.org/specializations/ai-for-everyone">AI for Everyone</a> - Coursera course on AI fundamentals</li>
+                </ul>
+                
+                <div class="tip-box">
+                    <div class="box-title">Final Tip</div>
+                    <p>Remember that AI is a tool to amplify human capabilities, not replace them. The most successful AI users combine technical skills with human creativity, critical thinking, and domain expertise. Keep learning, experimenting, and finding new ways to make AI work for you!</p>
+                </div>
+            </div>
+        </div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About This Course</h3>
+                    <p>A comprehensive 8-week course designed to transform you from a beginner to a confident user of generative AI tools for professional and personal applications.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="#course-overview" style="color: var(--primary-color); text-decoration: none;">Course Overview</a></p>
+                    <p><a href="#week1" style="color: var(--primary-color); text-decoration: none;">Week 1: Foundations</a></p>
+                    <p><a href="#week8" style="color: var(--primary-color); text-decoration: none;">Week 8: Integration</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://twitter.com/Asabeneh" target="_blank" rel="noopener noreferrer" aria-label="Twitter">𝕏</a>
+                        <a href="https://github.com/Asabeneh" target="_blank" rel="noopener noreferrer" aria-label="GitHub">📚</a>
+                        <a href="https://linkedin.com/in/Asabeneh" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">💼</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Generative AI for Work and Everyday Use. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    </main>
+    
+    <script>
+        // Utility function for safe DOM queries
+        const safeQuerySelector = (selector) => {
+            try {
+                return document.querySelector(selector);
+            } catch (error) {
+                console.warn(`Invalid selector: ${selector}`, error);
+                return null;
+            }
+        };
+
+        const safeQuerySelectorAll = (selector) => {
+            try {
+                return document.querySelectorAll(selector);
+            } catch (error) {
+                console.warn(`Invalid selector: ${selector}`, error);
+                return [];
+            }
+        };
+
+        // Smooth scrolling with error handling
+        const initSmoothScrolling = () => {
+            safeQuerySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const href = this.getAttribute('href');
+                    const target = safeQuerySelector(href);
+                    
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // Update URL without page jump
+                        history.pushState(null, null, href);
+                    }
+                });
+            });
+        };
+
+        // Interactive course outline items with keyboard support
+        const initOutlineInteractions = () => {
+            safeQuerySelectorAll('.outline-item').forEach(item => {
+                const handleInteraction = () => {
+                    const link = item.querySelector('a');
+                    if (link) {
+                        const href = link.getAttribute('href');
+                        const targetSection = safeQuerySelector(href);
+                        
+                        if (targetSection) {
+                            targetSection.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                            
+                            // Update URL
+                            history.pushState(null, null, href);
+                        }
+                    }
+                };
+
+                // Click handler
+                item.addEventListener('click', handleInteraction);
+                
+                // Keyboard handler
+                item.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        handleInteraction();
+                    }
+                });
+            });
+        };
+
+        // Intersection Observer for animations
+        const initAnimations = () => {
+            if ('IntersectionObserver' in window) {
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }
+                    });
+                }, observerOptions);
+                
+                // Observe elements for animation
+                const animatedElements = safeQuerySelectorAll('.outline-item, .exercise, .note-box, .warning-box, .tip-box');
+                animatedElements.forEach(el => {
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateY(20px)';
+                    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    observer.observe(el);
+                });
+            }
+        };
+
+        // Table of contents hover effects
+        const initTocEffects = () => {
+            safeQuerySelectorAll('.toc-link').forEach(link => {
+                link.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateX(5px)';
+                    this.style.transition = 'transform 0.2s ease';
+                });
+                
+                link.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateX(0)';
+                });
+            });
+        };
+
+        // Progress bar functionality
+        const initProgressBar = () => {
+            const progressBar = safeQuerySelector('#progressBar');
+            if (!progressBar) return;
+            
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.pageYOffset;
+                const docHeight = document.body.offsetHeight - window.innerHeight;
+                const scrollPercent = (scrollTop / docHeight) * 100;
+                progressBar.style.width = scrollPercent + '%';
+            });
+        };
+        
+        // Quiz interactions
+        const initQuizInteractions = () => {
+            const quizOptions = safeQuerySelectorAll('.quiz-option');
+            quizOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove previous selections
+                    quizOptions.forEach(opt => opt.classList.remove('selected'));
+                    
+                    // Add selection to clicked option
+                    this.classList.add('selected');
+                    
+                    // Check if correct
+                    const isCorrect = this.getAttribute('data-correct') === 'true';
+                    
+                    // Visual feedback
+                    setTimeout(() => {
+                        if (isCorrect) {
+                            this.style.background = 'var(--success-color)';
+                            this.style.color = 'white';
+                            this.innerHTML += ' ✅';
+                        } else {
+                            this.style.background = 'var(--error-color)';
+                            this.style.color = 'white';
+                            this.innerHTML += ' ❌';
+                        }
+                    }, 300);
+                });
+            });
+        };
+        
+        // Navigation dots
+        const initNavigationDots = () => {
+            const navDots = safeQuerySelectorAll('.nav-dot');
+            const sections = ['hero', 'week1', 'week2', 'week3', 'week4', 'week5', 'week6', 'week7', 'week8'];
+            
+            navDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    const targetSection = safeQuerySelector(`#${sections[index]}`);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+            
+            // Update active dot on scroll
+            window.addEventListener('scroll', () => {
+                const scrollPosition = window.scrollY + 100;
+                
+                sections.forEach((section, index) => {
+                    const element = safeQuerySelector(`#${section}`);
+                    if (element) {
+                        const elementTop = element.offsetTop;
+                        const elementBottom = elementTop + element.offsetHeight;
+                        
+                        if (scrollPosition >= elementTop && scrollPosition < elementBottom) {
+                            navDots.forEach(dot => dot.classList.remove('active'));
+                            navDots[index]?.classList.add('active');
+                        }
+                    }
+                });
+            });
+        };
+        
+        // Floating action button
+        const initFloatingActionButton = () => {
+            const fab = safeQuerySelector('#fab');
+            if (!fab) return;
+            
+            fab.addEventListener('click', () => {
+                // Simple action for now - scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+                // Add visual feedback
+                fab.style.transform = 'scale(0.9)';
+                setTimeout(() => {
+                    fab.style.transform = 'scale(1)';
+                }, 150);
+            });
+        };
+        
+        // Completion tracking
+        const initCompletionTracking = () => {
+            const outlineItems = safeQuerySelectorAll('.outline-item');
+            
+            outlineItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const week = this.getAttribute('data-week');
+                    if (week) {
+                        // Mark as completed
+                        this.classList.add('completed');
+                        
+                        // Store in localStorage
+                        const completedWeeks = JSON.parse(localStorage.getItem('completedWeeks') || '[]');
+                        if (!completedWeeks.includes(week)) {
+                            completedWeeks.push(week);
+                            localStorage.setItem('completedWeeks', JSON.stringify(completedWeeks));
+                        }
+                        
+                        // Visual feedback
+                        const check = this.querySelector('.completion-check');
+                        if (check) {
+                            check.style.animation = 'pulse 0.5s ease-in-out';
+                            setTimeout(() => {
+                                check.style.animation = '';
+                            }, 500);
+                        }
+                    }
+                });
+            });
+            
+            // Restore completed state on page load
+            const completedWeeks = JSON.parse(localStorage.getItem('completedWeeks') || '[]');
+            completedWeeks.forEach(week => {
+                const item = safeQuerySelector(`[data-week="${week}"]`);
+                if (item) {
+                    item.classList.add('completed');
+                }
+            });
+        };
+        
+        // Initialize all functionality when DOM is ready
+        const init = () => {
+            initSmoothScrolling();
+            initOutlineInteractions();
+            initAnimations();
+            initTocEffects();
+            initProgressBar();
+            initQuizInteractions();
+            initNavigationDots();
+            initFloatingActionButton();
+            initCompletionTracking();
+            
+            // Add loading animation
+            document.body.style.opacity = '1';
+        };
+
+        // Wait for DOM to be ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+    </script>
+</body>
+</html>
