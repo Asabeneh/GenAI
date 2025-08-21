@@ -275,6 +275,937 @@
             margin-bottom: var(--spacing-xl);
         }
         
+        /* Course Overview and Learning Materials */
+        .course-overview-box,
+        .learning-outcomes-box,
+        .study-guide-box,
+        .resources-box,
+        .time-commitment-box {
+            background: linear-gradient(135deg, var(--card-bg) 0%, var(--card-accent) 100%);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            margin: var(--spacing-lg) 0;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+        
+        .course-overview-box:hover,
+        .learning-outcomes-box:hover,
+        .study-guide-box:hover,
+        .resources-box:hover,
+        .time-commitment-box:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-color);
+        }
+        
+        .course-overview-box h3,
+        .learning-outcomes-box h3,
+        .study-guide-box h3,
+        .resources-box h3,
+        .time-commitment-box h3 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-lg);
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .outcomes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .outcome-item {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .outcome-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-color);
+        }
+        
+        .outcome-icon {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .outcome-item strong {
+            color: var(--text-color);
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .outcome-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        
+        .study-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-md);
+        }
+        
+        .step-number {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: var(--white);
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+        
+        .step-content h4 {
+            color: var(--text-color);
+            margin-bottom: var(--spacing-xs);
+            font-size: 1.1rem;
+        }
+        
+        .step-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .tool-category {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+        }
+        
+        .tool-category h4 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+            font-size: 1.1rem;
+        }
+        
+        .tool-category ul {
+            margin: 0;
+            padding-left: var(--spacing-lg);
+        }
+        
+        .tool-category li {
+            margin-bottom: var(--spacing-sm);
+            font-size: 0.95rem;
+        }
+        
+        .tool-category a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .tool-category a:hover {
+            text-decoration: underline;
+        }
+        
+        .time-commitment-box ul {
+            margin: var(--spacing-md) 0;
+        }
+        
+        .time-commitment-box li {
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        /* Glossary and Reference Styling */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin: var(--spacing-lg) 0;
+        }
+        
+        .glossary-item {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        
+        .glossary-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-color);
+        }
+        
+        .glossary-item h4 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.1rem;
+        }
+        
+        .glossary-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        .tools-reference {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-lg);
+            margin: var(--spacing-lg) 0;
+        }
+        
+        .tool-reference-item {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        
+        .tool-reference-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-color);
+        }
+        
+        .tool-reference-item h4 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+            font-size: 1.2rem;
+        }
+        
+        .tool-reference-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.6;
+        }
+        
+        .tool-reference-item p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .prompt-templates {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin: var(--spacing-lg) 0;
+        }
+        
+        .template-item {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        
+        .template-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-color);
+        }
+        
+        .template-item h4 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+            font-size: 1.1rem;
+        }
+        
+        .template-item pre {
+            background: var(--code-bg);
+            color: var(--code-text);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            font-size: 0.9rem;
+            overflow-x: auto;
+            margin: 0;
+        }
+        
+        .safety-checklist {
+            background: var(--white);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            margin: var(--spacing-lg) 0;
+        }
+        
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+            padding: var(--spacing-sm);
+            border-radius: var(--radius-sm);
+            transition: background-color 0.2s ease;
+        }
+        
+        .checklist-item:hover {
+            background: var(--card-accent);
+        }
+        
+        .checklist-item input[type="checkbox"] {
+            width: 1.2rem;
+            height: 1.2rem;
+            margin-top: 0.1rem;
+            accent-color: var(--primary-color);
+        }
+        
+        .checklist-item label {
+            color: var(--text-color);
+            font-size: 1rem;
+            line-height: 1.5;
+            cursor: pointer;
+            margin: 0;
+        }
+        
+        .checklist-item input[type="checkbox"]:checked + label {
+            color: var(--success-color);
+            text-decoration: line-through;
+        }
+        
+        /* Final Project Guide Styling */
+        .final-project-guide {
+            background: linear-gradient(135deg, var(--card-bg) 0%, var(--card-accent) 100%);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            margin: var(--spacing-xl) 0;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .project-components {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+            margin: var(--spacing-lg) 0;
+        }
+        
+        .component {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        
+        .component:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-color);
+        }
+        
+        .component h5 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+            font-size: 1.1rem;
+        }
+        
+        .component ul {
+            margin: 0;
+            padding-left: var(--spacing-lg);
+        }
+        
+        .component li {
+            margin-bottom: var(--spacing-sm);
+            font-size: 0.95rem;
+        }
+        
+        .submission-checklist {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            margin: var(--spacing-lg) 0;
+        }
+        
+        .project-ideas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin: var(--spacing-lg) 0;
+        }
+        
+        .idea-item {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        
+        .idea-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-color);
+        }
+        
+        .idea-item h5 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+            font-size: 1.1rem;
+        }
+        
+        .idea-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        .project-timeline {
+            margin: var(--spacing-xl) 0;
+        }
+        
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            margin: var(--spacing-lg) 0;
+        }
+        
+        .timeline-item {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-color);
+        }
+        
+        .timeline-week {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: var(--white);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: var(--spacing-md);
+            display: inline-block;
+        }
+        
+        .timeline-content h5 {
+            color: var(--text-color);
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.1rem;
+        }
+        
+        .timeline-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        /* Enhanced Instructional Design Styling */
+        .week-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: var(--white);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-xl);
+            margin-bottom: var(--spacing-xl);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .week-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .week-number {
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-block;
+            margin-bottom: var(--spacing-md);
+            backdrop-filter: blur(10px);
+        }
+        
+        .week-header h2 {
+            color: var(--white);
+            margin-bottom: var(--spacing-sm);
+            font-size: 2.5rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .week-duration {
+            background: rgba(255, 255, 255, 0.15);
+            padding: var(--spacing-xs) var(--spacing-md);
+            border-radius: var(--radius-md);
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .learning-objectives-box {
+            background: linear-gradient(135deg, var(--card-bg) 0%, var(--card-accent) 100%);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            margin: var(--spacing-lg) 0;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .objectives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .objective-item {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .objective-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-color);
+        }
+        
+        .objective-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .objective-item strong {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .objective-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        .prerequisites-box {
+            background: var(--warning-box);
+            border: 1px solid var(--warning-color);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            margin: var(--spacing-lg) 0;
+        }
+        
+        .prerequisites-box h3 {
+            color: var(--warning-color);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .week-overview {
+            background: linear-gradient(135deg, var(--card-bg) 0%, var(--card-accent) 100%);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            margin: var(--spacing-lg) 0;
+            border: 1px solid var(--border-color);
+        }
+        
+        .overview-timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .timeline-step {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .timeline-step:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-color);
+        }
+        
+        .step-marker {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: var(--white);
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 0 auto var(--spacing-md);
+        }
+        
+        .step-content h4 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.1rem;
+        }
+        
+        .step-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        
+        .concept-section {
+            margin: var(--spacing-xl) 0;
+        }
+        
+        .concept-intro {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .key-takeaway {
+            background: linear-gradient(135deg, var(--success-color), var(--info-color));
+            color: var(--white);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            margin-top: var(--spacing-md);
+            font-size: 0.95rem;
+        }
+        
+        .concept-breakdown {
+            margin-top: var(--spacing-lg);
+        }
+        
+        .characteristics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .characteristic-item {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-md);
+            transition: all 0.3s ease;
+        }
+        
+        .characteristic-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-color);
+        }
+        
+        .char-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+        
+        .char-content strong {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .char-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        .learning-path-section {
+            margin: var(--spacing-xl) 0;
+        }
+        
+        .learning-note {
+            background: var(--note-box);
+            border: 1px solid var(--info-color);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+        }
+        
+        .real-world-example {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .real-world-example h5 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .practice-section {
+            margin: var(--spacing-xl) 0;
+        }
+        
+        .practice-progression {
+            background: linear-gradient(135deg, var(--card-bg) 0%, var(--card-accent) 100%);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            border: 1px solid var(--border-color);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .practice-levels {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .practice-level {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .practice-level:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-color);
+        }
+        
+        .level-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: var(--white);
+            padding: var(--spacing-md);
+            text-align: center;
+        }
+        
+        .level-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius-sm);
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .level-header h5 {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+        
+        .practice-exercises {
+            padding: var(--spacing-lg);
+        }
+        
+        .practice-exercise h6 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+            font-size: 1.1rem;
+        }
+        
+        .practice-exercise p {
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.6;
+        }
+        
+        .exercise-tips {
+            background: var(--card-accent);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            margin-top: var(--spacing-md);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .exercise-tips strong {
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .exercise-tips ul {
+            margin: 0;
+            padding-left: var(--spacing-lg);
+        }
+        
+        .exercise-tips li {
+            margin-bottom: var(--spacing-xs);
+            font-size: 0.95rem;
+        }
+        
+        .assessment-section {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            padding: var(--spacing-lg);
+        }
+        
+        .assessment-levels {
+            margin: var(--spacing-lg) 0;
+        }
+        
+        .assessment-level {
+            background: var(--card-accent);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-md);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .assessment-level h5 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+            font-size: 1rem;
+        }
+        
+        .assessment-level ol {
+            margin: 0;
+            padding-left: var(--spacing-lg);
+        }
+        
+        .reflection-prompt {
+            background: var(--tip-box);
+            border: 1px solid var(--success-color);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .reflection-prompt h5 {
+            color: var(--success-color);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .week-summary {
+            background: linear-gradient(135deg, var(--card-bg) 0%, var(--card-accent) 100%);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            margin: var(--spacing-xl) 0;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+            margin: var(--spacing-lg) 0;
+        }
+        
+        .summary-section {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+        }
+        
+        .summary-section h4 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+            font-size: 1.1rem;
+        }
+        
+        .summary-section ul {
+            margin: 0;
+            padding-left: var(--spacing-lg);
+        }
+        
+        .summary-section li {
+            margin-bottom: var(--spacing-sm);
+            font-size: 0.95rem;
+        }
+        
+        .next-steps {
+            margin-top: var(--spacing-xl);
+        }
+        
+        .preparation-checklist {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            margin: var(--spacing-lg) 0;
+        }
+        
+        .week2-preview {
+            background: var(--card-accent);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .week2-preview h5 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .week2-preview ul {
+            margin: var(--spacing-md) 0;
+        }
+        
+        .week2-preview li {
+            margin-bottom: var(--spacing-sm);
+            font-size: 0.95rem;
+        }
+        
 
         
         /* Course Outline Cards */
@@ -520,32 +1451,7 @@
             box-shadow: var(--shadow-xl);
         }
         
-        .nav-dots {
-            position: fixed;
-            right: 2rem;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 1000;
-        }
-        
-        .nav-dot {
-            width: 12px;
-            height: 12px;
-            background: var(--border-color);
-            border-radius: 50%;
-            margin: 0.5rem 0;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-dot.active {
-            background: var(--primary-color);
-            transform: scale(1.2);
-        }
-        
-        .nav-dot:hover {
-            background: var(--accent-color);
-        }
+
         
         .completion-check {
             position: absolute;
@@ -878,8 +1784,8 @@
         
         .table-of-contents {
             background: linear-gradient(135deg, var(--card-bg) 0%, var(--card-accent) 100%);
-            padding: var(--spacing-lg);
-            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-xl);
             margin: var(--spacing-xl) 0;
             transition: all 0.3s ease;
             border: 1px solid var(--border-color);
@@ -894,20 +1800,128 @@
         
         .table-of-contents h3 {
             margin-top: 0;
+            margin-bottom: var(--spacing-lg);
         }
         
-        .table-of-contents ul {
-            margin-bottom: 0;
+        .course-progress {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--spacing-lg);
+            border: 1px solid var(--border-color);
+        }
+        
+        .progress-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .progress-text {
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        
+        .progress-percentage {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+        
+        .progress-bar-container {
+            background: var(--border-light);
+            border-radius: var(--radius-md);
+            height: 8px;
+            overflow: hidden;
+        }
+        
+        .course-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+        
+        .toc-sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .toc-section {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        
+        .toc-section:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-color);
+        }
+        
+        .toc-section h4 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .toc-section ul {
+            margin: 0;
+            padding-left: var(--spacing-lg);
+        }
+        
+        .toc-section li {
+            margin-bottom: var(--spacing-sm);
         }
         
         .toc-link {
-            color: var(--secondary-text);
+            color: var(--text-secondary);
             text-decoration: none;
+            transition: color 0.2s ease;
+            display: block;
+            padding: var(--spacing-xs) 0;
         }
         
         .toc-link:hover {
-            color: var(--accent-color);
-            text-decoration: underline;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .toc-link.completed {
+            color: var(--success-color);
+            font-weight: 500;
+        }
+        
+        .quick-actions {
+            display: flex;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .quick-action-btn {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: var(--white);
+            border: none;
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+        }
+        
+        .quick-action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
         }
         
         /* Exercise Boxes */
@@ -1089,18 +2103,7 @@
         <div class="progress-bar" id="progressBar"></div>
     </div>
     
-    <!-- Navigation Dots -->
-    <div class="nav-dots" id="navDots">
-        <div class="nav-dot active" data-section="hero"></div>
-        <div class="nav-dot" data-section="week1"></div>
-        <div class="nav-dot" data-section="week2"></div>
-        <div class="nav-dot" data-section="week3"></div>
-        <div class="nav-dot" data-section="week4"></div>
-        <div class="nav-dot" data-section="week5"></div>
-        <div class="nav-dot" data-section="week6"></div>
-        <div class="nav-dot" data-section="week7"></div>
-        <div class="nav-dot" data-section="week8"></div>
-    </div>
+
     
     <!-- Floating Action Button -->
     <button class="fab" id="fab" title="Quick Actions" aria-label="Quick actions menu">
@@ -1128,20 +2131,178 @@
             <header>
                 <p class="welcome">Welcome to the Generative AI for Work and Everyday Use course!</p>
                 <p>This comprehensive 8-week course will transform you from a beginner to a confident user of generative AI tools for professional and personal applications. Whether you're a business professional, creative, student, or entrepreneur, these essential AI skills will help you boost productivity, enhance creativity, and stay competitive in the AI-powered future.</p>
+                
+                <div class="course-overview-box">
+                    <h3>🎯 Course Overview</h3>
+                    <p><strong>Duration:</strong> 8 weeks (self-paced)</p>
+                    <p><strong>Level:</strong> Beginner to Intermediate</p>
+                    <p><strong>Prerequisites:</strong> Basic computer skills and internet access</p>
+                    <p><strong>Format:</strong> Self-contained online course with practical exercises</p>
+                    <p><strong>Certificate:</strong> Complete all weeks and final project to earn your certificate</p>
+                </div>
+                
+                <div class="learning-outcomes-box">
+                    <h3>🚀 What You'll Learn</h3>
+                    <div class="outcomes-grid">
+                        <div class="outcome-item">
+                            <span class="outcome-icon">💡</span>
+                            <strong>Foundation Knowledge</strong>
+                            <p>Understand AI fundamentals, model capabilities, and safety considerations</p>
+                        </div>
+                        <div class="outcome-item">
+                            <span class="outcome-icon">✍️</span>
+                            <strong>Practical Skills</strong>
+                            <p>Master prompt engineering, content creation, and AI tool integration</p>
+                        </div>
+                        <div class="outcome-item">
+                            <span class="outcome-icon">🔧</span>
+                            <strong>Technical Implementation</strong>
+                            <p>Build AI applications, implement RAG systems, and create custom workflows</p>
+                        </div>
+                        <div class="outcome-item">
+                            <span class="outcome-icon">🎯</span>
+                            <strong>Real-World Application</strong>
+                            <p>Apply AI to business, creativity, productivity, and problem-solving</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="study-guide-box">
+                    <h3>📚 How to Use This Course</h3>
+                    <div class="study-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Start with Week 1</h4>
+                                <p>Begin with the foundations and work through each week sequentially</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Complete All Exercises</h4>
+                                <p>Practice with hands-on activities and coding projects</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Take Quizzes</h4>
+                                <p>Test your understanding with interactive assessments</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Build Your Project</h4>
+                                <p>Apply everything you've learned to create a real AI application</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resources-box">
+                    <h3>🛠️ Required Tools and Resources</h3>
+                    <div class="tools-grid">
+                        <div class="tool-category">
+                            <h4>AI Platforms (Choose One)</h4>
+                            <ul>
+                                <li><a href="https://chat.openai.com" target="_blank">ChatGPT Plus</a> - $20/month</li>
+                                <li><a href="https://claude.ai" target="_blank">Claude Pro</a> - $20/month</li>
+                                <li><a href="https://gemini.google.com" target="_blank">Google Gemini Advanced</a> - $20/month</li>
+                            </ul>
+                        </div>
+                        <div class="tool-category">
+                            <h4>Development Tools</h4>
+                            <ul>
+                                <li><a href="https://code.visualstudio.com" target="_blank">Visual Studio Code</a> - Free</li>
+                                <li><a href="https://www.python.org" target="_blank">Python 3.8+</a> - Free</li>
+                                <li><a href="https://github.com" target="_blank">GitHub Account</a> - Free</li>
+                            </ul>
+                        </div>
+                        <div class="tool-category">
+                            <h4>Learning Resources</h4>
+                            <ul>
+                                <li>API Documentation for your chosen AI platform</li>
+                                <li>Python documentation and tutorials</li>
+                                <li>Git and GitHub basics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="time-commitment-box">
+                    <h3>⏰ Time Commitment</h3>
+                    <p><strong>Weekly Commitment:</strong> 5-8 hours</p>
+                    <ul>
+                        <li><strong>Reading & Theory:</strong> 2-3 hours</li>
+                        <li><strong>Hands-on Practice:</strong> 2-3 hours</li>
+                        <li><strong>Project Work:</strong> 1-2 hours</li>
+                    </ul>
+                    <p><strong>Total Course Time:</strong> 40-64 hours over 8 weeks</p>
+                    <p><em>Note: You can adjust the pace based on your schedule and experience level.</em></p>
+                </div>
             </header>
             
             <nav class="table-of-contents" role="navigation" aria-label="Course navigation">
-                <h3 id="toc-heading">Table of Contents</h3>
-                <ul role="list">
-                    <li><a href="#week1" class="toc-link" aria-describedby="toc-heading">Week 1: Foundations of Generative AI</a></li>
-                    <li><a href="#week2" class="toc-link" aria-describedby="toc-heading">Week 2: Text Generation and Writing</a></li>
-                    <li><a href="#week3" class="toc-link" aria-describedby="toc-heading">Week 3: AI for Business and Productivity</a></li>
-                    <li><a href="#week4" class="toc-link" aria-describedby="toc-heading">Week 4: Creative Content Generation</a></li>
-                    <li><a href="#week5" class="toc-link" aria-describedby="toc-heading">Week 5: Data Analysis and Research</a></li>
-                    <li><a href="#week6" class="toc-link" aria-describedby="toc-heading">Week 6: Code Generation and Programming</a></li>
-                    <li><a href="#week7" class="toc-link" aria-describedby="toc-heading">Week 7: Image and Multimedia Generation</a></li>
-                    <li><a href="#week8" class="toc-link" aria-describedby="toc-heading">Week 8: Integration and Advanced Applications</a></li>
-                </ul>
+                <h3 id="toc-heading">📚 Complete Course Navigation</h3>
+                <div class="course-progress">
+                    <div class="progress-info">
+                        <span class="progress-text">Course Progress</span>
+                        <span class="progress-percentage" id="courseProgress">0%</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="course-progress-bar" id="courseProgressBar"></div>
+                    </div>
+                </div>
+                
+                <div class="toc-sections">
+                    <div class="toc-section">
+                        <h4>🎯 Foundation Weeks (1-2)</h4>
+                        <ul role="list">
+                            <li><a href="#week1" class="toc-link" data-week="1" aria-describedby="toc-heading">Week 1: Foundations of Generative AI</a></li>
+                            <li><a href="#week2" class="toc-link" data-week="2" aria-describedby="toc-heading">Week 2: Text Generation and Writing</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="toc-section">
+                        <h4>💼 Application Weeks (3-5)</h4>
+                        <ul role="list">
+                            <li><a href="#week3" class="toc-link" data-week="3" aria-describedby="toc-heading">Week 3: AI for Business and Productivity</a></li>
+                            <li><a href="#week4" class="toc-link" data-week="4" aria-describedby="toc-heading">Week 4: Creative Content Generation</a></li>
+                            <li><a href="#week5" class="toc-link" data-week="5" aria-describedby="toc-heading">Week 5: Data Analysis and Research</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="toc-section">
+                        <h4>🔧 Technical Weeks (6-7)</h4>
+                        <ul role="list">
+                            <li><a href="#week6" class="toc-link" data-week="6" aria-describedby="toc-heading">Week 6: Code Generation and Programming</a></li>
+                            <li><a href="#week7" class="toc-link" data-week="7" aria-describedby="toc-heading">Week 7: Image and Multimedia Generation</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="toc-section">
+                        <h4>🚀 Integration Week (8)</h4>
+                        <ul role="list">
+                            <li><a href="#week8" class="toc-link" data-week="8" aria-describedby="toc-heading">Week 8: Integration and Advanced Applications</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="toc-section">
+                        <h4>📖 Reference Materials</h4>
+                        <ul role="list">
+                            <li><a href="#glossary" class="toc-link" aria-describedby="toc-heading">AI Glossary and Reference</a></li>
+                            <li><a href="#conclusion" class="toc-link" aria-describedby="toc-heading">Course Conclusion</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="quick-actions">
+                    <button class="quick-action-btn" id="markAllComplete">Mark All Complete</button>
+                    <button class="quick-action-btn" id="resetProgress">Reset Progress</button>
+                    <button class="quick-action-btn" id="exportProgress">Export Progress</button>
+                </div>
             </nav>
             
             <section aria-labelledby="course-outline-heading">
@@ -1192,52 +2353,181 @@
 
             
             <div class="section" id="week1">
-                <h2>Week 1: Foundations of Generative AI</h2>
+                <div class="week-header">
+                    <div class="week-number">Week 1</div>
+                    <h2>Foundations of Generative AI</h2>
+                    <div class="week-duration">⏱️ 5-7 hours</div>
+                </div>
                 
-                <h3>Learning Objectives</h3>
-                <ul>
-                    <li>Understand what generative AI is and how it works</li>
-                    <li>Learn about different types of generative AI tools</li>
-                    <li>Set up your first AI workspace</li>
-                    <li>Complete your first AI-assisted task</li>
-                </ul>
+                <div class="learning-objectives-box">
+                    <h3>🎯 Learning Objectives</h3>
+                    <p>By the end of this week, you will be able to:</p>
+                    <div class="objectives-grid">
+                        <div class="objective-item">
+                            <span class="objective-icon">🧠</span>
+                            <strong>Define and Explain</strong>
+                            <p>What generative AI is and how it differs from traditional AI</p>
+                        </div>
+                        <div class="objective-item">
+                            <span class="objective-icon">🔧</span>
+                            <strong>Identify and Compare</strong>
+                            <p>Different types of generative AI tools and their capabilities</p>
+                        </div>
+                        <div class="objective-item">
+                            <span class="objective-icon">⚙️</span>
+                            <strong>Set Up and Configure</strong>
+                            <p>Your first AI workspace with essential tools</p>
+                        </div>
+                        <div class="objective-item">
+                            <span class="objective-icon">✅</span>
+                            <strong>Complete and Evaluate</strong>
+                            <p>Your first AI-assisted task with proper assessment</p>
+                        </div>
+                    </div>
+                </div>
                 
-                <h3>What is Generative AI?</h3>
-                <p>Generative AI refers to artificial intelligence systems that can create new content, including text, images, audio, video, and code. These systems learn patterns from existing data and generate novel outputs that can be remarkably human-like and creative.</p>
+                <div class="prerequisites-box">
+                    <h3>📋 Prerequisites</h3>
+                    <p>Before starting this week, ensure you have:</p>
+                    <ul>
+                        <li>Basic computer literacy and internet access</li>
+                        <li>An account on at least one AI platform (ChatGPT, Claude, or Gemini)</li>
+                        <li>Curiosity and willingness to experiment with new tools</li>
+                    </ul>
+                </div>
                 
-                <h4>Key Characteristics of Generative AI</h4>
-                <ul>
-                    <li><strong>Creativity:</strong> Can produce original content that didn't exist before</li>
-                    <li><strong>Adaptability:</strong> Can generate content in various styles and formats</li>
-                    <li><strong>Context Awareness:</strong> Understands context and generates relevant responses</li>
-                    <li><strong>Iterative Improvement:</strong> Can refine outputs based on feedback</li>
-                    <li><strong>Multimodal Capabilities:</strong> Can work with text, images, audio, and video</li>
-                </ul>
+                <div class="week-overview">
+                    <h3>📖 Week Overview</h3>
+                    <div class="overview-timeline">
+                        <div class="timeline-step">
+                            <div class="step-marker">1</div>
+                            <div class="step-content">
+                                <h4>Day 1-2: Understanding AI Fundamentals</h4>
+                                <p>Learn core concepts and terminology</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-marker">2</div>
+                            <div class="step-content">
+                                <h4>Day 3-4: Exploring AI Tools</h4>
+                                <p>Set up accounts and test basic functionality</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-marker">3</div>
+                            <div class="step-content">
+                                <h4>Day 5-6: Hands-on Practice</h4>
+                                <p>Complete guided exercises and mini-projects</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-marker">4</div>
+                            <div class="step-content">
+                                <h4>Day 7: Assessment & Reflection</h4>
+                                <p>Take quizzes and plan next week's learning</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 
-                <h4>How Generative AI Differs from Traditional AI</h4>
-                <div class="comparison-table">
-                    <table>
-                        <tr>
-                            <th>Traditional AI</th>
-                            <th>Generative AI</th>
-                        </tr>
-                        <tr>
-                            <td>Analyzes and classifies existing data</td>
-                            <td>Creates new, original content</td>
-                        </tr>
-                        <tr>
-                            <td>Follows predefined rules</td>
-                            <td>Learns patterns and generates variations</td>
-                        </tr>
-                        <tr>
-                            <td>Predicts outcomes based on input</td>
-                            <td>Generates diverse outputs from prompts</td>
-                        </tr>
-                        <tr>
-                            <td>Specialized for specific tasks</td>
-                            <td>Versatile across multiple domains</td>
-                        </tr>
-                    </table>
+                <div class="concept-section">
+                    <h3>🧠 What is Generative AI?</h3>
+                    <div class="concept-intro">
+                        <p>Generative AI refers to artificial intelligence systems that can create new content, including text, images, audio, video, and code. These systems learn patterns from existing data and generate novel outputs that can be remarkably human-like and creative.</p>
+                        
+                        <div class="key-takeaway">
+                            <strong>🎯 Key Takeaway:</strong> Generative AI doesn't just analyze existing data—it creates new, original content based on learned patterns.
+                        </div>
+                    </div>
+                    
+                    <div class="concept-breakdown">
+                        <h4>🔑 Key Characteristics of Generative AI</h4>
+                        <div class="characteristics-grid">
+                            <div class="characteristic-item">
+                                <div class="char-icon">✨</div>
+                                <div class="char-content">
+                                    <strong>Creativity</strong>
+                                    <p>Can produce original content that didn't exist before</p>
+                                </div>
+                            </div>
+                            <div class="characteristic-item">
+                                <div class="char-icon">🔄</div>
+                                <div class="char-content">
+                                    <strong>Adaptability</strong>
+                                    <p>Can generate content in various styles and formats</p>
+                                </div>
+                            </div>
+                            <div class="characteristic-item">
+                                <div class="char-icon">🎯</div>
+                                <div class="char-content">
+                                    <strong>Context Awareness</strong>
+                                    <p>Understands context and generates relevant responses</p>
+                                </div>
+                            </div>
+                            <div class="characteristic-item">
+                                <div class="char-icon">📈</div>
+                                <div class="char-content">
+                                    <strong>Iterative Improvement</strong>
+                                    <p>Can refine outputs based on feedback</p>
+                                </div>
+                            </div>
+                            <div class="characteristic-item">
+                                <div class="char-icon">🎨</div>
+                                <div class="char-content">
+                                    <strong>Multimodal Capabilities</strong>
+                                    <p>Can work with text, images, audio, and video</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="learning-path-section">
+                    <h4>🔄 How Generative AI Differs from Traditional AI</h4>
+                    
+                    <div class="learning-note">
+                        <p><strong>💡 Learning Tip:</strong> Understanding these differences helps you choose the right AI approach for your specific needs.</p>
+                    </div>
+                    
+                    <div class="comparison-table">
+                        <table>
+                            <tr>
+                                <th>Traditional AI</th>
+                                <th>Generative AI</th>
+                                <th>When to Use</th>
+                            </tr>
+                            <tr>
+                                <td>Analyzes and classifies existing data</td>
+                                <td>Creates new, original content</td>
+                                <td>Use traditional AI for analysis, generative AI for creation</td>
+                            </tr>
+                            <tr>
+                                <td>Follows predefined rules</td>
+                                <td>Learns patterns and generates variations</td>
+                                <td>Use traditional AI for structured tasks, generative AI for creative tasks</td>
+                            </tr>
+                            <tr>
+                                <td>Predicts outcomes based on input</td>
+                                <td>Generates diverse outputs from prompts</td>
+                                <td>Use traditional AI for predictions, generative AI for content generation</td>
+                            </tr>
+                            <tr>
+                                <td>Specialized for specific tasks</td>
+                                <td>Versatile across multiple domains</td>
+                                <td>Use traditional AI for specialized needs, generative AI for general purposes</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="real-world-example">
+                        <h5>🌍 Real-World Example</h5>
+                        <p><strong>Scenario:</strong> You need to analyze customer feedback and create marketing content.</p>
+                        <ul>
+                            <li><strong>Traditional AI:</strong> Categorize feedback into positive/negative/neutral</li>
+                            <li><strong>Generative AI:</strong> Create marketing copy based on positive feedback themes</li>
+                            <li><strong>Combined Approach:</strong> Use traditional AI to analyze, then generative AI to create content</li>
+                        </ul>
+                    </div>
                 </div>
                 
                 <div class="note-box">
@@ -1247,11 +2537,13 @@
                 
                 <h3>Types of Generative AI</h3>
                 <ul>
-                    <li><strong>Text Generation (LLMs)</strong>: ChatGPT, Claude, Gemini for writing, analysis, and conversation</li>
-                    <li><strong>Image Generation</strong>: DALL-E, Midjourney, Stable Diffusion for creating visual content</li>
-                    <li><strong>Audio Generation</strong>: ElevenLabs, Mubert for text-to-speech and music creation</li>
-                    <li><strong>Video Generation</strong>: Runway, Pika Labs for creating and editing videos</li>
-                    <li><strong>Code Generation</strong>: GitHub Copilot, Cursor for programming assistance</li>
+                    <li><strong>Large Language Models (LLMs)</strong>: GPT-4, Claude 3.5 Sonnet, Gemini 1.5 Pro, Llama 3 for text generation, analysis, and reasoning</li>
+                    <li><strong>Multimodal Models</strong>: GPT-4V, Claude 3.5 Sonnet, Gemini 1.5 Pro for text, image, audio, and video understanding</li>
+                    <li><strong>Image Generation</strong>: DALL-E 3, Midjourney V6, Stable Diffusion XL, Adobe Firefly for creating visual content</li>
+                    <li><strong>Audio Generation</strong>: ElevenLabs, Mubert, Suno AI for text-to-speech, music creation, and audio editing</li>
+                    <li><strong>Video Generation</strong>: Runway Gen-3, Pika Labs, Sora (when available) for creating and editing videos</li>
+                    <li><strong>Code Generation</strong>: GitHub Copilot, Cursor, Claude 3.5 Sonnet for programming assistance and code generation</li>
+                    <li><strong>Specialized Models</strong>: Domain-specific models for medicine, law, finance, and other professional fields</li>
                 </ul>
                 
                 <h3>Benefits of Generative AI</h3>
@@ -1265,15 +2557,25 @@
                 </ul>
                 
                 <h3>How Generative AI Works</h3>
-                <p>Generative AI models learn patterns from massive amounts of data and use that knowledge to create new content. When you provide a prompt, the AI predicts what should come next based on its training.</p>
+                <p>Generative AI models use advanced neural network architectures (primarily Transformers) to learn patterns from massive amounts of data. These models use attention mechanisms to understand context and relationships between different parts of the input, enabling them to generate coherent and contextually relevant content.</p>
+                
+                <h4>Technical Architecture Overview</h4>
+                <ul>
+                    <li><strong>Transformer Architecture</strong>: Self-attention mechanisms that process input sequences in parallel</li>
+                    <li><strong>Tokenization</strong>: Converting text into numerical representations (tokens) for processing</li>
+                    <li><strong>Embedding Layers</strong>: Converting tokens into high-dimensional vector representations</li>
+                    <li><strong>Attention Mechanisms</strong>: Computing relationships between different parts of the input</li>
+                    <li><strong>Feed-Forward Networks</strong>: Processing information through multiple neural network layers</li>
+                </ul>
                 
                 <h4>The AI Generation Process</h4>
                 <p>Generative AI follows these main steps:</p>
                 <ul>
-                    <li><strong>Input Processing</strong>: Your prompt is analyzed and understood by the model</li>
-                    <li><strong>Pattern Recognition</strong>: The AI identifies relevant patterns from its training data</li>
-                    <li><strong>Content Generation</strong>: New content is created based on learned patterns</li>
-                    <li><strong>Output Refinement</strong>: The response is refined for coherence and relevance</li>
+                    <li><strong>Input Processing</strong>: Your prompt is tokenized and embedded into the model</li>
+                    <li><strong>Context Understanding</strong>: The AI analyzes context using attention mechanisms</li>
+                    <li><strong>Pattern Recognition</strong>: The model identifies relevant patterns from its training data</li>
+                    <li><strong>Content Generation</strong>: New content is created using probability distributions over the vocabulary</li>
+                    <li><strong>Output Refinement</strong>: The response is refined for coherence, relevance, and safety</li>
                 </ul>
                 
                 <div class="workflow-chart">
@@ -1287,13 +2589,194 @@
                     </ol>
                 </div>
                 
-                <div class="exercise">
-                    <h4>Self-Check Quiz</h4>
-                    <ol>
-                        <li>What are the five main types of generative AI?</li>
-                        <li>Explain the difference between traditional AI and generative AI.</li>
-                        <li>What are the four main steps in the AI generation process?</li>
-                    </ol>
+                <h3>Modern AI Engineering Practices</h3>
+                
+                <h4>Retrieval-Augmented Generation (RAG)</h4>
+                <p>RAG is a powerful technique that combines the knowledge retrieval capabilities of search systems with the text generation abilities of language models. This approach addresses one of the key limitations of current AI models: their knowledge cutoff dates.</p>
+                
+                <h5>How RAG Works</h5>
+                <ul>
+                    <li><strong>Document Processing</strong>: Convert documents into searchable vector embeddings</li>
+                    <li><strong>Query Processing</strong>: Convert user queries into vector representations</li>
+                    <li><strong>Similarity Search</strong>: Find the most relevant documents using vector similarity</li>
+                    <li><strong>Context Augmentation</strong>: Include retrieved documents as context for the AI model</li>
+                    <li><strong>Response Generation</strong>: Generate responses based on both the query and retrieved context</li>
+                </ul>
+                
+                <h5>RAG Implementation Example</h5>
+                <pre><code># Basic RAG implementation using Python
+import openai
+from sentence_transformers import SentenceTransformer
+import faiss
+import numpy as np
+
+# 1. Document embedding
+documents = ["Document 1 content", "Document 2 content", "Document 3 content"]
+embedder = SentenceTransformer('all-MiniLM-L6-v2')
+doc_embeddings = embedder.encode(documents)
+
+# 2. Create vector index
+dimension = doc_embeddings.shape[1]
+index = faiss.IndexFlatL2(dimension)
+index.add(doc_embeddings.astype('float32'))
+
+# 3. Query processing
+query = "What is the main topic?"
+query_embedding = embedder.encode([query])
+
+# 4. Retrieve relevant documents
+k = 3
+distances, indices = index.search(query_embedding.astype('float32'), k)
+relevant_docs = [documents[i] for i in indices[0]]
+
+# 5. Generate response with context
+context = "\n".join(relevant_docs)
+prompt = f"Context: {context}\n\nQuestion: {query}\n\nAnswer:"
+
+response = openai.ChatCompletion.create(
+    model="gpt-4",
+    messages=[{"role": "user", "content": prompt}]
+)</code></pre>
+                
+                <h4>Fine-tuning and Customization</h4>
+                <p>Fine-tuning allows you to customize pre-trained models for specific domains or tasks:</p>
+                <ul>
+                    <li><strong>Domain Adaptation</strong>: Adapt models to specific industries (healthcare, legal, finance)</li>
+                    <li><strong>Task Specialization</strong>: Optimize models for specific tasks (summarization, classification)</li>
+                    <li><strong>Style Transfer</strong>: Teach models to write in specific styles or tones</li>
+                    <li><strong>Performance Optimization</strong>: Improve model performance on specific datasets</li>
+                </ul>
+                
+                <h4>API Integration and Automation</h4>
+                <p>Modern AI applications require robust API integration and automation:</p>
+                <ul>
+                    <li><strong>RESTful APIs</strong>: Standard HTTP-based interfaces for AI services</li>
+                    <li><strong>WebSocket Connections</strong>: Real-time communication for streaming responses</li>
+                    <li><strong>Rate Limiting</strong>: Managing API usage and costs</li>
+                    <li><strong>Error Handling</strong>: Graceful degradation when AI services are unavailable</li>
+                    <li><strong>Monitoring and Logging</strong>: Track usage, performance, and costs</li>
+                </ul>
+                
+                <div class="practice-section">
+                    <h3>🔄 Practice and Application</h3>
+                    
+                    <div class="practice-progression">
+                        <h4>📈 Progressive Learning Path</h4>
+                        <p>Complete these exercises in order to build your understanding step by step:</p>
+                        
+                        <div class="practice-levels">
+                            <div class="practice-level beginner">
+                                <div class="level-header">
+                                    <span class="level-badge">🌱 Beginner</span>
+                                    <h5>Foundation Building</h5>
+                                </div>
+                                <div class="practice-exercises">
+                                    <div class="practice-exercise">
+                                        <h6>Exercise 1.1: AI Tool Exploration</h6>
+                                        <p><strong>Objective:</strong> Familiarize yourself with different AI platforms</p>
+                                        <p><strong>Task:</strong> Sign up for ChatGPT, Claude, or Gemini and ask each platform the same question. Compare their responses.</p>
+                                        <p><strong>Time:</strong> 15-20 minutes</p>
+                                        <div class="exercise-tips">
+                                            <strong>💡 Tips:</strong>
+                                            <ul>
+                                                <li>Use a simple question like "Explain photosynthesis in simple terms"</li>
+                                                <li>Note differences in tone, detail, and style</li>
+                                                <li>Consider which platform you prefer and why</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-level intermediate">
+                                <div class="level-header">
+                                    <span class="level-badge">🚀 Intermediate</span>
+                                    <h5>Concept Application</h5>
+                                </div>
+                                <div class="practice-exercises">
+                                    <div class="practice-exercise">
+                                        <h6>Exercise 1.2: AI Capability Analysis</h6>
+                                        <p><strong>Objective:</strong> Understand different AI model strengths</p>
+                                        <p><strong>Task:</strong> Test the same AI platform with different types of tasks (creative writing, analysis, coding help).</p>
+                                        <p><strong>Time:</strong> 25-30 minutes</p>
+                                        <div class="exercise-tips">
+                                            <strong>💡 Tips:</strong>
+                                            <ul>
+                                                <li>Try creative writing, factual analysis, and technical questions</li>
+                                                <li>Rate each response on a scale of 1-5</li>
+                                                <li>Identify which tasks the AI handles best</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-level advanced">
+                                <div class="level-header">
+                                    <span class="level-badge">🎯 Advanced</span>
+                                    <h5>Critical Thinking</h5>
+                                </div>
+                                <div class="practice-exercises">
+                                    <div class="practice-exercise">
+                                        <h6>Exercise 1.3: AI Limitations Assessment</h6>
+                                        <p><strong>Objective:</strong> Develop critical thinking about AI capabilities</p>
+                                        <p><strong>Task:</strong> Deliberately test AI limitations by asking for current events, complex calculations, or controversial topics.</p>
+                                        <p><strong>Time:</strong> 20-25 minutes</p>
+                                        <div class="exercise-tips">
+                                            <strong>💡 Tips:</strong>
+                                            <ul>
+                                                <li>Ask about recent news events (check knowledge cutoff)</li>
+                                                <li>Request complex mathematical calculations</li>
+                                                <li>Note how the AI handles uncertainty and limitations</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="assessment-section">
+                        <h4>📝 Self-Assessment</h4>
+                        <p>Test your understanding with these progressive questions:</p>
+                        
+                        <div class="assessment-levels">
+                            <div class="assessment-level">
+                                <h5>🌱 Basic Understanding (Complete these first)</h5>
+                                <ol>
+                                    <li>What are the five main types of generative AI?</li>
+                                    <li>Explain the difference between traditional AI and generative AI.</li>
+                                </ol>
+                            </div>
+                            
+                            <div class="assessment-level">
+                                <h5>🚀 Intermediate Knowledge (After completing basic)</h5>
+                                <ol>
+                                    <li>What are the four main steps in the AI generation process?</li>
+                                    <li>What is RAG and how does it address AI model limitations?</li>
+                                </ol>
+                            </div>
+                            
+                            <div class="assessment-level">
+                                <h5>🎯 Advanced Application (Challenge yourself)</h5>
+                                <ol>
+                                    <li>What are the key components of a RAG system?</li>
+                                    <li>How would you design a system that combines traditional and generative AI?</li>
+                                </ol>
+                            </div>
+                        </div>
+                        
+                        <div class="reflection-prompt">
+                            <h5>🤔 Reflection Questions</h5>
+                            <p>After completing the exercises and assessments, reflect on:</p>
+                            <ul>
+                                <li>Which AI platform did you prefer and why?</li>
+                                <li>What surprised you about AI capabilities or limitations?</li>
+                                <li>How do you see yourself using AI in your work or personal life?</li>
+                                <li>What concerns do you have about AI, and how might you address them?</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Interactive Quiz Section -->
@@ -1349,6 +2832,74 @@
                     <div class="quiz-option" data-correct="false">
                         <strong>D.</strong> Pattern Recognition - identifying relevant patterns
                     </div>
+                <div class="week-summary">
+                    <h3>📋 Week 1 Summary</h3>
+                    
+                    <div class="summary-grid">
+                        <div class="summary-section">
+                            <h4>✅ What You've Accomplished</h4>
+                            <ul>
+                                <li>Understood the fundamental concepts of generative AI</li>
+                                <li>Explored different AI platforms and their capabilities</li>
+                                <li>Completed hands-on exercises with AI tools</li>
+                                <li>Developed critical thinking about AI limitations</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="summary-section">
+                            <h4>🔑 Key Concepts Mastered</h4>
+                            <ul>
+                                <li>Generative AI vs. Traditional AI</li>
+                                <li>AI model types and capabilities</li>
+                                <li>Basic prompt engineering principles</li>
+                                <li>AI safety and ethical considerations</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="summary-section">
+                            <h4>🚀 Skills Developed</h4>
+                            <ul>
+                                <li>AI platform evaluation and selection</li>
+                                <li>Critical assessment of AI outputs</li>
+                                <li>Basic prompt writing and testing</li>
+                                <li>AI tool integration planning</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="next-steps">
+                        <h4>🎯 Preparing for Week 2</h4>
+                        <p>Before moving to Week 2, ensure you have:</p>
+                        <div class="preparation-checklist">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="week1-prep1">
+                                <label for="week1-prep1">Completed all three practice exercises</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="week1-prep2">
+                                <label for="week1-prep2">Answered all assessment questions</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="week1-prep3">
+                                <label for="week1-prep3">Reflected on your learning experience</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="week1-prep4">
+                                <label for="week1-prep4">Chosen your preferred AI platform for continued learning</label>
+                            </div>
+                        </div>
+                        
+                        <div class="week2-preview">
+                            <h5>🔮 Week 2 Preview: Text Generation and Writing</h5>
+                            <p>Next week, you'll dive deeper into:</p>
+                            <ul>
+                                <li><strong>Advanced Prompt Engineering:</strong> Master the CLEAR framework and advanced techniques</li>
+                                <li><strong>Content Creation Strategies:</strong> Learn to generate different types of content</li>
+                                <li><strong>Writing for Different Audiences:</strong> Adapt your AI prompts for various contexts</li>
+                                <li><strong>Quality Assurance:</strong> Implement editing and refinement workflows</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -1366,13 +2917,66 @@
                 <h3>Advanced Prompt Engineering Techniques</h3>
                 <p>Building on the basics from Week 1, we'll explore advanced techniques for getting the best results from AI text generation tools. Effective prompt engineering is the key to unlocking the full potential of generative AI.</p>
                 
-                <h4>Understanding AI Model Capabilities</h4>
-                <p>Different AI models have different strengths and limitations:</p>
+                <h4>Understanding AI Model Capabilities and Selection</h4>
+                <p>Different AI models have different strengths and limitations. Understanding these differences is crucial for selecting the right tool for your specific use case:</p>
+                
+                <h5>Model Comparison Matrix</h5>
+                <div class="comparison-table">
+                    <table>
+                        <tr>
+                            <th>Model Family</th>
+                            <th>Strengths</th>
+                            <th>Limitations</th>
+                            <th>Best For</th>
+                            <th>Cost (per 1M tokens)</th>
+                        </tr>
+                        <tr>
+                            <td><strong>GPT-4</strong></td>
+                            <td>Creative writing, complex reasoning, code generation</td>
+                            <td>Higher cost, slower response times</td>
+                            <td>High-quality content, complex analysis</td>
+                            <td>$30 input, $60 output</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Claude 3.5 Sonnet</strong></td>
+                            <td>Reasoning, factual accuracy, coding, safety</td>
+                            <td>Less creative than GPT-4</td>
+                            <td>Research, analysis, technical writing</td>
+                            <td>$3 input, $15 output</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gemini 1.5 Pro</strong></td>
+                            <td>Multimodal, real-time info, long context</td>
+                            <td>Variable quality, limited API access</td>
+                            <td>Multimodal tasks, current events</td>
+                            <td>$3.50 input, $10.50 output</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Llama 3</strong></td>
+                            <td>Open source, customizable, cost-effective</td>
+                            <td>Requires technical setup, variable quality</td>
+                            <td>Custom applications, cost-sensitive projects</td>
+                            <td>Free (self-hosted)</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <h5>Model Selection Criteria</h5>
                 <ul>
-                    <li><strong>GPT Models:</strong> Excellent for creative writing, analysis, and conversation</li>
-                    <li><strong>Claude Models:</strong> Strong in reasoning, coding, and factual accuracy</li>
-                    <li><strong>Gemini Models:</strong> Good at multimodal tasks and real-time information</li>
-                    <li><strong>Specialized Models:</strong> Domain-specific models for coding, design, etc.</li>
+                    <li><strong>Task Requirements:</strong> What type of output do you need?</li>
+                    <li><strong>Quality vs. Speed:</strong> Balance between output quality and response time</li>
+                    <li><strong>Cost Constraints:</strong> Budget considerations for API usage</li>
+                    <li><strong>Privacy Requirements:</strong> Data handling and retention policies</li>
+                    <li><strong>Integration Needs:</strong> API availability and documentation quality</li>
+                </ul>
+                
+                <h5>Specialized Models for Specific Tasks</h5>
+                <ul>
+                    <li><strong>Code Generation:</strong> GitHub Copilot, Cursor, Claude 3.5 Sonnet</li>
+                    <li><strong>Creative Writing:</strong> GPT-4, Claude 3.5 Haiku</li>
+                    <li><strong>Research & Analysis:</strong> Claude 3.5 Sonnet, GPT-4</li>
+                    <li><strong>Multimodal Tasks:</strong> Gemini 1.5 Pro, GPT-4V</li>
+                    <li><strong>Cost-Sensitive Applications:</strong> Llama 3, Claude 3.5 Haiku</li>
                 </ul>
                 
                 <div class="tip-box">
@@ -1507,9 +3111,52 @@ Include:
                     <li><strong>Polishing:</strong> Final touches and quality assurance</li>
                 </ul>
                 
-                <h3>AI Writing Ethics and Best Practices</h3>
+                <h3>AI Safety, Ethics, and Best Practices</h3>
                 
-                <h4>Ethical Considerations</h4>
+                <h4>Critical AI Safety Considerations</h4>
+                <p>As AI becomes more powerful, understanding safety implications is crucial:</p>
+                <ul>
+                    <li><strong>Hallucination Prevention</strong>: AI models can generate false information that sounds plausible</li>
+                    <li><strong>Bias Detection</strong>: Models may perpetuate or amplify existing biases in training data</li>
+                    <li><strong>Prompt Injection</strong>: Malicious prompts can manipulate AI behavior</li>
+                    <li><strong>Data Privacy</strong>: Sensitive information in prompts may be stored or used for training</li>
+                    <li><strong>Misuse Prevention</strong>: AI can be used for harmful purposes (deepfakes, misinformation)</li>
+                </ul>
+                
+                <h4>Ethical AI Usage Guidelines</h4>
+                <ul>
+                    <li><strong>Transparency</strong>: Be honest about AI use when appropriate and disclose limitations</li>
+                    <li><strong>Accountability</strong>: Take responsibility for AI-generated content and decisions</li>
+                    <li><strong>Fairness</strong>: Ensure AI usage doesn't discriminate against individuals or groups</li>
+                    <li><strong>Privacy Protection</strong>: Never input sensitive personal information into AI systems</li>
+                    <li><strong>Human Oversight</strong>: Always review and validate AI outputs before use</li>
+                </ul>
+                
+                <h4>AI Safety Best Practices</h4>
+                <div class="warning-box">
+                    <div class="box-title">⚠️ Critical Safety Guidelines</div>
+                    <ul>
+                        <li><strong>Never share sensitive information</strong> (passwords, personal data, confidential business info)</li>
+                        <li><strong>Always fact-check AI outputs</strong> before using them in professional contexts</li>
+                        <li><strong>Use multiple AI models</strong> to cross-validate important information</li>
+                        <li><strong>Implement content filters</strong> to prevent harmful or inappropriate outputs</li>
+                        <li><strong>Monitor AI usage</strong> for unusual patterns or concerning outputs</li>
+                    </ul>
+                </div>
+                
+                <h4>Technical Safety Measures</h4>
+                <p>Implement these technical safeguards in your AI applications:</p>
+                <ul>
+                    <li><strong>Input Validation</strong>: Sanitize and validate all user inputs</li>
+                    <li><strong>Output Filtering</strong>: Implement content moderation and filtering</li>
+                    <li><strong>Rate Limiting</strong>: Prevent abuse and manage costs</li>
+                    <li><strong>Audit Logging</strong>: Track all AI interactions for monitoring and debugging</li>
+                    <li><strong>Fallback Mechanisms</strong>: Graceful degradation when AI services fail</li>
+                </ul>
+                
+                <h4>AI Writing Ethics and Best Practices</h4>
+                
+                <h5>Ethical Considerations</h5>
                 <ul>
                     <li><strong>Transparency:</strong> Be honest about AI use when appropriate</li>
                     <li><strong>Originality:</strong> Ensure content is original and not plagiarized</li>
@@ -1623,9 +3270,47 @@ Include:
                         <strong>D.</strong> Facebook for community engagement
                     </div>
                 </div>
+
+                <div class="quiz-question" id="quiz2-4">
+                    <h4>🎯 Quiz 4: AI Safety and Ethics</h4>
+                    <p>What is the most critical safety practice when using AI systems?</p>
+                    
+                    <div class="quiz-option" data-correct="false">
+                        <strong>A.</strong> Always use the latest AI model available
+                    </div>
+                    <div class="quiz-option" data-correct="false">
+                        <strong>B.</strong> Share your API keys with colleagues for collaboration
+                    </div>
+                    <div class="quiz-option" data-correct="true">
+                        <strong>C.</strong> Never input sensitive personal or confidential information
+                    </div>
+                    <div class="quiz-option" data-correct="false">
+                        <strong>D.</strong> Trust AI outputs completely without verification
+                    </div>
+                </div>
+
+                <div class="quiz-question" id="quiz2-5">
+                    <h4>🎯 Quiz 5: Model Selection</h4>
+                    <p>Which AI model would be best for a cost-sensitive coding project requiring high accuracy?</p>
+                    
+                    <div class="quiz-option" data-correct="false">
+                        <strong>A.</strong> GPT-4 (most expensive but highest quality)
+                    </div>
+                    <div class="quiz-option" data-correct="true">
+                        <strong>B.</strong> Claude 3.5 Sonnet (good coding ability, reasonable cost)
+                    </div>
+                    <div class="quiz-option" data-correct="false">
+                        <strong>C.</strong> Gemini 1.5 Pro (multimodal but variable quality)
+                    </div>
+                    <div class="quiz-option" data-correct="false">
+                        <strong>D.</strong> Llama 3 (free but requires technical setup)
+                    </div>
+                </div>
                 
-                <h3>Project: AI Writing Toolkit</h3>
-                <p>Create a comprehensive writing toolkit using AI that includes:</p>
+                <h3>Project: AI Writing Toolkit with Code Implementation</h3>
+                <p>Create a comprehensive writing toolkit using AI that includes both conceptual frameworks and practical code implementations:</p>
+                
+                <h4>Core Components</h4>
                 <ul>
                     <li>Prompt templates for different writing tasks</li>
                     <li>Style guides for various audiences</li>
@@ -1633,6 +3318,221 @@ Include:
                     <li>Content creation strategies for different platforms</li>
                     <li>Quality assurance procedures</li>
                 </ul>
+                
+                <h4>Technical Implementation</h4>
+                <p>Build a Python-based AI writing assistant with the following features:</p>
+                
+                <h5>1. Prompt Template Engine</h5>
+                <pre><code>import json
+from typing import Dict, List, Optional
+
+class PromptTemplateEngine:
+    def __init__(self):
+        self.templates = {
+            "blog_post": {
+                "context": "Write a blog post about {topic}",
+                "length": "{word_count} words",
+                "style": "{writing_style}",
+                "audience": "for {target_audience}",
+                "tone": "{tone}"
+            },
+            "email": {
+                "context": "Write a {email_type} email",
+                "recipient": "to {recipient_role}",
+                "purpose": "regarding {purpose}",
+                "tone": "in a {tone} tone",
+                "length": "approximately {word_count} words"
+            }
+        }
+    
+    def generate_prompt(self, template_name: str, **kwargs) -> str:
+        if template_name not in self.templates:
+            raise ValueError(f"Template '{template_name}' not found")
+        
+        template = self.templates[template_name]
+        prompt_parts = []
+        
+        for key, value in template.items():
+            if key in kwargs:
+                prompt_parts.append(value.format(**kwargs))
+            else:
+                prompt_parts.append(value)
+        
+        return " ".join(prompt_parts)
+    
+    def add_template(self, name: str, template: Dict[str, str]):
+        self.templates[name] = template
+
+# Usage example
+engine = PromptTemplateEngine()
+blog_prompt = engine.generate_prompt(
+    "blog_post",
+    topic="AI in healthcare",
+    word_count="800",
+    writing_style="informative",
+    target_audience="healthcare professionals",
+    tone="professional"
+)
+print(blog_prompt)</code></pre>
+                
+                <h5>2. AI Content Generator</h5>
+                <pre><code>import openai
+from typing import List, Dict, Any
+
+class AIContentGenerator:
+    def __init__(self, api_key: str, model: str = "gpt-4"):
+        openai.api_key = api_key
+        self.model = model
+    
+    def generate_content(self, prompt: str, max_tokens: int = 1000) -> str:
+        try:
+            response = openai.ChatCompletion.create(
+                model=self.model,
+                messages=[{"role": "user", "content": prompt}],
+                max_tokens=max_tokens,
+                temperature=0.7
+            )
+            return response.choices[0].message.content
+        except Exception as e:
+            return f"Error generating content: {str(e)}"
+    
+    def batch_generate(self, prompts: List[str]) -> List[str]:
+        results = []
+        for prompt in prompts:
+            result = self.generate_content(prompt)
+            results.append(result)
+        return results
+    
+    def generate_with_feedback(self, prompt: str, feedback: str) -> str:
+        enhanced_prompt = f"{prompt}\n\nPrevious feedback: {feedback}\n\nPlease improve based on this feedback:"
+        return self.generate_content(enhanced_prompt)
+
+# Usage example
+generator = AIContentGenerator("your-api-key-here")
+content = generator.generate_content(blog_prompt)
+print(content)</code></pre>
+                
+                <h5>3. Content Quality Analyzer</h5>
+                <pre><code>import re
+from typing import Dict, List
+
+class ContentQualityAnalyzer:
+    def __init__(self):
+        self.quality_metrics = {
+            "readability": self._calculate_readability,
+            "word_count": self._count_words,
+            "sentence_count": self._count_sentences,
+            "keyword_density": self._calculate_keyword_density,
+            "grammar_check": self._basic_grammar_check
+        }
+    
+    def analyze_content(self, content: str, target_keywords: List[str] = None) -> Dict[str, Any]:
+        analysis = {}
+        
+        for metric_name, metric_func in self.quality_metrics.items():
+            if metric_name == "keyword_density" and target_keywords:
+                analysis[metric_name] = metric_func(content, target_keywords)
+            else:
+                analysis[metric_name] = metric_func(content)
+        
+        return analysis
+    
+    def _calculate_readability(self, content: str) -> float:
+        # Simplified Flesch Reading Ease calculation
+        words = len(content.split())
+        sentences = len(re.split(r'[.!?]+', content))
+        
+        if sentences == 0:
+            return 0.0
+        
+        syllables = len(re.findall(r'[aeiouy]+', content.lower()))
+        return 206.835 - (1.015 * (words / sentences)) - (84.6 * (syllables / words))
+    
+    def _count_words(self, content: str) -> int:
+        return len(content.split())
+    
+    def _count_sentences(self, content: str) -> int:
+        return len(re.split(r'[.!?]+', content))
+    
+    def _calculate_keyword_density(self, content: str, keywords: List[str]) -> Dict[str, float]:
+        word_count = len(content.lower().split())
+        density = {}
+        
+        for keyword in keywords:
+            keyword_count = content.lower().count(keyword.lower())
+            density[keyword] = (keyword_count / word_count) * 100 if word_count > 0 else 0
+        
+        return density
+    
+    def _basic_grammar_check(self, content: str) -> Dict[str, int]:
+        # Basic grammar pattern checking
+        patterns = {
+            "double_spaces": len(re.findall(r'  +', content)),
+            "missing_apostrophes": len(re.findall(r'\b(?:dont|cant|wont|isnt|arent|wasnt|werent)\b', content, re.IGNORECASE)),
+            "run_on_sentences": len(re.findall(r'[^.!?]+[^.!?]{100,}', content))
+        }
+        return patterns
+
+# Usage example
+analyzer = ContentQualityAnalyzer()
+quality_report = analyzer.analyze_content(content, ["AI", "healthcare"])
+print(json.dumps(quality_report, indent=2))</code></pre>
+                
+                <h5>4. Complete Writing Workflow</h5>
+                <pre><code>class AIWritingWorkflow:
+    def __init__(self, api_key: str):
+        self.template_engine = PromptTemplateEngine()
+        self.content_generator = AIContentGenerator(api_key)
+        self.quality_analyzer = ContentQualityAnalyzer()
+    
+    def create_content(self, content_type: str, **kwargs) -> Dict[str, Any]:
+        # Step 1: Generate prompt
+        prompt = self.template_engine.generate_prompt(content_type, **kwargs)
+        
+        # Step 2: Generate initial content
+        initial_content = self.content_generator.generate_content(prompt)
+        
+        # Step 3: Analyze quality
+        quality_report = self.quality_analyzer.analyze_content(initial_content)
+        
+        # Step 4: Generate improvement suggestions
+        improvement_prompt = f"""
+        Analyze this content and provide specific improvement suggestions:
+        
+        Content: {initial_content}
+        
+        Quality Report: {quality_report}
+        
+        Please provide:
+        1. 3 specific improvements
+        2. A revised version
+        3. Writing tips for future content
+        """
+        
+        improvements = self.content_generator.generate_content(improvement_prompt)
+        
+        return {
+            "original_prompt": prompt,
+            "generated_content": initial_content,
+            "quality_analysis": quality_report,
+            "improvement_suggestions": improvements
+        }
+
+# Complete workflow example
+workflow = AIWritingWorkflow("your-api-key-here")
+result = workflow.create_content(
+    "blog_post",
+    topic="Machine Learning Basics",
+    word_count="600",
+    writing_style="educational",
+    target_audience="beginners",
+    tone="friendly"
+)
+
+print("Generated Content:")
+print(result["generated_content"])
+print("\nQuality Analysis:")
+print(json.dumps(result["quality_analysis"], indent=2))</code></pre>
             </div>
             
             <div class="section" id="week3">
@@ -3579,6 +5479,283 @@ cinematic composition</code></pre>
                     <li>Resource planning and budget considerations</li>
                     <li>Success metrics and evaluation framework</li>
                 </ul>
+                
+                <div class="final-project-guide">
+                    <h4>🎯 Project Requirements</h4>
+                    <p>To complete this course and earn your certificate, you must complete the following final project:</p>
+                    
+                    <div class="project-components">
+                        <div class="component">
+                            <h5>1. Technical Implementation (40%)</h5>
+                            <ul>
+                                <li>Build a functional AI application using the skills learned</li>
+                                <li>Implement at least one advanced technique (RAG, fine-tuning, or custom API integration)</li>
+                                <li>Include proper error handling and safety measures</li>
+                                <li>Document your code and provide usage instructions</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="component">
+                            <h5>2. Documentation and Analysis (30%)</h5>
+                            <ul>
+                                <li>Write a comprehensive project report (1500-2000 words)</li>
+                                <li>Include technical architecture diagrams and explanations</li>
+                                <li>Analyze the effectiveness of your AI implementation</li>
+                                <li>Discuss lessons learned and areas for improvement</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="component">
+                            <h5>3. Presentation and Demonstration (20%)</h5>
+                            <ul>
+                                <li>Create a 5-10 minute video demonstration of your project</li>
+                                <li>Explain the problem you solved and your solution approach</li>
+                                <li>Show the application in action with real examples</li>
+                                <li>Discuss the business or personal value created</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="component">
+                            <h5>4. Reflection and Future Planning (10%)</h5>
+                            <ul>
+                                <li>Reflect on your learning journey throughout the course</li>
+                                <li>Identify how you'll continue developing your AI skills</li>
+                                <li>Plan for scaling and improving your project</li>
+                                <li>Consider ethical implications and responsible AI usage</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h4>📋 Project Submission Checklist</h4>
+                    <div class="submission-checklist">
+                        <div class="checklist-item">
+                            <input type="checkbox" id="submit1">
+                            <label for="submit1">Technical implementation with working code</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="submit2">
+                            <label for="submit2">Comprehensive project documentation</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="submit3">
+                            <label for="submit3">Video demonstration and explanation</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="submit4">
+                            <label for="submit4">Reflection and future planning document</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="submit5">
+                            <label for="submit5">GitHub repository with all project files</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="submit6">
+                            <label for="submit6">README file with setup and usage instructions</label>
+                        </div>
+                    </div>
+                    
+                    <h4>🏆 Project Ideas to Get You Started</h4>
+                    <div class="project-ideas">
+                        <div class="idea-item">
+                            <h5>Business Productivity Assistant</h5>
+                            <p>Build an AI-powered tool that helps with email management, meeting preparation, or document creation. Include RAG capabilities for company-specific knowledge.</p>
+                        </div>
+                        <div class="idea-item">
+                            <h5>Content Creation Platform</h5>
+                            <p>Create a system that generates and optimizes content for different platforms (blogs, social media, emails) with quality analysis and improvement suggestions.</p>
+                        </div>
+                        <div class="idea-item">
+                            <h5>Personal Learning Assistant</h5>
+                            <p>Develop an AI tutor that can explain complex topics, generate practice questions, and adapt to different learning styles and knowledge levels.</p>
+                        </div>
+                        <div class="idea-item">
+                            <h5>Data Analysis and Reporting Tool</h5>
+                            <p>Build an AI system that can analyze datasets, generate insights, and create professional reports with visualizations and recommendations.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-timeline">
+                        <h4>⏰ Recommended Project Timeline</h4>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-week">Week 6-7</div>
+                                <div class="timeline-content">
+                                    <h5>Planning and Design</h5>
+                                    <p>Define project scope, choose tools, and design architecture</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-week">Week 7-8</div>
+                                <div class="timeline-content">
+                                    <h5>Implementation</h5>
+                                    <p>Build your AI application with core functionality</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-week">Week 8</div>
+                                <div class="timeline-content">
+                                    <h5>Testing and Refinement</h5>
+                                    <p>Test your application, fix issues, and improve performance</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-week">Week 8+</div>
+                                <div class="timeline-content">
+                                    <h5>Documentation and Submission</h5>
+                                    <p>Complete documentation, create demo video, and submit project</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section" id="glossary">
+                <h2>📚 AI Glossary and Reference</h2>
+                
+                <h3>Essential AI Terms</h3>
+                <div class="glossary-grid">
+                    <div class="glossary-item">
+                        <h4>AI (Artificial Intelligence)</h4>
+                        <p>Computer systems that can perform tasks typically requiring human intelligence, such as learning, reasoning, and problem-solving.</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4>API (Application Programming Interface)</h4>
+                        <p>A set of rules and protocols that allows different software applications to communicate with each other.</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4>Context Window</h4>
+                        <p>The maximum amount of text (measured in tokens) that an AI model can process in a single conversation or input.</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4>Fine-tuning</h4>
+                        <p>The process of training a pre-trained AI model on additional data to improve its performance on specific tasks or domains.</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4>Hallucination</h4>
+                        <p>When an AI model generates false or misleading information that appears plausible but is not factually correct.</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4>LLM (Large Language Model)</h4>
+                        <p>AI models trained on vast amounts of text data that can understand and generate human-like text.</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4>Multimodal</h4>
+                        <p>AI models that can process and generate multiple types of content (text, images, audio, video).</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4>Prompt Engineering</h4>
+                        <p>The practice of designing effective inputs (prompts) to get desired outputs from AI models.</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4>RAG (Retrieval-Augmented Generation)</h4>
+                        <p>A technique that combines information retrieval with text generation to provide more accurate and up-to-date responses.</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4>Token</h4>
+                        <p>The basic unit of text that AI models process, which can be a word, part of a word, or punctuation mark.</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4>Transformer</h4>
+                        <p>A neural network architecture that uses attention mechanisms to process sequential data, forming the foundation of modern AI models.</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4>Temperature</h4>
+                        <p>A parameter that controls the randomness and creativity of AI model outputs, with lower values producing more focused results.</p>
+                    </div>
+                </div>
+                
+                <h3>Common AI Tools and Platforms</h3>
+                <div class="tools-reference">
+                    <div class="tool-reference-item">
+                        <h4>ChatGPT (OpenAI)</h4>
+                        <p><strong>Best for:</strong> Creative writing, conversation, general knowledge</p>
+                        <p><strong>Cost:</strong> Free tier available, Plus: $20/month</p>
+                        <p><strong>Strengths:</strong> User-friendly, extensive knowledge, creative capabilities</p>
+                        <p><strong>Limitations:</strong> Knowledge cutoff, potential for hallucination</p>
+                    </div>
+                    <div class="tool-reference-item">
+                        <h4>Claude (Anthropic)</h4>
+                        <p><strong>Best for:</strong> Analysis, coding, factual accuracy</p>
+                        <p><strong>Cost:</strong> Free tier available, Pro: $20/month</p>
+                        <p><strong>Strengths:</strong> Strong reasoning, safety-focused, good coding</p>
+                        <p><strong>Limitations:</strong> Less creative than GPT-4, smaller context window</p>
+                    </div>
+                    <div class="tool-reference-item">
+                        <h4>Gemini (Google)</h4>
+                        <p><strong>Best for:</strong> Multimodal tasks, real-time information</p>
+                        <p><strong>Cost:</strong> Free tier available, Advanced: $20/month</p>
+                        <p><strong>Strengths:</strong> Multimodal capabilities, real-time data access</p>
+                        <p><strong>Limitations:</strong> Variable quality, limited API access</p>
+                    </div>
+                </div>
+                
+                <h3>Prompt Engineering Templates</h3>
+                <div class="prompt-templates">
+                    <div class="template-item">
+                        <h4>Content Creation Template</h4>
+                        <pre><code>Create [content_type] about [topic] that is:
+- [length] words long
+- Written for [target_audience]
+- In a [tone] tone
+- Including [specific_elements]
+- With the goal of [objective]</code></pre>
+                    </div>
+                    <div class="template-item">
+                        <h4>Analysis Template</h4>
+                        <pre><code>Analyze [subject] by:
+1. Identifying the main [aspects]
+2. Evaluating [criteria]
+3. Providing [number] key insights
+4. Suggesting [recommendations]
+5. Supporting with [evidence_type]</code></pre>
+                    </div>
+                    <div class="template-item">
+                        <h4>Problem-Solving Template</h4>
+                        <pre><code>Help me solve [problem] by:
+1. Breaking down the problem into [components]
+2. Analyzing potential [solutions]
+3. Evaluating [pros_and_cons]
+4. Recommending the best [approach]
+5. Providing [implementation_steps]</code></pre>
+                    </div>
+                </div>
+                
+                <h3>AI Safety Checklist</h3>
+                <div class="safety-checklist">
+                    <div class="checklist-item">
+                        <input type="checkbox" id="safety1">
+                        <label for="safety1">Never input sensitive personal information (passwords, SSN, etc.)</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="safety2">
+                        <label for="safety2">Always fact-check AI-generated information before using it</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="safety3">
+                        <label for="safety3">Use multiple AI models to cross-validate important information</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="safety4">
+                        <label for="safety4">Implement content filters for inappropriate outputs</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="safety5">
+                        <label for="safety5">Monitor AI usage for unusual patterns or concerning outputs</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="safety6">
+                        <label for="safety6">Keep API keys secure and never share them publicly</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="safety7">
+                        <label for="safety7">Review and edit all AI-generated content before publication</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="safety8">
+                        <label for="safety8">Understand the limitations and potential biases of AI models</label>
+                    </div>
+                </div>
             </div>
             
             <div class="section" id="conclusion">
@@ -3811,37 +5988,103 @@ cinematic composition</code></pre>
             });
         };
         
-        // Navigation dots
-        const initNavigationDots = () => {
-            const navDots = safeQuerySelectorAll('.nav-dot');
-            const sections = ['hero', 'week1', 'week2', 'week3', 'week4', 'week5', 'week6', 'week7', 'week8'];
+        // Enhanced course progress tracking
+        const initCourseProgress = () => {
+            const courseProgressBar = safeQuerySelector('#courseProgressBar');
+            const courseProgressText = safeQuerySelector('#courseProgress');
+            const tocLinks = safeQuerySelectorAll('.toc-link[data-week]');
+            const markAllBtn = safeQuerySelector('#markAllComplete');
+            const resetBtn = safeQuerySelector('#resetProgress');
+            const exportBtn = safeQuerySelector('#exportProgress');
             
-            navDots.forEach((dot, index) => {
-                dot.addEventListener('click', () => {
-                    const targetSection = safeQuerySelector(`#${sections[index]}`);
-                    if (targetSection) {
-                        targetSection.scrollIntoView({ behavior: 'smooth' });
-                    }
-                });
-            });
+            if (!courseProgressBar || !courseProgressText) return;
             
-            // Update active dot on scroll
-            window.addEventListener('scroll', () => {
-                const scrollPosition = window.scrollY + 100;
+            // Load progress from localStorage
+            const loadProgress = () => {
+                const completedWeeks = JSON.parse(localStorage.getItem('completedWeeks') || '[]');
+                const totalWeeks = 8;
+                const progress = (completedWeeks.length / totalWeeks) * 100;
                 
-                sections.forEach((section, index) => {
-                    const element = safeQuerySelector(`#${section}`);
-                    if (element) {
-                        const elementTop = element.offsetTop;
-                        const elementBottom = elementTop + element.offsetHeight;
-                        
-                        if (scrollPosition >= elementTop && scrollPosition < elementBottom) {
-                            navDots.forEach(dot => dot.classList.remove('active'));
-                            navDots[index]?.classList.add('active');
-                        }
+                courseProgressBar.style.width = `${progress}%`;
+                courseProgressText.textContent = `${Math.round(progress)}%`;
+                
+                // Update TOC links
+                tocLinks.forEach(link => {
+                    const week = link.getAttribute('data-week');
+                    if (week && completedWeeks.includes(week)) {
+                        link.classList.add('completed');
+                    } else {
+                        link.classList.remove('completed');
                     }
                 });
-            });
+                
+                return completedWeeks;
+            };
+            
+            // Mark week as complete
+            const markWeekComplete = (week) => {
+                const completedWeeks = JSON.parse(localStorage.getItem('completedWeeks') || '[]');
+                if (!completedWeeks.includes(week)) {
+                    completedWeeks.push(week);
+                    localStorage.setItem('completedWeeks', JSON.stringify(completedWeeks));
+                    loadProgress();
+                }
+            };
+            
+            // Mark all weeks complete
+            if (markAllBtn) {
+                markAllBtn.addEventListener('click', () => {
+                    const allWeeks = ['1', '2', '3', '4', '5', '6', '7', '8'];
+                    localStorage.setItem('completedWeeks', JSON.stringify(allWeeks));
+                    loadProgress();
+                });
+            }
+            
+            // Reset progress
+            if (resetBtn) {
+                resetBtn.addEventListener('click', () => {
+                    localStorage.removeItem('completedWeeks');
+                    loadProgress();
+                });
+            }
+            
+            // Export progress
+            if (exportBtn) {
+                exportBtn.addEventListener('click', () => {
+                    const completedWeeks = JSON.parse(localStorage.getItem('completedWeeks') || '[]');
+                    const progressData = {
+                        completedWeeks,
+                        totalWeeks: 8,
+                        progress: (completedWeeks.length / 8) * 100,
+                        timestamp: new Date().toISOString(),
+                        course: 'Generative AI for Work and Everyday Use'
+                    };
+                    
+                    const dataStr = JSON.stringify(progressData, null, 2);
+                    const dataBlob = new Blob([dataStr], { type: 'application/json' });
+                    const url = URL.createObjectURL(dataBlob);
+                    
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = 'ai-course-progress.json';
+                    link.click();
+                    
+                    URL.revokeObjectURL(url);
+                });
+            }
+            
+            // Initialize progress
+            loadProgress();
+            
+            // Update progress when weeks are completed
+            tocLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    const week = link.getAttribute('data-week');
+                    if (week) {
+                        markWeekComplete(week);
+                    }
+                });
+                });
         };
         
         // Floating action button
@@ -3909,7 +6152,7 @@ cinematic composition</code></pre>
             initTocEffects();
             initProgressBar();
             initQuizInteractions();
-            initNavigationDots();
+            initCourseProgress();
             initFloatingActionButton();
             initCompletionTracking();
             
