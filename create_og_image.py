@@ -2,10 +2,22 @@
 """
 Open Graph Image Generator
 Creates a 1200x630 pixel image suitable for social media sharing
+
+Usage:
+    python create_og_image.py [input_image] [output_path] [title]
+
+Requirements:
+    pip install Pillow
 """
 
-from PIL import Image, ImageDraw, ImageFont
 import os
+import sys
+
+try:
+    from PIL import Image, ImageDraw, ImageFont
+except ImportError:
+    print("Error: PIL (Pillow) is required. Install it with: pip install Pillow")
+    sys.exit(1)
 
 def create_og_image(input_image_path, output_path="og-image.png", title="Git & GitHub for Beginners"):
     """
@@ -90,21 +102,40 @@ def create_og_image(input_image_path, output_path="og-image.png", title="Git & G
         print(f"❌ Error creating OG image: {str(e)}")
 
 def main():
-    """Main function to create OG image from the attached JPEG"""
+    """Main function to create OG image with command line arguments"""
     
-    # Input image path (the attached JPEG)
-    input_image = "_6a954c68-9bda-49d3-be7d-ceb91ddd88eb.jpeg"
+    # Default values
+    default_input = "_6a954c68-9bda-49d3-be7d-ceb91ddd88eb.jpeg"
+    default_output = "og-image.png"
+    default_title = "Generative AI for Work and Everyday Use"
+    
+    # Parse command line arguments
+    if len(sys.argv) > 1:
+        input_image = sys.argv[1]
+    else:
+        input_image = default_input
+    
+    if len(sys.argv) > 2:
+        output_path = sys.argv[2]
+    else:
+        output_path = default_output
+        
+    if len(sys.argv) > 3:
+        title = sys.argv[3]
+    else:
+        title = default_title
     
     # Check if input image exists
     if not os.path.exists(input_image):
         print(f"❌ Input image not found: {input_image}")
+        print(f"Usage: python {sys.argv[0]} [input_image] [output_path] [title]")
         return
     
     # Create OG image
     create_og_image(
         input_image_path=input_image,
-        output_path="og-image.png",
-        title="Git & GitHub for Beginners"
+        output_path=output_path,
+        title=title
     )
 
 if __name__ == "__main__":
