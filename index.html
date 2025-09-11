@@ -1712,6 +1712,374 @@
             content: '✅';
         }
         
+        /* Ethics and Safety Section Styles */
+        .ethics-safety-section {
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            border: 2px solid #e2e8f0;
+            border-radius: 1rem;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .ethics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .ethics-category {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .ethics-category h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .ethics-category ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .ethics-category li {
+            margin-bottom: 0.75rem;
+            padding-left: 0;
+            line-height: 1.6;
+        }
+        
+        .responsible-ai-practices {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+            margin-top: 1.5rem;
+        }
+        
+        .practices-list {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .practice-item {
+            padding: 1rem;
+            background: #f8fafc;
+            border-radius: 0.5rem;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .current-landscape {
+            background: #f0f9ff;
+            border: 1px solid #0ea5e9;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .current-landscape h4 {
+            color: #0369a1;
+            margin-bottom: 1rem;
+        }
+        
+        /* Scenario Grid Styles */
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .scenario-item {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .scenario-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .scenario-item h5 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        .scenario-item p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: var(--text-secondary);
+        }
+        
+        /* Assessment Framework Styles */
+        .assessment-framework {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            border: 2px solid #0ea5e9;
+            border-radius: 1rem;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .assessment-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .assessment-type {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .assessment-type h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .grading-rubric {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+            margin: 1.5rem 0;
+        }
+        
+        .rubric-table table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        
+        .rubric-table th,
+        .rubric-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .rubric-table th {
+            background: #f8fafc;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .certification-requirements {
+            background: #f0fdf4;
+            border: 1px solid #22c55e;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .certification-requirements h4 {
+            color: #16a34a;
+            margin-bottom: 1rem;
+        }
+        
+        /* AI Tools Grid Styles */
+        .ai-tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .tool-category {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .tool-category h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .tool-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .tool-item {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            position: relative;
+        }
+        
+        .tool-item strong {
+            color: var(--text-color);
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tool-item p {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tool-status {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+        
+        .tool-status:contains("Open Source") {
+            background: #16a34a;
+        }
+        
+        .tool-status:contains("Enterprise") {
+            background: #dc2626;
+        }
+        
+        .tool-status:contains("Commercial") {
+            background: #ea580c;
+        }
+        
+        /* Industry Applications Styles */
+        .industry-applications {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            border: 2px solid #f59e0b;
+            border-radius: 1rem;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .industry-sector {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .industry-sector h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .career-roles {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .role-item {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            position: relative;
+        }
+        
+        .role-item strong {
+            color: var(--text-color);
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .role-item p {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+        }
+        
+        .salary-range {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: #10b981;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+        
+        .career-guidance {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .career-guidance h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .guidance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .guidance-item {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            padding: 1rem;
+        }
+        
+        .guidance-item h5 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .guidance-item p {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            line-height: 1.4;
+        }
+        
         img {
             max-width: 100%;
             height: auto;
@@ -2258,6 +2626,234 @@
                     <p><strong>Total Course Time:</strong> 40-64 hours over 8 weeks</p>
                     <p><em>Note: You can adjust the pace based on your schedule and experience level.</em></p>
                 </div>
+                
+                <div class="assessment-framework">
+                    <h3>📊 Comprehensive Assessment Framework</h3>
+                    <div class="assessment-overview">
+                        <p>This course uses a multi-layered assessment approach to ensure you master both theoretical knowledge and practical skills:</p>
+                    </div>
+                    
+                    <div class="assessment-types">
+                        <div class="assessment-type">
+                            <h4>🎯 Knowledge Checks (20%)</h4>
+                            <ul>
+                                <li>Weekly concept quizzes (multiple choice, true/false)</li>
+                                <li>Terminology and definition matching</li>
+                                <li>Scenario-based problem identification</li>
+                                <li>Ethics and safety awareness questions</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="assessment-type">
+                            <h4>🛠️ Practical Exercises (40%)</h4>
+                            <ul>
+                                <li>Hands-on AI tool usage demonstrations</li>
+                                <li>Prompt engineering challenges</li>
+                                <li>Industry-specific project implementations</li>
+                                <li>Peer review and collaboration exercises</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="assessment-type">
+                            <h4>📝 Portfolio Projects (30%)</h4>
+                            <ul>
+                                <li>Weekly mini-projects showcasing learned skills</li>
+                                <li>Final capstone project demonstrating mastery</li>
+                                <li>Reflection essays on learning journey</li>
+                                <li>Real-world application case studies</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="assessment-type">
+                            <h4>🤝 Peer Collaboration (10%)</h4>
+                            <ul>
+                                <li>Discussion forum participation</li>
+                                <li>Peer feedback on projects</li>
+                                <li>Knowledge sharing presentations</li>
+                                <li>Community contribution activities</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="grading-rubric">
+                        <h4>📋 Grading Rubric</h4>
+                        <div class="rubric-table">
+                            <table>
+                                <tr>
+                                    <th>Grade</th>
+                                    <th>Percentage</th>
+                                    <th>Description</th>
+                                    <th>Requirements</th>
+                                </tr>
+                                <tr>
+                                    <td>A+ (Excellent)</td>
+                                    <td>95-100%</td>
+                                    <td>Exceptional mastery with innovation</td>
+                                    <td>All assessments + creative extensions</td>
+                                </tr>
+                                <tr>
+                                    <td>A (Outstanding)</td>
+                                    <td>90-94%</td>
+                                    <td>Complete mastery of all concepts</td>
+                                    <td>All assessments completed excellently</td>
+                                </tr>
+                                <tr>
+                                    <td>B (Good)</td>
+                                    <td>80-89%</td>
+                                    <td>Solid understanding with minor gaps</td>
+                                    <td>Most assessments + good project work</td>
+                                </tr>
+                                <tr>
+                                    <td>C (Satisfactory)</td>
+                                    <td>70-79%</td>
+                                    <td>Basic competency achieved</td>
+                                    <td>Core assessments completed</td>
+                                </tr>
+                                <tr>
+                                    <td>D (Needs Improvement)</td>
+                                    <td>60-69%</td>
+                                    <td>Partial understanding</td>
+                                    <td>Some assessments missing/incomplete</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="certification-requirements">
+                        <h4>🏆 Certificate Requirements</h4>
+                        <p>To earn your <strong>Generative AI Professional Certificate</strong>, you must:</p>
+                        <ul>
+                            <li>Complete all 8 weekly modules with 80%+ average</li>
+                            <li>Submit all required projects and exercises</li>
+                            <li>Pass the final comprehensive assessment (70%+)</li>
+                            <li>Complete the capstone project with peer review</li>
+                            <li>Participate in at least 6 discussion forums</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="industry-applications">
+                    <h3>🏭 Industry Applications & Career Paths</h3>
+                    <div class="industry-grid">
+                        <div class="industry-sector">
+                            <h4>🏥 Healthcare & Medicine</h4>
+                            <div class="career-roles">
+                                <div class="role-item">
+                                    <strong>AI Medical Writer</strong>
+                                    <p>Create patient education materials, research summaries, and medical documentation using AI</p>
+                                    <span class="salary-range">$60K - $90K</span>
+                                </div>
+                                <div class="role-item">
+                                    <strong>Healthcare Data Analyst</strong>
+                                    <p>Use AI to analyze patient data, predict outcomes, and optimize treatment protocols</p>
+                                    <span class="salary-range">$70K - $110K</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="industry-sector">
+                            <h4>💼 Business & Finance</h4>
+                            <div class="career-roles">
+                                <div class="role-item">
+                                    <strong>AI Business Analyst</strong>
+                                    <p>Automate reporting, create business intelligence dashboards, and optimize processes</p>
+                                    <span class="salary-range">$65K - $95K</span>
+                                </div>
+                                <div class="role-item">
+                                    <strong>Financial AI Specialist</strong>
+                                    <p>Develop AI models for risk assessment, fraud detection, and investment analysis</p>
+                                    <span class="salary-range">$80K - $120K</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="industry-sector">
+                            <h4>🎓 Education & Training</h4>
+                            <div class="career-roles">
+                                <div class="role-item">
+                                    <strong>AI Learning Designer</strong>
+                                    <p>Create personalized learning experiences and adaptive educational content</p>
+                                    <span class="salary-range">$55K - $80K</span>
+                                </div>
+                                <div class="role-item">
+                                    <strong>Educational Technology Specialist</strong>
+                                    <p>Implement AI tools in educational institutions and develop learning platforms</p>
+                                    <span class="salary-range">$60K - $90K</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="industry-sector">
+                            <h4>🎨 Marketing & Creative</h4>
+                            <div class="career-roles">
+                                <div class="role-item">
+                                    <strong>AI Content Strategist</strong>
+                                    <p>Develop content strategies using AI for social media, blogs, and marketing campaigns</p>
+                                    <span class="salary-range">$50K - $75K</span>
+                                </div>
+                                <div class="role-item">
+                                    <strong>Creative AI Director</strong>
+                                    <p>Lead creative teams in using AI for design, video production, and multimedia content</p>
+                                    <span class="salary-range">$70K - $100K</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="industry-sector">
+                            <h4>💻 Technology & Software</h4>
+                            <div class="career-roles">
+                                <div class="role-item">
+                                    <strong>AI Product Manager</strong>
+                                    <p>Lead AI product development, define requirements, and manage AI-powered features</p>
+                                    <span class="salary-range">$90K - $140K</span>
+                                </div>
+                                <div class="role-item">
+                                    <strong>AI Solutions Architect</strong>
+                                    <p>Design and implement AI solutions for enterprise clients and organizations</p>
+                                    <span class="salary-range">$100K - $150K</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="industry-sector">
+                            <h4>🏭 Manufacturing & Operations</h4>
+                            <div class="career-roles">
+                                <div class="role-item">
+                                    <strong>AI Process Optimizer</strong>
+                                    <p>Use AI to optimize manufacturing processes, quality control, and supply chain management</p>
+                                    <span class="salary-range">$70K - $105K</span>
+                                </div>
+                                <div class="role-item">
+                                    <strong>Industrial AI Engineer</strong>
+                                    <p>Implement AI solutions for predictive maintenance and automated quality assurance</p>
+                                    <span class="salary-range">$75K - $115K</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="career-guidance">
+                        <h4>🎯 Career Development Tips</h4>
+                        <div class="guidance-grid">
+                            <div class="guidance-item">
+                                <h5>📚 Build Your Portfolio</h5>
+                                <p>Create a portfolio showcasing AI projects, case studies, and real-world applications</p>
+                            </div>
+                            <div class="guidance-item">
+                                <h5>🤝 Network & Connect</h5>
+                                <p>Join AI communities, attend conferences, and connect with industry professionals</p>
+                            </div>
+                            <div class="guidance-item">
+                                <h5>📈 Stay Current</h5>
+                                <p>Follow AI news, take advanced courses, and experiment with new tools regularly</p>
+                            </div>
+                            <div class="guidance-item">
+                                <h5>💼 Start Small</h5>
+                                <p>Begin with freelance projects or internal initiatives to build experience and credibility</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </header>
             
             <nav class="table-of-contents" role="navigation" aria-label="Course navigation">
@@ -2454,6 +3050,18 @@
                         <div class="key-takeaway">
                             <strong>🎯 Key Takeaway:</strong> Generative AI doesn't just analyze existing data—it creates new, original content based on learned patterns.
                         </div>
+                        
+                        <div class="current-landscape">
+                            <h4>🌍 Current AI Landscape (2024)</h4>
+                            <p>The generative AI field is rapidly evolving. As of 2024, we're seeing:</p>
+                            <ul>
+                                <li><strong>Multimodal Models:</strong> AI that can process and generate text, images, audio, and video simultaneously</li>
+                                <li><strong>Agentic AI:</strong> AI systems that can plan, execute, and iterate on complex tasks autonomously</li>
+                                <li><strong>Real-time Generation:</strong> Faster, more responsive AI with reduced latency</li>
+                                <li><strong>Enterprise Integration:</strong> AI becoming deeply integrated into business workflows and tools</li>
+                                <li><strong>Open Source Movement:</strong> More accessible, customizable AI models for developers</li>
+                            </ul>
+                        </div>
                     </div>
                     
                     <div class="concept-breakdown">
@@ -2551,16 +3159,207 @@
                     <p>Generative AI is transforming how we work, create, and solve problems. From writing emails to creating presentations, from analyzing data to generating code, AI tools can amplify human capabilities and unlock new possibilities in every field.</p>
                 </div>
                 
-                <h3>Types of Generative AI</h3>
-                <ul>
-                    <li><strong>Large Language Models (LLMs)</strong>: GPT-4, Claude 3.5 Sonnet, Gemini 1.5 Pro, Llama 3 for text generation, analysis, and reasoning</li>
-                    <li><strong>Multimodal Models</strong>: GPT-4V, Claude 3.5 Sonnet, Gemini 1.5 Pro for text, image, audio, and video understanding</li>
-                    <li><strong>Image Generation</strong>: DALL-E 3, Midjourney V6, Stable Diffusion XL, Adobe Firefly for creating visual content</li>
-                    <li><strong>Audio Generation</strong>: ElevenLabs, Mubert, Suno AI for text-to-speech, music creation, and audio editing</li>
-                    <li><strong>Video Generation</strong>: Runway Gen-3, Pika Labs, Sora (when available) for creating and editing videos</li>
-                    <li><strong>Code Generation</strong>: GitHub Copilot, Cursor, Claude 3.5 Sonnet for programming assistance and code generation</li>
-                    <li><strong>Specialized Models</strong>: Domain-specific models for medicine, law, finance, and other professional fields</li>
-                </ul>
+                <div class="ethics-safety-section">
+                    <h3>🛡️ AI Ethics and Safety Fundamentals</h3>
+                    <div class="ethics-grid">
+                        <div class="ethics-category">
+                            <h4>🎯 Accuracy and Reliability</h4>
+                            <ul>
+                                <li><strong>Hallucination Awareness:</strong> AI can generate plausible-sounding but incorrect information</li>
+                                <li><strong>Fact-Checking:</strong> Always verify AI outputs against reliable sources</li>
+                                <li><strong>Confidence Levels:</strong> Understand when AI is uncertain vs. confident</li>
+                                <li><strong>Source Attribution:</strong> AI doesn't provide sources - you must track them</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="ethics-category">
+                            <h4>⚖️ Bias and Fairness</h4>
+                            <ul>
+                                <li><strong>Training Data Bias:</strong> AI reflects biases in its training data</li>
+                                <li><strong>Representation Issues:</strong> May underrepresent certain groups or perspectives</li>
+                                <li><strong>Cultural Sensitivity:</strong> Be aware of cultural and contextual differences</li>
+                                <li><strong>Inclusive Prompting:</strong> Use prompts that promote fairness and inclusion</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="ethics-category">
+                            <h4>🔒 Privacy and Security</h4>
+                            <ul>
+                                <li><strong>Data Protection:</strong> Never input sensitive personal information</li>
+                                <li><strong>Corporate Secrets:</strong> Avoid sharing proprietary business information</li>
+                                <li><strong>Patient/Client Privacy:</strong> Respect confidentiality in professional contexts</li>
+                                <li><strong>Data Retention:</strong> Understand how AI providers handle your data</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="ethics-category">
+                            <h4>📝 Intellectual Property</h4>
+                            <ul>
+                                <li><strong>Copyright Considerations:</strong> AI training data may include copyrighted material</li>
+                                <li><strong>Attribution Requirements:</strong> Some jurisdictions require AI disclosure</li>
+                                <li><strong>Originality Claims:</strong> Be transparent about AI assistance in your work</li>
+                                <li><strong>Commercial Use:</strong> Understand licensing terms for AI-generated content</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="responsible-ai-practices">
+                        <h4>✅ Responsible AI Practices</h4>
+                        <div class="practices-list">
+                            <div class="practice-item">
+                                <strong>1. Human-in-the-Loop:</strong> Always have human oversight and final decision-making
+                            </div>
+                            <div class="practice-item">
+                                <strong>2. Transparency:</strong> Be open about AI use in your work and communications
+                            </div>
+                            <div class="practice-item">
+                                <strong>3. Continuous Learning:</strong> Stay updated on AI developments and best practices
+                            </div>
+                            <div class="practice-item">
+                                <strong>4. Impact Assessment:</strong> Consider the broader implications of AI-generated content
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3>Types of Generative AI (2024 Landscape)</h3>
+                <div class="ai-tools-grid">
+                    <div class="tool-category">
+                        <h4>🧠 Large Language Models (LLMs)</h4>
+                        <div class="tool-list">
+                            <div class="tool-item">
+                                <strong>GPT-4o & GPT-4o Mini</strong>
+                                <p>OpenAI's latest multimodal models with improved reasoning, vision, and audio capabilities</p>
+                                <span class="tool-status">Latest</span>
+                            </div>
+                            <div class="tool-item">
+                                <strong>Claude 3.5 Sonnet</strong>
+                                <p>Anthropic's most capable model with excellent coding and analysis abilities</p>
+                                <span class="tool-status">Latest</span>
+                            </div>
+                            <div class="tool-item">
+                                <strong>Gemini 1.5 Pro & Flash</strong>
+                                <p>Google's advanced models with massive context windows (up to 2M tokens)</p>
+                                <span class="tool-status">Latest</span>
+                            </div>
+                            <div class="tool-item">
+                                <strong>Llama 3.1 (8B, 70B, 405B)</strong>
+                                <p>Meta's open-source models with strong performance and customization options</p>
+                                <span class="tool-status">Open Source</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-category">
+                        <h4>🎨 Image & Visual Generation</h4>
+                        <div class="tool-list">
+                            <div class="tool-item">
+                                <strong>DALL-E 3</strong>
+                                <p>OpenAI's most advanced image generator with excellent prompt understanding</p>
+                                <span class="tool-status">Latest</span>
+                            </div>
+                            <div class="tool-item">
+                                <strong>Midjourney V6.1</strong>
+                                <p>Exceptional artistic quality with advanced style control and composition</p>
+                                <span class="tool-status">Latest</span>
+                            </div>
+                            <div class="tool-item">
+                                <strong>Stable Diffusion 3</strong>
+                                <p>Open-source model with excellent customization and local deployment</p>
+                                <span class="tool-status">Open Source</span>
+                            </div>
+                            <div class="tool-item">
+                                <strong>Adobe Firefly 3</strong>
+                                <p>Commercial-safe image generation integrated with Adobe Creative Suite</p>
+                                <span class="tool-status">Commercial</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-category">
+                        <h4>🎵 Audio & Music Generation</h4>
+                        <div class="tool-list">
+                            <div class="tool-item">
+                                <strong>ElevenLabs</strong>
+                                <p>Advanced voice cloning and text-to-speech with emotional control</p>
+                                <span class="tool-status">Latest</span>
+                            </div>
+                            <div class="tool-item">
+                                <strong>Suno AI V3</strong>
+                                <p>Create complete songs from text prompts with vocals and instrumentation</p>
+                                <span class="tool-status">Latest</span>
+                            </div>
+                            <div class="tool-item">
+                                <strong>Udio</strong>
+                                <p>AI music generation with high-quality audio output and style control</p>
+                                <span class="tool-status">Latest</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-category">
+                        <h4>🎬 Video Generation</h4>
+                        <div class="tool-list">
+                            <div class="tool-item">
+                                <strong>Runway ML Gen-3</strong>
+                                <p>Advanced video generation with text and image prompts</p>
+                                <span class="tool-status">Latest</span>
+                            </div>
+                            <div class="tool-item">
+                                <strong>Pika Labs 1.5</strong>
+                                <p>High-quality video generation with motion control and style transfer</p>
+                                <span class="tool-status">Latest</span>
+                            </div>
+                            <div class="tool-item">
+                                <strong>Stable Video Diffusion</strong>
+                                <p>Open-source video generation from images</p>
+                                <span class="tool-status">Open Source</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-category">
+                        <h4>💻 Code Generation & Development</h4>
+                        <div class="tool-list">
+                            <div class="tool-item">
+                                <strong>GitHub Copilot Workspace</strong>
+                                <p>AI-powered coding assistant with full repository understanding</p>
+                                <span class="tool-status">Latest</span>
+                            </div>
+                            <div class="tool-item">
+                                <strong>Cursor</strong>
+                                <p>AI-first code editor with advanced code generation and editing</p>
+                                <span class="tool-status">Latest</span>
+                            </div>
+                            <div class="tool-item">
+                                <strong>Tabnine Enterprise</strong>
+                                <p>AI code completion with privacy and security features</p>
+                                <span class="tool-status">Enterprise</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-category">
+                        <h4>🤖 AI Agents & Automation</h4>
+                        <div class="tool-list">
+                            <div class="tool-item">
+                                <strong>GPTs & Custom Agents</strong>
+                                <p>Create custom AI agents for specific tasks and workflows</p>
+                                <span class="tool-status">Latest</span>
+                            </div>
+                            <div class="tool-item">
+                                <strong>Claude Artifacts</strong>
+                                <p>Interactive AI workspace for code, documents, and creative projects</p>
+                                <span class="tool-status">Latest</span>
+                            </div>
+                            <div class="tool-item">
+                                <strong>Zapier AI Actions</strong>
+                                <p>Connect AI models to automate business processes</p>
+                                <span class="tool-status">Latest</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 
                 <h3>Benefits of Generative AI</h3>
                 <p>Generative AI offers several advantages for work and everyday use:</p>
@@ -3197,15 +3996,34 @@ Include:
                 <h3>Hands-On Activities</h3>
                 
                 <div class="exercise">
-                    <h4>Activity 1: Advanced Prompt Engineering</h4>
-                    <p><strong>Objective:</strong> Practice creating sophisticated prompts for different writing tasks</p>
-                    <p><strong>Tasks:</strong></p>
-                    <ol>
-                        <li>Write a prompt for creating a professional LinkedIn post about AI trends</li>
-                        <li>Create a prompt for generating a creative short story</li>
-                        <li>Develop a prompt for writing an academic research summary</li>
-                        <li>Design a prompt for creating marketing copy for a new product</li>
-                    </ol>
+                    <h4>Activity 1: Industry-Specific Writing Scenarios</h4>
+                    <p><strong>Objective:</strong> Practice creating sophisticated prompts for real-world professional writing tasks</p>
+                    <p><strong>Industry Scenarios:</strong></p>
+                    <div class="scenario-grid">
+                        <div class="scenario-item">
+                            <h5>🏥 Healthcare</h5>
+                            <p>Write a patient education document about diabetes management using AI, ensuring medical accuracy and accessibility for diverse literacy levels.</p>
+                        </div>
+                        <div class="scenario-item">
+                            <h5>💼 Finance</h5>
+                            <p>Create a quarterly earnings report summary for investors, translating complex financial data into clear, actionable insights.</p>
+                        </div>
+                        <div class="scenario-item">
+                            <h5>🎓 Education</h5>
+                            <p>Develop a curriculum outline for a high school AI literacy course, including learning objectives and assessment methods.</p>
+                        </div>
+                        <div class="scenario-item">
+                            <h5>🏭 Manufacturing</h5>
+                            <p>Draft a safety protocol document for AI-assisted quality control processes, ensuring compliance with industry standards.</p>
+                        </div>
+                    </div>
+                    <p><strong>Advanced Prompting Techniques to Practice:</strong></p>
+                    <ul>
+                        <li><strong>Chain-of-Thought:</strong> "Think step-by-step about the target audience, then create content..."</li>
+                        <li><strong>Few-Shot Learning:</strong> Provide 2-3 examples before asking for similar content</li>
+                        <li><strong>Role-Playing:</strong> "Act as a senior [industry] consultant with 15 years of experience..."</li>
+                        <li><strong>Constraint Setting:</strong> "Write in exactly 200 words, using only active voice..."</li>
+                    </ul>
                 </div>
                 
                 <div class="exercise">
