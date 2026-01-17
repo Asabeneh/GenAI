@@ -1,0 +1,671 @@
+# 🎓 **Generative AI for Work and Daily Use**
+
+**A Self-Contained, Beginner-Friendly Guide to Practical Generative AI Skills**
+
+**Autumn 2025**
+**Instructor:** Asabeneh Yetayeh
+
+![Generative AI for work and daily use banner](./generative_ai_for_work_and_daily_use.jpg)
+
+## 📚 Table of Contents
+
+- [👋 Welcome & Getting Started](#-welcome--getting-started)
+- [📖 Course Navigation](#-course-navigation)
+- [🎯 What You'll Learn](#-what-youll-learn)
+- [🛠️ Required Tools & Setup](#️-required-tools--setup)
+- [📘 Course Modules](#-course-modules)
+- [💡 Popular AI Tools](#-popular-ai-tools)
+- [❓ FAQ & Troubleshooting](#-faq--troubleshooting)
+
+---
+
+## 👋 Welcome & Getting Started
+
+### Who Is This Course For?
+
+This course is designed for **absolute beginners** who want to learn how to use Generative AI tools in their daily life and professional work. No technical background required!
+
+**You'll benefit from this course if you:**
+- Want to boost your productivity at work or school
+- Are curious about AI but don't know where to start
+- Want to create content faster (writing, images, presentations)
+- Need help with coding, research, or data analysis
+- Want to stay competitive in the modern workplace
+
+### Prerequisites
+
+✅ **Required:**
+- Basic computer skills (browsing, email, using apps)
+- Internet connection
+- Email address to create AI tool accounts
+
+✅ **Optional (but helpful):**
+- Curiosity and willingness to experiment
+- Real tasks or projects where you can apply what you learn
+
+### How to Use This Guide
+
+1. **Start from Module 1** and progress sequentially (modules build on each other)
+2. **Complete hands-on exercises** - learning by doing is essential!
+3. **Try the real-world examples** provided in each module
+4. **Take the quizzes** to test your understanding
+5. **Work on the projects** to apply your skills
+6. **Join the community** (see resources section) for support and sharing
+
+**Time Commitment:** 30-60 minutes daily, or 5-8 hours weekly
+
+---
+
+## 📖 Course Navigation
+
+This repository contains multiple files to support your learning:
+
+| File | Purpose | When to Use |
+|------|---------|-------------|
+| `readme.md` (this file) | Main course content with all 8 modules | Read sequentially for comprehensive learning |
+| `getting-started.md` | Quick start guide for beginners | Start here if you're completely new to AI |
+| `course-outline.md` | Week-by-week course structure | For planning your learning schedule |
+| `course-syllabus.md` | Detailed syllabus with policies | For formal course requirements |
+| `week1-foundations.md` | Deep dive into Week 1 topics | For detailed Week 1 study |
+| `daily_use_cases.md` | Practical AI use cases with tools | For inspiration and tool discovery |
+| `prompt.md` | Prompt engineering guide | When learning to write better prompts |
+| `exercises-and-projects.md` | All exercises and projects | For hands-on practice |
+| `projects.md` | Project ideas and descriptions | For final projects and portfolios |
+| `questions-usecases.md` | Discussion questions | For self-reflection or group discussions |
+
+---
+
+## 🎯 What You'll Learn
+
+By completing this course, you will be able to:
+
+### ✍️ Writing & Communication
+- Write professional emails in seconds
+- Create blog posts, reports, and presentations
+- Generate social media content and captions
+- Translate and improve your writing
+
+### 💼 Professional Skills
+- Automate repetitive work tasks
+- Prepare for and summarize meetings
+- Analyze data and create reports
+- Research topics efficiently
+
+### 🎨 Creative Applications
+- Generate images, logos, and designs
+- Create stories, poems, and creative content
+- Produce videos and multimedia content
+- Brainstorm ideas and solve problems creatively
+
+### 💻 Technical Skills
+- Generate and debug code
+- Create documentation and comments
+- Learn programming concepts with AI tutors
+- Build simple applications with AI assistance
+
+### 🧠 Strategic Thinking
+- Integrate AI into your daily workflows
+- Understand AI capabilities and limitations
+- Use AI ethically and responsibly
+- Stay current with AI developments
+
+---
+
+## 🛠️ Required Tools & Setup
+
+### Free AI Tools You'll Use
+
+All essential tools have **free tiers** that are perfect for learning!
+
+#### 1️⃣ **Text Generation (Choose at least 1)**
+
+| Tool | Free Tier | Best For | Sign Up Link |
+|------|-----------|----------|--------------|
+| **ChatGPT** | ✅ Yes (GPT-3.5) | General tasks, writing, coding | [chat.openai.com](https://chat.openai.com) |
+| **Claude** | ✅ Yes | Research, analysis, long documents | [claude.ai](https://claude.ai) |
+| **Gemini** | ✅ Yes | Google integration, research | [gemini.google.com](https://gemini.google.com) |
+| **Copilot** | ✅ Yes | Microsoft integration, web search | [copilot.microsoft.com](https://copilot.microsoft.com) |
+
+#### 2️⃣ **Image Generation (Optional for Module 5)**
+
+| Tool | Free Tier | Best For | Sign Up Link |
+|------|-----------|----------|--------------|
+| **DALL-E** | Limited free | Quick image generation | [via ChatGPT Plus] |
+| **Canva AI** | ✅ Yes | Design + AI generation | [canva.com](https://canva.com) |
+| **Bing Image Creator** | ✅ Yes | Free DALL-E access | [bing.com/create](https://bing.com/create) |
+
+#### 3️⃣ **Productivity Tools (Optional)**
+
+- **Notion AI** - Smart note-taking
+- **Grammarly** - Writing improvement
+- **Otter.ai** - Meeting transcription
+
+### 🚀 Quick Setup (5 Minutes)
+
+**Step 1: Create Your First AI Account**
+1. Visit [chat.openai.com](https://chat.openai.com)
+2. Click "Sign Up"
+3. Enter your email or use Google/Microsoft login
+4. Verify your email
+5. You're ready to start!
+
+**Step 2: Test Your First Prompt**
+```
+Try this in ChatGPT:
+"Explain what generative AI is in simple terms, using an everyday analogy."
+```
+
+**Step 3: Bookmark These Resources**
+- Save the AI tools you signed up for
+- Bookmark this repository
+- Join the course community (if available)
+
+---
+
+## 📘 Course Modules
+
+---
+
+## **Module 1: Introduction to Generative AI**
+
+### 🎯 Learning Objectives
+
+By the end of this module, learners should be able to:
+
+* Explain what Generative AI is and how it differs from traditional AI
+* Understand how generative models work (in simple terms)
+* Identify popular Generative AI tools and their use cases
+* Write your first effective AI prompt
+
+### 📘 What is Generative AI?
+
+Generative Artificial Intelligence refers to AI systems that can **create new content**—text, images, code, music, videos—based on patterns learned from vast amounts of data.
+
+#### 🔍 Traditional AI vs. Generative AI
+
+**Traditional AI** (Analytical AI):
+- **Analyzes** and **classifies** existing data
+- **Example:** Email spam filter (is this spam? Yes/No)
+- **Example:** Voice recognition (what did the user say?)
+- **Example:** Recommendation system (suggest products you might like)
+
+**Generative AI**:
+- **Creates** new, original content
+- **Example:** ChatGPT writing an email for you
+- **Example:** DALL-E creating an image from your description
+- **Example:** GitHub Copilot generating code based on comments
+
+#### 🧠 Simple Analogy
+
+Think of Generative AI like a **highly intelligent autocomplete**:
+- When you type on your phone, it suggests the next word
+- Generative AI does this at a massive scale—completing entire paragraphs, creating images, or writing code
+- It "learned" by reading billions of examples and understanding patterns
+
+#### ⚙️ How Does It Work? (Simple Explanation)
+
+**Training Phase:**
+1. AI reads millions/billions of examples (books, websites, images, code)
+2. It learns patterns: "After 'Once upon a time' usually comes a story", "Professional emails usually start with 'Dear' or 'Hi'"
+3. It learns relationships: "cats" relates to "meow", "whiskers", "pets"
+
+**Generation Phase:**
+1. You give it a prompt: "Write a professional email declining a meeting"
+2. It predicts what should come next based on patterns it learned
+3. It generates new content word-by-word (or pixel-by-pixel for images)
+4. Each word/pixel is chosen to fit naturally with what came before
+
+**Key Technologies:**
+- **Transformers:** The "brain" architecture used by ChatGPT, Claude, Gemini (processes information in parallel)
+- **Diffusion Models:** Creates images by gradually "denoising" random patterns (DALL-E, Midjourney, Stable Diffusion)
+- **GANs:** Two AI networks compete - one creates, one judges quality (older image generation tech)
+
+### 🌍 Real-World Examples
+
+#### Example 1: Email Writing
+**Before AI:**
+```
+You spend 15 minutes crafting a professional email to decline a meeting politely.
+```
+
+**With AI:**
+```
+You tell ChatGPT: "Write a polite email declining a Friday meeting because I have a conflict"
+
+AI generates in 5 seconds:
+"Subject: Unable to Attend Friday Meeting
+
+Dear [Name],
+
+Thank you for the meeting invitation. Unfortunately, I have a scheduling conflict 
+on Friday and won't be able to attend. Would it be possible to reschedule for 
+early next week? I'm available Monday or Tuesday afternoon.
+
+I apologize for any inconvenience.
+
+Best regards,
+[Your Name]"
+```
+
+#### Example 2: Learning Assistant
+**Scenario:** You're learning Python and don't understand functions.
+
+**Before AI:**
+- Google search → Read multiple articles → Still confused
+- Time spent: 30+ minutes
+
+**With AI:**
+```
+You ask ChatGPT: "Explain Python functions like I'm 10 years old"
+
+AI response:
+"Imagine a function like a recipe for making cookies:
+
+1. The recipe has a name (function name): 'make_cookies'
+2. It needs ingredients (parameters): flour, sugar, butter
+3. It has steps (code inside the function): mix, bake, cool
+4. It produces something (return value): delicious cookies!
+
+Every time you want cookies, you don't rewrite the recipe—you just use it!
+
+Example:
+def make_cookies(flour, sugar, butter):
+    mix = flour + sugar + butter
+    cookies = bake(mix)
+    return cookies
+
+result = make_cookies(2, 1, 0.5)
+# Now you have cookies!"
+```
+
+#### Example 3: Creative Projects
+**Scenario:** You need a logo for your podcast.
+
+**Before AI:**
+- Hire a designer ($100-500) or spend hours learning design software
+
+**With AI:**
+```
+You tell DALL-E or Canva AI: 
+"Create a modern, minimalist podcast logo featuring a microphone and sound 
+waves in blue and purple gradient"
+
+AI generates multiple options in seconds.
+You pick one, make minor adjustments, and you're done!
+```
+
+### 🧪 Hands-On Exercise
+
+#### Exercise 1: Your First AI Conversation
+**Time:** 5 minutes
+
+1. Open [ChatGPT](https://chat.openai.com)
+2. Try this prompt:
+   ```
+   "Explain what generative AI is in simple terms, using an everyday analogy 
+   that a high school student would understand."
+   ```
+3. Read the response
+4. Now refine your prompt:
+   ```
+   "Now explain the same concept, but make it funny and use a cooking analogy."
+   ```
+5. **Reflection:** How did the response change when you refined your prompt?
+
+#### Exercise 2: Compare Traditional vs. Generative AI
+**Time:** 5 minutes
+
+In your own words, explain the difference:
+- **Traditional AI:** _________________________
+- **Generative AI:** _________________________
+- **Key Difference:** _________________________
+
+#### Exercise 3: Explore AI Tools
+**Time:** 10 minutes
+
+1. Create accounts on **at least 2** of these platforms:
+   - ChatGPT (OpenAI)
+   - Claude (Anthropic)
+   - Gemini (Google)
+   - Copilot (Microsoft)
+
+2. Ask the **same question** to each:
+   ```
+   "Give me 3 tips for staying productive while working from home."
+   ```
+
+3. Compare responses:
+   - Which AI gave the most helpful answer?
+   - Which had the best tone/style for you?
+   - Were there any differences in the advice given?
+
+### 📝 Self-Assessment Quiz
+
+Test your understanding!
+
+**1. What is the main goal of Generative AI?**
+   - a) Classification
+   - b) Prediction
+   - c) Creation ✅
+   - d) Optimization
+
+**2. Which is an example of Generative AI?**
+   - a) Spam filter
+   - b) ChatGPT writing an essay ✅
+   - c) Face recognition
+   - d) Autocorrect on your phone
+
+**3. Which technology powers ChatGPT?**
+   - a) Transformer architecture ✅
+   - b) Decision trees
+   - c) Linear regression
+   - d) Rule-based systems
+
+**4. True or False: Generative AI can only create text.**
+   - ❌ False (it can create text, images, code, music, video, and more!)
+
+**5. True or False: You need to be a programmer to use Generative AI tools.**
+   - ❌ False (anyone can use them with simple text prompts!)
+
+**6. Which of these is the best use of Generative AI?**
+   - a) Making all your decisions for you
+   - b) Helping you draft and improve your work ✅
+   - c) Replacing human creativity entirely
+   - d) Avoiding learning new skills
+
+**Answers:** 1-c, 2-b, 3-a, 4-False, 5-False, 6-b
+
+### 🎯 Module 1 Takeaways
+
+**Key Concepts:**
+✅ Generative AI creates new content (text, images, code, etc.)
+✅ Traditional AI analyzes data; Generative AI produces data
+✅ It works by learning patterns from billions of examples
+✅ Anyone can use it—no programming required!
+✅ Popular tools: ChatGPT, Claude, Gemini, DALL-E, Midjourney
+
+**Skills Acquired:**
+✅ Understanding of what Generative AI is and how it works
+✅ Ability to access and use basic AI tools
+✅ Writing simple prompts
+✅ Comparing different AI tools
+
+**Next Steps:**
+→ Move to Module 2 to learn about everyday use cases
+→ Practice writing prompts daily
+→ Experiment with different AI tools to find your favorites
+
+---
+
+## **Module 2: Everyday Use Cases**
+
+### 🎯 Learning Objectives
+
+* Recognize how Generative AI can improve daily productivity.
+* Learn to apply AI tools in learning, writing, and communication.
+* Explore creative personal applications of AI.
+
+### 📘 Explanation
+
+Generative AI isn’t just for developers—it’s for everyone. It can act as your **personal assistant**, **creative partner**, or **learning companion**.
+
+#### 💼 Productivity Examples
+
+* Summarize meeting notes using ChatGPT.
+* Draft and polish emails in seconds.
+* Plan daily schedules or meal plans.
+
+#### 📚 Learning and Education
+
+* Use AI as a tutor to explain difficult concepts.
+* Generate quizzes and flashcards for revision.
+* Summarize chapters or articles for faster learning.
+
+#### 🎨 Creativity and Entertainment
+
+* Generate art, logos, or character designs.
+* Write poems, stories, or lyrics.
+* Create social media posts or captions.
+
+### 🧪 Exercise
+
+1. Ask ChatGPT to create a **daily to-do list** for a software developer.
+2. Use an image tool like **Canva Magic Studio** or **DALL·E** to design a poster for a personal project.
+3. Use AI to summarize an online article of your choice in 3 bullet points.
+
+### 📝 Quiz
+
+1. Which of the following is **not** a common personal use of Generative AI?
+   a) Summarizing notes
+   b) Automating factory machines ✅
+   c) Writing social media posts
+   d) Translating text
+
+2. True or False: Generative AI can create personalized workout plans.
+   ✅ True
+
+3. Fill in the blank: AI can be your ______ in learning new subjects.
+   ✅ Tutor
+
+---
+
+## **Module 3: Workplace Applications – Content Creation**
+
+### 🎯 Learning Objectives
+
+* Explore how AI enhances writing, design, and media production.
+* Learn effective prompting for professional content creation.
+* Understand how to maintain authenticity when using AI tools.
+
+### 📘 Explanation
+
+Generative AI can create blogs, reports, visuals, and more—helping professionals save time and boost creativity.
+
+#### ✍️ Writing and Communication
+
+* Draft marketing content and press releases.
+* Generate SEO-optimized articles or ad copy.
+* Edit for grammar, tone, and engagement.
+
+#### 🎨 Design and Media
+
+* Generate images for blogs or presentations.
+* Use AI video tools (like RunwayML) for quick video edits.
+* Produce mockups and visual prototypes.
+
+#### 💡 Best Practices
+
+* Always edit and fact-check AI-generated content.
+* Maintain a human voice and ethical transparency.
+
+### 🧪 Exercise
+
+1. Use ChatGPT to generate a 150-word LinkedIn post about “AI in Education.”
+2. Create an image that visually represents your post using DALL·E or Canva Magic Studio.
+3. Edit the AI’s draft to reflect your personal tone and style.
+
+### 📝 Quiz
+
+1. Which of the following is a risk of using AI in content creation?
+   a) Increased creativity
+   b) Reduced accuracy ✅
+   c) Better time management
+   d) Improved visuals
+
+2. What should you always do after generating content with AI?
+   ✅ Review, edit, and verify the facts.
+
+---
+
+## **Module 4: Workplace Applications – Automation and Analysis**
+
+### 🎯 Learning Objectives
+
+* Automate repetitive workflows using AI tools.
+* Use AI for data summarization and decision support.
+* Identify popular integrations and productivity platforms.
+
+### 📘 Explanation
+
+Generative AI isn’t limited to writing—it can automate processes and analyze data intelligently.
+
+#### ⚙️ Examples
+
+* Automatically draft meeting summaries.
+* Generate reports from Excel data.
+* Use AI chatbots for customer support.
+
+#### 🔗 Integrations
+
+* **Zapier + OpenAI** for workflow automation.
+* **Microsoft Copilot** for AI assistance in Word, Excel, and PowerPoint.
+* **Notion AI** for intelligent note management.
+
+### 🧪 Exercise
+
+1. Use ChatGPT to summarize a 2-page report into bullet points.
+2. Design a simple automation plan: “When I receive an email about a meeting, automatically create a calendar event.”
+3. Create a chatbot prompt for responding to a customer query.
+
+### 📝 Quiz
+
+1. Which tool can automate workflows using AI?
+   ✅ Zapier
+2. True or False: Generative AI can extract key points from long documents.
+   ✅ True
+
+---
+
+## **Module 5: Hands-On with Visual and Coding Tools**
+
+### 🎯 Learning Objectives
+
+* Practice using text-to-image and text-to-code tools.
+* Develop small projects combining multiple AI tools.
+* Understand how to refine prompts for better results.
+
+### 📘 Tools Overview
+
+* **ChatGPT / Copilot:** Coding assistance and debugging.
+* **DALL·E / Midjourney:** Text-to-image generation.
+* **RunwayML / Pika:** Video generation.
+
+### 🧪 Exercises
+
+1. Generate an image of a “Futuristic Classroom” using an image AI.
+2. Ask ChatGPT to write a JavaScript function that reverses a string.
+3. Use Copilot to optimize the code.
+
+### 📝 Quiz
+
+1. Which of the following tools can generate code?
+   ✅ GitHub Copilot
+2. True or False: Midjourney is used for coding.
+   ❌ False
+
+---
+
+## **Module 6: Advanced Applications and Workflows**
+
+### 🎯 Learning Objectives
+
+* Combine tools to build automated pipelines.
+* Learn how to create and integrate custom AI agents.
+* Understand the concept of fine-tuning and personalization.
+
+### 📘 Explanation
+
+Advanced AI workflows connect multiple tools for automation and creativity:
+
+* **Idea → Draft → Visual → Publish**
+* **Data → Analyze → Visualize → Summarize**
+
+You can even create personal AI agents that assist with emails, scheduling, or content production.
+
+### 🧪 Exercise
+
+1. Create a workflow that uses ChatGPT for content, Canva for visuals, and Notion for publishing.
+2. Plan a custom AI chatbot for a specific role (e.g., a writing coach or study assistant).
+
+### 📝 Quiz
+
+1. What is “fine-tuning” in AI?
+   ✅ Training a model on specialized data to improve task-specific performance.
+
+---
+
+## **Module 7: Ethics, Limitations, and Best Practices**
+
+### 🎯 Learning Objectives
+
+* Understand ethical concerns in AI-generated content.
+* Recognize limitations and biases of Generative AI.
+* Learn responsible and transparent AI use.
+
+### 📘 Key Points
+
+* **Transparency:** Always disclose AI involvement.
+* **Bias Awareness:** AI reflects the data it was trained on.
+* **Privacy:** Avoid sharing personal or confidential information.
+
+### 🧪 Exercise
+
+1. Find an example of biased AI output and discuss how to fix it.
+2. Write a short paragraph explaining why ethical AI use matters.
+
+### 📝 Quiz
+
+1. True or False: AI-generated text can be published without review.
+   ❌ False
+2. What is one ethical principle of AI use?
+   ✅ Transparency
+
+---
+
+## **Module 8: Capstone Project and Course Wrap-Up**
+
+### 🎯 Objective
+
+Apply everything you’ve learned in a practical, creative project.
+
+### 📘 Project Options
+
+1. **AI-Powered Blog:** Automate article writing and visuals.
+2. **Personal Assistant:** Build a daily planner using ChatGPT + Zapier.
+3. **AI Story Generator:** Combine ChatGPT + DALL·E to create visual stories.
+
+### 📋 Submission Requirements
+
+* Describe your goal, tools, and workflow.
+* Showcase results (e.g., link, screenshots, or demo).
+* Reflect on lessons learned and ethical considerations.
+
+
+## Some of the common GenAI
+- [ChatGPT](https://chatgpt.com/)
+- [Gemini](https://gemini.google.com/)
+- [Grok](https://grok.com/)
+- [Claude](https://claude.ai/)
+- [Deepseek](https://www.deepseek.com/en)
+  
+## Code formatting use Markdown
+
+Some snippet of code in JavaScript
+```javascript
+
+const makeSquare = (n) => {
+    return n ** 2
+}
+console.log(makeSquare(2)) # 4
+console.log(makeSquare(5)) # 25
+```
+Some snippet of code in Python
+
+```python
+
+def make_square (n):
+    return n ** 2
+
+print(make_square(2)) # 4
+print(make_square(5)) # 25
+```
