@@ -1,7 +1,4 @@
 # Prompt Engineering 
-
-## Standalone Teaching and Learning Material
-
 ## 0) How to Use This Material
 
 This is designed as a full module you can use in three ways:
