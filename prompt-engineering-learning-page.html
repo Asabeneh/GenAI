@@ -160,26 +160,64 @@
   <main class="container">
     <section class="hero">
       <h1>Prompt Engineering Masterclass</h1>
-      <p>Standalone learning page for a generic audience. Learn core prompt design and evaluate understanding using mixed quiz types.</p>
+      <p>Full module: foundations, patterns, examples, exercises, rubric, and a capstone.</p>
       <span class="badge">Beginner-friendly</span>
-      <span class="badge">Practical templates</span>
-      <span class="badge">Interactive quiz</span>
+      <span class="badge">Workshop-ready</span>
+      <span class="badge">Includes exercises</span>
     </section>
 
     <section class="card">
-      <h2>1) Core Prompt Framework (RTFCC)</h2>
+      <h2>0) How to Use This Material</h2>
+      <p class="small">Use this as self-study, a 2–4 hour facilitated workshop, or a team training pack.</p>
       <div class="grid">
-        <div class="mini"><strong>R - Role</strong><p>Who the AI should act as.</p></div>
-        <div class="mini"><strong>T - Task</strong><p>The exact objective to complete.</p></div>
-        <div class="mini"><strong>F - Facts/Context</strong><p>Background information the AI must use.</p></div>
-        <div class="mini"><strong>C - Constraints</strong><p>Tone, length, audience, and limits.</p></div>
-        <div class="mini"><strong>C - Criteria</strong><p>Output contract and quality expectations.</p></div>
+        <div class="mini"><strong>Core lesson</strong><p>90 minutes</p></div>
+        <div class="mini"><strong>Guided practice</strong><p>45 minutes</p></div>
+        <div class="mini"><strong>Capstone</strong><p>45–60 minutes</p></div>
+      </div>
+      <p class="footnote">Prerequisites: none — suitable for students, professionals, and beginners.</p>
+    </section>
+
+    <section class="card">
+      <h2>1) Learning Outcomes</h2>
+      <ol>
+        <li>Explain prompt engineering and why it matters.</li>
+        <li>Diagnose weak prompts and improve them systematically.</li>
+        <li>Use multiple prompting patterns (few-shot, rubric-driven, iterative).</li>
+        <li>Build prompts for real tasks across domains.</li>
+        <li>Evaluate AI outputs using a practical rubric.</li>
+        <li>Run an end-to-end prompt workflow: define → craft → evaluate → iterate.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>2) What Prompt Engineering Really Is</h2>
+      <p>Prompt engineering designs inputs that reliably produce useful AI outputs. It's about clear goals, constraints, context, and evaluation criteria — not secret words.</p>
+      <h3>Mental Model</h3>
+      <ul>
+        <li>Treat the AI like a capable but literal collaborator.</li>
+        <li>It can reason with what you provide but won't infer missing requirements.</li>
+        <li>Explicit structure and requirements yield best results.</li>
+      </ul>
+      <h3>Why This Skill Matters</h3>
+      <div class="grid">
+        <div class="mini"><strong>Quality</strong><p>More accurate & relevant responses.</p></div>
+        <div class="mini"><strong>Speed</strong><p>Fewer retries, faster completion.</p></div>
+        <div class="mini"><strong>Consistency</strong><p>Repeatable outputs across users.</p></div>
+        <div class="mini"><strong>Control</strong><p>Better format, tone, and scope.</p></div>
       </div>
     </section>
 
     <section class="card">
-      <h2>2) Reusable Template + Example</h2>
-      <h3>Template</h3>
+      <h2>3) Prompt Anatomy: RTFCC</h2>
+      <div class="grid">
+        <div class="mini"><strong>R - Role</strong><p>Who the AI should act as.</p></div>
+        <div class="mini"><strong>T - Task</strong><p>The specific job to do.</p></div>
+        <div class="mini"><strong>F - Facts/Context</strong><p>Domain background and input data.</p></div>
+        <div class="mini"><strong>C - Constraints</strong><p>Limits, tone, audience, exclusions.</p></div>
+        <div class="mini"><strong>C - Criteria</strong><p>Output contract and what "good" looks like.</p></div>
+      </div>
+
+      <h3>Base Template</h3>
       <pre>You are a [role].
 Task: [clear objective].
 Context:
@@ -195,37 +233,206 @@ Output contract:
 - [sections]
 - [quality criteria]
 If needed, ask [N] clarifying questions before answering.</pre>
+    </section>
 
-      <h3 style="margin-top:16px;">Filled Example</h3>
-      <pre>You are a study coach for beginners.
-Task: Create a 7-day study plan to help me prepare for an introductory biology exam.
+    <section class="card">
+      <h2>4) Levels of Prompt Quality</h2>
+      <h3>Level 1 — Request</h3>
+      <pre>Write about remote work.</pre>
+      <p class="small">Problem: vague task, no audience, no structure.</p>
+
+      <h3>Level 3 — Structured Prompt</h3>
+      <pre>You are an HR advisor.
+Explain remote work to new managers.
+Include 4 benefits, 4 challenges, and 5 practical policies.
+Keep it under 350 words in simple language.
+Output as headings + bullet points.</pre>
+
+      <h3>Level 4 — Production-Ready</h3>
+      <pre>You are an HR advisor with policy-writing experience.
+Task: Draft a manager guide for hybrid work onboarding.
 Context:
-- I am a first-year university student.
-- I have 2 hours per day available.
-- My weak areas are cell division and genetics.
+- Company size: 80 employees
+- Teams: engineering, sales, support
+- Current issue: inconsistent work-from-home expectations
 Constraints:
-- Use simple, non-technical language.
-- Include short daily revision and quiz tasks.
-- Do not suggest more than 2 hours of work per day.
+- Audience: first-time managers
+- Tone: practical and supportive
+- Length: 450-550 words
+- Avoid legal claims and country-specific legal advice
 Output contract:
-- Format: day-by-day plan
-- Sections: daily goal, topics, 2 activities, and quick self-check
-- Quality criteria: realistic workload, clear progression, and practical actions
-If needed, ask 3 clarifying questions before answering.</pre>
+- Section 1: Policy principles (5 bullets)
+- Section 2: Team agreement template (checklist)
+- Section 3: First 30-day rollout plan (week-by-week)
+- Section 4: 3 risks and mitigations
+Before drafting, ask 3 clarifying questions about local policies and team schedules.</pre>
     </section>
 
     <section class="card">
-      <h2>3) Quick Use Cases</h2>
-      <div class="grid">
-        <div class="mini"><strong>Learning</strong><p>Explain complex topics at the right level and add mini quizzes.</p></div>
-        <div class="mini"><strong>Work</strong><p>Draft emails, plans, and status updates with clear tone rules.</p></div>
-        <div class="mini"><strong>Business</strong><p>Create launch plans, KPI tables, and risk mitigation steps.</p></div>
-        <div class="mini"><strong>Content</strong><p>Generate structured ideas with format and audience alignment.</p></div>
-      </div>
+      <h2>5) Prompting Patterns</h2>
+      <h3>Direct Instruction</h3>
+      <pre>Generate 10 customer service email subject lines for delayed delivery notices.
+Tone: empathetic and professional.
+Max 8 words each.</pre>
+
+      <h3>Role + Audience Alignment</h3>
+      <pre>You are a cybersecurity trainer.
+Explain phishing to office staff with no technical background.
+Use everyday examples and a 5-item safety checklist.</pre>
+
+      <h3>Few-Shot Prompting</h3>
+      <pre>Provide input/output examples, then ask model to transform.
+Useful for style matching and consistent tone.</pre>
+
+      <h3>Critique-and-Revise</h3>
+      <pre>Draft, self-critique for clarity and actionability, then revise.</pre>
+
+      <h3>Rubric-Guided Generation</h3>
+      <pre>Provide a rubric and require the model to score its own output and revise until scores meet thresholds.</pre>
     </section>
 
     <section class="card">
-      <h2>4) Interactive Quiz (Mixed Question Types)</h2>
+      <h2>6) Advanced Principles</h2>
+      <ul>
+        <li>Specify the decision context (where the output will be used).</li>
+        <li>Separate facts from instructions to avoid confusion.</li>
+        <li>Constrain scope by geography, audience, timeframe, budget.</li>
+        <li>Request verification behavior: ask assumptions and mark uncertainty.</li>
+        <li>Force structured output when downstream reuse is required (JSON/tables).</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>7) Real-World Use Cases (Selected)</h2>
+      <h3>Learning</h3>
+      <pre>You are a learning strategist and tutor. Teach opportunity cost in plain language with analogies, a 5-question quiz, and a practical exercise.</pre>
+
+      <h3>Professional Email</h3>
+      <pre>You are a communications advisor. Draft an email to a vendor who missed two milestones. Tone: firm but respectful. Length: 140-180 words.</pre>
+
+      <h3>Small Business Plan</h3>
+      <pre>You are a small business advisor. Build a 30-day launch plan for a home-based fresh juice service. Budget: $400. Capacity: one person.</pre>
+    </section>
+
+    <section class="card">
+      <h2>8) Prompt Evaluation Rubric</h2>
+      <p>Score outputs 1–5 on the following criteria and sum:</p>
+      <ol>
+        <li>Task Alignment</li>
+        <li>Accuracy</li>
+        <li>Completeness</li>
+        <li>Clarity</li>
+        <li>Actionability</li>
+        <li>Format Compliance</li>
+      </ol>
+      <p class="footnote">Interpretation: 26–30 production-ready; 20–25 useful with edits.</p>
+    </section>
+
+    <section class="card">
+      <h2>9) Common Failure Modes & Fixes</h2>
+      <ul>
+        <li><strong>Generic Output</strong>: add audience, goal, constraints.</li>
+        <li><strong>Wrong Tone</strong>: specify tone and do/don't examples.</li>
+        <li><strong>Missing Sections</strong>: add an explicit output contract.</li>
+        <li><strong>Hallucinated Facts</strong>: require assumptions and flag uncertainty.</li>
+        <li><strong>Verbose Output</strong>: add length bounds and structure.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>10) Iterative Prompt Workflow</h2>
+      <ol>
+        <li>Define success in one sentence.</li>
+        <li>Draft Prompt v1 using RTFCC.</li>
+        <li>Run and evaluate with the rubric.</li>
+        <li>Diagnose gaps (task/context/constraints/format).</li>
+        <li>Revise 1–2 variables to create Prompt v2.</li>
+        <li>Save the final prompt as a reusable template.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>11) Teaching Plan (Instructor)</h2>
+      <ol>
+        <li>Concept Lecture — 35 min</li>
+        <li>Live Demonstration — 20 min</li>
+        <li>Guided Practice — 35 min</li>
+        <li>Break — 10 min</li>
+        <li>Use-Case Labs — 35 min</li>
+        <li>Capstone Challenge — 35 min</li>
+        <li>Debrief — 10 min</li>
+      </ol>
+      <p class="footnote">Materials: this module, an AI assistant tool, rubric sheet, and peer feedback form.</p>
+    </section>
+
+    <section class="card">
+      <h2>12) Mini Tasks (Drills)</h2>
+      <ul>
+        <li>Prompt Diagnosis — identify 5 missing elements; rewrite.</li>
+        <li>Audience Shift — write two versions for children and executives.</li>
+        <li>Format Control — produce checklist, 7-day plan, FAQ.</li>
+        <li>Clarification Gate — force AI to ask questions first.</li>
+        <li>Reliability Guardrails — add assumptions and "don't invent data".</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>13) Scenario Exercises</h2>
+      <h3>Student Support</h3>
+      <p>Create a 14-day study plan (2 hours/day), stress strategy, and tracker.</p>
+      <h3>Team Productivity</h3>
+      <p>Create a meeting agenda template, decision log, and action tracker.</p>
+      <h3>Freelance Growth</h3>
+      <p>Build a 60-day client growth plan under $150 budget.</p>
+    </section>
+
+    <section class="card">
+      <h2>14) Capstone Project</h2>
+      <p>Create a production-ready prompt system with: problem statement, Prompt v1, sample output, rubric scoring, Prompt v2, and a short reflection.</p>
+      <p class="small">Evaluation: problem clarity, prompt quality, output usefulness, iteration quality, reflection depth, and format discipline.</p>
+    </section>
+
+    <section class="card">
+      <h2>15) One-Page Prompt Cheat Sheet</h2>
+      <pre>[ROLE]
+You are a [specific role].
+
+[TASK]
+Do [specific objective] for [specific audience].
+
+[CONTEXT]
+- Situation:
+- Inputs/data:
+- Constraints (time, budget, tools):
+
+[CONSTRAINTS]
+- Tone/style:
+- Length:
+- Must include:
+- Must avoid:
+
+[OUTPUT CONTRACT]
+- Format:
+- Required sections:
+- Quality criteria:
+
+[SAFETY/RELIABILITY]
+- State assumptions.
+- Mark uncertainty.
+- Do not fabricate specific data.
+
+[INTERACTION RULE]
+Ask [N] clarifying questions first when requirements are unclear.</pre>
+    </section>
+
+    <section class="card">
+      <h2>16) Final Notes</h2>
+      <p class="small">Prompt engineering is applied thinking: define success, structure instructions, evaluate, and iterate. Complete the drills and capstone to gain transferable skill.</p>
+    </section>
+
+    <!-- Retain interactive quiz at the end -->
+    <section class="card">
+      <h2>Interactive Quiz (Mixed Question Types)</h2>
       <p class="small">Objective questions are auto-graded. Open-ended questions include a self-check rubric.</p>
 
       <div class="quiz-item" data-points="1">
