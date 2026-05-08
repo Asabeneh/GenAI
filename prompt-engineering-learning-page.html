@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prompt Engineering Masterclass - Learning Page</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #131a33;
+      --panel-2: #1a2345;
+      --text: #e9ecf8;
+      --muted: #b8c0de;
+      --accent: #7aa2ff;
+      --ok: #2ec27e;
+      --warn: #ffb347;
+      --bad: #ff6b6b;
+      --border: #2a3567;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.55;
+      background: linear-gradient(180deg, #090e1b 0%, #0b1020 100%);
+      color: var(--text);
+    }
+
+    .container {
+      width: min(1050px, 94%);
+      margin: 28px auto 60px;
+    }
+
+    .hero, .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 18px;
+    }
+
+    h1, h2, h3 { margin-top: 0; }
+    h1 { font-size: 1.9rem; margin-bottom: 10px; }
+    h2 { font-size: 1.35rem; }
+    h3 { font-size: 1.1rem; }
+    p, li { color: var(--muted); }
+    strong { color: var(--text); }
+
+    .badge {
+      display: inline-block;
+      background: #1f2a57;
+      border: 1px solid var(--border);
+      color: #cfd7ff;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.85rem;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+
+    .mini {
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+    }
+
+    pre {
+      margin: 0;
+      white-space: pre-wrap;
+      background: #0b1433;
+      border: 1px solid #2f407d;
+      border-radius: 10px;
+      padding: 12px;
+      color: #dbe4ff;
+      font-size: 0.95rem;
+    }
+
+    .quiz-item {
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+      margin-top: 12px;
+    }
+
+    .quiz-item h4 {
+      margin: 0 0 8px;
+      color: #dae1ff;
+      font-size: 1rem;
+    }
+
+    .options label {
+      display: block;
+      margin: 8px 0;
+      color: var(--muted);
+    }
+
+    input[type="text"], textarea, select {
+      width: 100%;
+      background: #0d1533;
+      color: #eff3ff;
+      border: 1px solid #3a4c92;
+      border-radius: 8px;
+      padding: 10px;
+      margin-top: 6px;
+    }
+
+    textarea { min-height: 100px; resize: vertical; }
+
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    button {
+      border: 1px solid #4561b5;
+      border-radius: 8px;
+      background: #1c3274;
+      color: #eef2ff;
+      padding: 10px 14px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    button:hover { filter: brightness(1.1); }
+
+    .score-box {
+      margin-top: 14px;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #334886;
+      background: #0f193d;
+    }
+
+    .ok { color: var(--ok); }
+    .warn { color: var(--warn); }
+    .bad { color: var(--bad); }
+
+    .footnote {
+      font-size: 0.92rem;
+      color: #a9b3d8;
+      margin-top: 10px;
+    }
+
+    .small { font-size: 0.92rem; }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <h1>Prompt Engineering Masterclass</h1>
+      <p>Standalone learning page for a generic audience. Learn core prompt design and evaluate understanding using mixed quiz types.</p>
+      <span class="badge">Beginner-friendly</span>
+      <span class="badge">Practical templates</span>
+      <span class="badge">Interactive quiz</span>
+    </section>
+
+    <section class="card">
+      <h2>1) Core Prompt Framework (RTFCC)</h2>
+      <div class="grid">
+        <div class="mini"><strong>R - Role</strong><p>Who the AI should act as.</p></div>
+        <div class="mini"><strong>T - Task</strong><p>The exact objective to complete.</p></div>
+        <div class="mini"><strong>F - Facts/Context</strong><p>Background information the AI must use.</p></div>
+        <div class="mini"><strong>C - Constraints</strong><p>Tone, length, audience, and limits.</p></div>
+        <div class="mini"><strong>C - Criteria</strong><p>Output contract and quality expectations.</p></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>2) Reusable Template + Example</h2>
+      <h3>Template</h3>
+      <pre>You are a [role].
+Task: [clear objective].
+Context:
+- [fact 1]
+- [fact 2]
+- [fact 3]
+Constraints:
+- [tone/length/reading level]
+- [must include]
+- [must avoid]
+Output contract:
+- [format]
+- [sections]
+- [quality criteria]
+If needed, ask [N] clarifying questions before answering.</pre>
+
+      <h3 style="margin-top:16px;">Filled Example</h3>
+      <pre>You are a study coach for beginners.
+Task: Create a 7-day study plan to help me prepare for an introductory biology exam.
+Context:
+- I am a first-year university student.
+- I have 2 hours per day available.
+- My weak areas are cell division and genetics.
+Constraints:
+- Use simple, non-technical language.
+- Include short daily revision and quiz tasks.
+- Do not suggest more than 2 hours of work per day.
+Output contract:
+- Format: day-by-day plan
+- Sections: daily goal, topics, 2 activities, and quick self-check
+- Quality criteria: realistic workload, clear progression, and practical actions
+If needed, ask 3 clarifying questions before answering.</pre>
+    </section>
+
+    <section class="card">
+      <h2>3) Quick Use Cases</h2>
+      <div class="grid">
+        <div class="mini"><strong>Learning</strong><p>Explain complex topics at the right level and add mini quizzes.</p></div>
+        <div class="mini"><strong>Work</strong><p>Draft emails, plans, and status updates with clear tone rules.</p></div>
+        <div class="mini"><strong>Business</strong><p>Create launch plans, KPI tables, and risk mitigation steps.</p></div>
+        <div class="mini"><strong>Content</strong><p>Generate structured ideas with format and audience alignment.</p></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>4) Interactive Quiz (Mixed Question Types)</h2>
+      <p class="small">Objective questions are auto-graded. Open-ended questions include a self-check rubric.</p>
+
+      <div class="quiz-item" data-points="1">
+        <h4>Q1 - Multiple Choice</h4>
+        <p>Which part of RTFCC defines "what good output looks like"?</p>
+        <div class="options">
+          <label><input type="radio" name="q1" value="A"> A) Role</label>
+          <label><input type="radio" name="q1" value="B"> B) Task</label>
+          <label><input type="radio" name="q1" value="C"> C) Criteria/Output Contract</label>
+          <label><input type="radio" name="q1" value="D"> D) Facts</label>
+        </div>
+      </div>
+
+      <div class="quiz-item" data-points="1">
+        <h4>Q2 - True or False</h4>
+        <p>"A vague prompt can still reliably produce consistent outputs across many users."</p>
+        <div class="options">
+          <label><input type="radio" name="q2" value="true"> True</label>
+          <label><input type="radio" name="q2" value="false"> False</label>
+        </div>
+      </div>
+
+      <div class="quiz-item" data-points="1">
+        <h4>Q3 - Fill in the Blank</h4>
+        <p>Complete this sentence: "Prompt engineering is not about magic words; it is about clear ______ and clear instructions."</p>
+        <input type="text" id="q3" placeholder="Type one word" />
+      </div>
+
+      <div class="quiz-item" data-points="2">
+        <h4>Q4 - Matching (Select the best match)</h4>
+        <p>Match each item to the correct RTFCC component.</p>
+        <label>1) "Under 200 words and beginner tone"
+          <select id="q4a">
+            <option value="">Select...</option>
+            <option value="role">Role</option>
+            <option value="task">Task</option>
+            <option value="facts">Facts/Context</option>
+            <option value="constraints">Constraints</option>
+            <option value="criteria">Criteria</option>
+          </select>
+        </label>
+        <label>2) "Return output in a table with columns: action, owner, deadline"
+          <select id="q4b">
+            <option value="">Select...</option>
+            <option value="role">Role</option>
+            <option value="task">Task</option>
+            <option value="facts">Facts/Context</option>
+            <option value="constraints">Constraints</option>
+            <option value="criteria">Criteria</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="quiz-item" data-points="2">
+        <h4>Q5 - Scenario-Based (Short Answer)</h4>
+        <p>You are helping a student ask AI for exam preparation support. Write a strong 5-part prompt using RTFCC in 6-10 lines.</p>
+        <textarea id="q5" placeholder="Write your prompt here..."></textarea>
+      </div>
+
+      <div class="quiz-item" data-points="2">
+        <h4>Q6 - Multi-Select</h4>
+        <p>Choose all elements that usually improve prompt quality.</p>
+        <div class="options">
+          <label><input type="checkbox" id="q6a"> A) Define audience</label>
+          <label><input type="checkbox" id="q6b"> B) Specify output format</label>
+          <label><input type="checkbox" id="q6c"> C) Keep objective hidden</label>
+          <label><input type="checkbox" id="q6d"> D) Add constraints</label>
+          <label><input type="checkbox" id="q6e"> E) Include context facts</label>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button id="gradeBtn">Grade Objective Questions</button>
+        <button id="showGuideBtn">Show Self-Evaluation Guide</button>
+        <button id="resetBtn">Reset Quiz</button>
+      </div>
+
+      <div id="result" class="score-box" aria-live="polite">
+        <strong>Score:</strong> Not graded yet.
+      </div>
+
+      <div id="selfGuide" class="score-box" style="display:none;">
+        <strong>Self-Evaluation for Q5 (2 points):</strong>
+        <ul>
+          <li><strong>+0.5</strong> if role is clear and relevant.</li>
+          <li><strong>+0.5</strong> if task is specific and measurable.</li>
+          <li><strong>+0.5</strong> if context and constraints are practical.</li>
+          <li><strong>+0.5</strong> if output contract is explicit (format + sections).</li>
+        </ul>
+        <p class="footnote">Target: 1.5+ means strong understanding. 2.0 means excellent.</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function selectedValue(name) {
+      const checked = document.querySelector('input[name="' + name + '"]:checked');
+      return checked ? checked.value : null;
+    }
+
+    function normalizeWord(s) {
+      return (s || "").trim().toLowerCase();
+    }
+
+    document.getElementById("gradeBtn").addEventListener("click", function () {
+      let score = 0;
+      let total = 7; // objective only (Q1,Q2,Q3,Q4=2,Q6=2)
+      const feedback = [];
+
+      // Q1
+      if (selectedValue("q1") === "C") {
+        score += 1;
+        feedback.push("Q1: correct");
+      } else {
+        feedback.push("Q1: review output contract and criteria");
+      }
+
+      // Q2
+      if (selectedValue("q2") === "false") {
+        score += 1;
+        feedback.push("Q2: correct");
+      } else {
+        feedback.push("Q2: vague prompts reduce consistency");
+      }
+
+      // Q3
+      const q3 = normalizeWord(document.getElementById("q3").value);
+      if (q3 === "thinking") {
+        score += 1;
+        feedback.push("Q3: correct");
+      } else {
+        feedback.push("Q3: expected word is 'thinking'");
+      }
+
+      // Q4 matching
+      const q4a = document.getElementById("q4a").value;
+      const q4b = document.getElementById("q4b").value;
+      if (q4a === "constraints") score += 1;
+      if (q4b === "criteria") score += 1;
+      if (q4a === "constraints" && q4b === "criteria") {
+        feedback.push("Q4: both matches correct");
+      } else {
+        feedback.push("Q4: check constraints vs criteria");
+      }
+
+      // Q6 multi-select
+      const a = document.getElementById("q6a").checked;
+      const b = document.getElementById("q6b").checked;
+      const c = document.getElementById("q6c").checked;
+      const d = document.getElementById("q6d").checked;
+      const e = document.getElementById("q6e").checked;
+
+      let q6Score = 0;
+      if (a) q6Score += 0.5;
+      if (b) q6Score += 0.5;
+      if (d) q6Score += 0.5;
+      if (e) q6Score += 0.5;
+      if (c) q6Score -= 0.5;
+      if (q6Score < 0) q6Score = 0;
+
+      score += q6Score;
+      if (q6Score >= 1.5) {
+        feedback.push("Q6: strong selection");
+      } else {
+        feedback.push("Q6: include audience, format, constraints, and context");
+      }
+
+      const pct = Math.round((score / total) * 100);
+      let band = '<span class="bad">Needs more practice</span>';
+      if (pct >= 80) band = '<span class="ok">Excellent understanding</span>';
+      else if (pct >= 60) band = '<span class="warn">Good, refine weak areas</span>';
+
+      document.getElementById("result").innerHTML =
+        "<strong>Objective Score:</strong> " + score.toFixed(1) + " / " + total +
+        " (" + pct + "%) - " + band +
+        "<br><strong>Feedback:</strong> " + feedback.join("; ") +
+        "<br><span class='footnote'>Q5 is self-evaluated with the rubric.</span>";
+    });
+
+    document.getElementById("showGuideBtn").addEventListener("click", function () {
+      const panel = document.getElementById("selfGuide");
+      panel.style.display = panel.style.display === "none" ? "block" : "none";
+    });
+
+    document.getElementById("resetBtn").addEventListener("click", function () {
+      document.querySelectorAll('input[type="radio"]').forEach(function (el) { el.checked = false; });
+      document.querySelectorAll('input[type="checkbox"]').forEach(function (el) { el.checked = false; });
+      document.querySelectorAll("input[type='text'], textarea").forEach(function (el) { el.value = ""; });
+      document.querySelectorAll("select").forEach(function (el) { el.value = ""; });
+      document.getElementById("result").innerHTML = "<strong>Score:</strong> Not graded yet.";
+      document.getElementById("selfGuide").style.display = "none";
+    });
+  </script>
+</body>
+</html>
