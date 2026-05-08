@@ -1,4 +1,4 @@
-# Prompt Engineering Masterclass
+# Prompt Engineering 
 
 ## Standalone Teaching and Learning Material
 
