@@ -3209,6 +3209,7 @@ This course provides everything you need, but here are additional resources for 
 - Twitter/X: Follow @OpenAI, @AnthropicAI, @GoogleAI
 
 **News and Analysis:**
+- [AI Weekly](https://aiweekly.co/) - What AI experts are reading and sharing across models, agents, research, funding, and policy
 - [MIT Technology Review - AI](https://technologyreview.com/topic/artificial-intelligence)
 - [The Batch](https://read.deeplearning.ai/the-batch) by Andrew Ng
 - [AI Newsletter](https://buttondown.email/ainews) - Weekly roundups
